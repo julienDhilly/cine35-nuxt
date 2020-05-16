@@ -1,6 +1,8 @@
 <template>
   <nav class="navbar sticky-top navbar-dark bg-dark navbar-expand-lg">
-    <nuxt-link to="/" class="navbar-brand">Cine35</nuxt-link>
+    <nuxt-link to="/" class="navbar-brand">
+      Cine35
+    </nuxt-link>
     <button
       class="navbar-toggler"
       type="button"
@@ -10,10 +12,10 @@
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
-      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon" />
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div id="navbarSupportedContent" class="collapse navbar-collapse">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
           <a class="nav-link" href="#">Evenement</a>
@@ -38,16 +40,32 @@
       </ul>
       <form class="form-inline my-2 my-lg-0">
         <select class="custom-select form-control mr-sm-2">
-          <option selected>Rechercher un film</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
+          <option selected>
+            Rechercher un film
+          </option>
+          <option value="1">
+            One
+          </option>
+          <option value="2">
+            Two
+          </option>
+          <option value="3">
+            Three
+          </option>
         </select>
         <select class="custom-select form-control mr-sm-2">
-          <option selected>Rechercher une salle</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
+          <option selected>
+            Rechercher une salle
+          </option>
+          <option value="1">
+            One
+          </option>
+          <option value="2">
+            Two
+          </option>
+          <option value="3">
+            Three
+          </option>
         </select>
       </form>
     </div>
@@ -57,5 +75,5 @@
 <script>
 export default {
   name: "C35Header",
-};
+}
 </script>

@@ -7,9 +7,9 @@
         <span>{{ movie.name }}</span>
         <div>
           de
-          <template v-for="director in movie.directors">{{
-            `${director.firstName} ${director.lastName}`
-          }}</template>
+          <template v-for="director in movie.directors">
+            {{ `${director.firstName} ${director.lastName}` }}
+          </template>
         </div>
       </div>
     </div>
@@ -25,7 +25,7 @@ export default {
       required: true,
     },
   },
-};
+}
 </script>
 
 <style lang="scss">

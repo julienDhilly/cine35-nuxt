@@ -13,31 +13,17 @@
 </template>
 
 <script>
-import C35MoviePreview from "~/components/commons/MoviePreview";
+import C35MoviePreview from "~/components/commons/MoviePreview"
 
 export default {
   components: { C35MoviePreview },
-  async asyncData({ app }) {
-    const querySnapshot = await app.$fireStore.collection("movies").get();
-    const promises = querySnapshot.docs.map(async (doc) => {
-      const movie = doc.data();
-
-      // get actors
-      const actorPromises = movie.actors.map((doc) => doc.get());
-      const actorDocs = await Promise.all(actorPromises);
-      const actors = actorDocs.map((doc) => doc.data());
-
-      // get directors
-      const directorPromises = movie.directors.map((doc) => doc.get());
-      const directorDocs = await Promise.all(actorPromises);
-      const directors = actorDocs.map((doc) => doc.data());
-
-      return { id: doc.ref.id, name: doc.get("name"), actors, directors };
-    });
-    const movies = await Promise.all(promises);
-    return {
-      movies,
-    };
+  async fetch({ store }) {
+    await store.dispatch("movies/fetch")
   },
-};
+  computed: {
+    movies() {
+      return this.$store.getters["movies/collection"]
+    },
+  },
+}
 </script>

@@ -84,6 +84,16 @@ export default {
       if (ctx.isDev) {
         config.devtool = ctx.isClient ? "source-map" : "inline-source-map";
       }
+
+      // Exécuter ESLint lors de la sauvegarde
+      if (ctx.isDev && ctx.isClient) {
+        config.module.rules.push({
+          enforce: "pre",
+          test: /\.(js|vue)$/,
+          loader: "eslint-loader",
+          exclude: /(node_modules)/,
+        });
+      }
     },
     extractCSS: true,
     optimization: {

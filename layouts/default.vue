@@ -6,11 +6,11 @@
 </template>
 
 <script>
-import C35Header from "~/components/partial/Header.vue";
+import C35Header from "~/components/partial/Header.vue"
 
 export default {
-  components: { C35Header }
-};
+  components: { C35Header },
+}
 </script>
 
 <style>

@@ -1,5 +1,18 @@
 <template>
   <div class="container mt-4">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <nuxt-link to="/admin/">
+            Admin
+          </nuxt-link>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">
+          Actors
+        </li>
+      </ol>
+    </nav>
+
     <ul class="list-group">
       <template v-for="actor in actors">
         <li
@@ -21,26 +34,21 @@
 
 <script>
 export default {
-  async asyncData({ app }) {
-    const querySnapshot = await app.$fireStore.collection("actors").get();
-    const promises = querySnapshot.docs.map(async (doc) => {
-      const data = await doc.data();
-      return Object.assign({}, data, { id: doc.id });
-    });
-    const actors = await Promise.all(promises);
-    return {
-      actors,
-    };
+  async fetch({ store }) {
+    await store.dispatch("actors/fetch")
+  },
+  computed: {
+    actors() {
+      return this.$store.getters["actors/collection"]
+    },
   },
   methods: {
     getActorFullName(actor) {
-      return `${actor.firstName} ${actor.lastName}`;
+      return `${actor.firstName} ${actor.lastName}`
     },
     async onDelete(actor) {
-      await this.$fireStore.collection("actors").doc(actor.id).delete();
-      const index = this.actors.findIndex((a) => a.id === actor.id);
-      this.actors.splice(index, 1);
+      this.$store.dispatch("actors/delete", actor)
     },
   },
-};
+}
 </script>
