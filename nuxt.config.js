@@ -1,3 +1,5 @@
+import { injectRoutes } from "./routes"
+
 export default {
   target: "static",
   ssr: true,
@@ -19,14 +21,14 @@ export default {
         href:
           "https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap",
       },
-      {
-        rel: "stylesheet",
-        href:
-          "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css",
-        integrity:
-          "sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh",
-        crossorigin: "anonymous",
-      },
+      // {
+      //   rel: "stylesheet",
+      //   href:
+      //     "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css",
+      //   integrity:
+      //     "sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh",
+      //   crossorigin: "anonymous",
+      // },
     ],
     script: [
       {
@@ -76,13 +78,17 @@ export default {
       },
     ],
   ],
+  css: [
+   "~assets/scss/app.scss"
+  ],
   router: {
     linkActiveClass: "active",
+    injectRoutes,
   },
   build: {
     extend(config, ctx) {
       if (ctx.isDev) {
-        config.devtool = ctx.isClient ? "source-map" : "inline-source-map";
+        config.devtool = ctx.isClient ? "source-map" : "inline-source-map"
       }
 
       // Exécuter ESLint lors de la sauvegarde
@@ -92,7 +98,10 @@ export default {
           test: /\.(js|vue)$/,
           loader: "eslint-loader",
           exclude: /(node_modules)/,
-        });
+          options: {
+             fix: true,
+          }
+        })
       }
     },
     extractCSS: true,
@@ -111,5 +120,6 @@ export default {
   },
   generate: {
     dir: "release",
+    // see https://fr.nuxtjs.org/api/configuration-generate#routes
   },
-};
+}

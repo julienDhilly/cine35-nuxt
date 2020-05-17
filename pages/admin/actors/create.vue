@@ -1,5 +1,5 @@
 <template>
-  <div class="container mt-4">
+  <div class="container pt-4">
     <h3>Créer un acteur</h3>
     <form ref="form" @submit="onSubmit">
       <div class="form-group">

@@ -1,0 +1,34 @@
+
+.c35-header {
+   padding: 1rem 1rem;
+
+   .navbar-nav .nav-link {
+      color: #FFF;
+   }
+
+   .nav-item {
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+   }
+
+   .header-dropdown-active, .nuxt-link-exact-active {
+      background:  theme-color("primary");
+   }
+
+   .dropdown-menu {
+      margin-top: 1rem;
+      border-radius: 0;
+      padding: 0;
+
+      .dropdown-item:hover {
+         background: theme-color("primary");
+         color: #FFF;
+      }
+   }
+
+   // .dropdown-toggle::after {
+   //    display: none;
+   // }
+}

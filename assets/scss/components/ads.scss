@@ -1,0 +1,37 @@
+
+.c35-responsive-ads {
+   background: #fcba03;
+   width: 320px;
+   height: 100px;
+}
+
+@include media-breakpoint-up(xs) {
+   .c35-responsive-ads {
+      width: 468px;
+      height: 60px;
+   }
+}
+@include media-breakpoint-up(sm) {
+   .c35-responsive-ads {
+      width: 728px;
+      height: 90px;
+   }
+}
+@include media-breakpoint-up(md) {
+   .c35-responsive-ads {
+      width: 728px;
+      height: 90px;
+   }
+}
+@include media-breakpoint-up(lg) {
+   .c35-responsive-ads {
+      width: 728px;
+      height: 90px;
+   }
+}
+@include media-breakpoint-up(xl) {
+   .c35-responsive-ads {
+      width: 728px;
+      height: 90px;
+   }
+}

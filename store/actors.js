@@ -4,6 +4,8 @@ export const state = () => ({
 
 export const getters = {
   collection: (state) => state.collection,
+  findById: (state) => (id) =>
+    state.collection.find((model) => model.id === id),
 }
 
 export const mutations = {

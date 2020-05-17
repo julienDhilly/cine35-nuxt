@@ -4,6 +4,8 @@ export const state = () => ({
 
 export const getters = {
   collection: (state) => state.collection,
+  findById: (state) => (id) =>
+    state.collection.find((model) => model.id === id),
 }
 
 export const mutations = {
@@ -22,16 +24,38 @@ export const actions = {
       const movie = doc.data()
 
       // get actors
-      const actorPromises = movie.actors.map((doc) => doc.get())
+      const actorIds = movie.actors
+      const actorPromises = actorIds.map((docId) =>
+        this.$fireStore.collection("actors").doc(docId).get()
+      )
       const actorDocs = await Promise.all(actorPromises)
-      const actors = actorDocs.map((doc) => doc.data())
+      const actors = actorDocs.map((doc) => ({
+        id: doc.ref.id,
+        ...doc.data(),
+      }))
 
       // get directors
-      const directorPromises = movie.directors.map((doc) => doc.get())
+      const directorIds = movie.directors
+      const directorPromises = directorIds.map((docId) =>
+        this.$fireStore.collection("directors").doc(docId).get()
+      )
       const directorDocs = await Promise.all(directorPromises)
-      const directors = directorDocs.map((doc) => doc.data())
+      const directors = directorDocs.map((doc) => ({
+        id: doc.ref.id,
+        ...doc.data(),
+      }))
 
-      return { id: doc.ref.id, name: doc.get("name"), actors, directors }
+      const { name, duration, preview, cover, synopsis } = doc.data()
+      return {
+        id: doc.ref.id,
+        name,
+        duration,
+        preview,
+        cover,
+        synopsis,
+        actors,
+        directors,
+      }
     })
     const movies = await Promise.all(promises)
     commit("set", movies)

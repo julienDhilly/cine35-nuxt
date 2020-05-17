@@ -1,7 +1,7 @@
 <template>
   <!-- This is the component for movie preview -->
   <div class="cine35-movie-preview">
-    <img src="http://www.cine35.com/Affiches/14372.jpg" alt="ALERTE" />
+    <img :src="`/previews/${movie.preview}`" alt="ALERTE" />
     <div class="cine35-movie-preview-overlay">
       <div class="cine35-movie-preview-overlay-text">
         <span>{{ movie.name }}</span>
@@ -32,6 +32,7 @@ export default {
 .cine35-movie-preview {
   padding: 0;
   cursor: pointer;
+  position: relative;
 
   img {
     display: block;
