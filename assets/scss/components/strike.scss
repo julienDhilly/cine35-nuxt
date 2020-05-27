@@ -5,6 +5,7 @@
    white-space: nowrap;
    color: theme-color("primary");
    margin-right: -15px;
+   text-transform: uppercase;
  }
 
  .strike > span {
@@ -18,7 +19,7 @@
    position: absolute;
    top: 50%;
    width: 9999px;
-   height: 3px;
+   height: 5px;
    background: theme-color("primary");
  }
 

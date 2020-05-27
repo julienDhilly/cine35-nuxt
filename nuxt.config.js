@@ -21,6 +21,16 @@ export default {
         href:
           "https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap",
       },
+      {
+         rel: "stylesheet",
+         href:
+           "https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&display=swap",
+       },
+       {
+          rel: "stylesheet",
+          href:
+            "https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap",
+        },
       // {
       //   rel: "stylesheet",
       //   href:
@@ -51,6 +61,18 @@ export default {
           "sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6",
         crossorigin: "anonymous",
       },
+      // {
+      //    'data-ad-client': 'ca-pub-3777403068080720',
+      //    async: true,
+      //    src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
+      // },
+      {
+         async: true,
+         src: 'https://securepubads.g.doubleclick.net/tag/js/gpt.js',
+      },
+      {
+         src: '/ads.js',
+      }
     ],
   },
   loading: { color: "#fff" },

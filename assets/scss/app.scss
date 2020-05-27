@@ -1,6 +1,6 @@
 
 html {
-   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
+   font-family: "Rubik", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
      Roboto, "Helvetica Neue", Arial, sans-serif;
    font-size: 16px;
    word-spacing: 1px;
@@ -18,19 +18,127 @@ html {
    margin: 0;
  }
 
-$body-bg: #e5e5e5;
+// $body-bg: #e5e5e5;
+$body-bg: #FFF;
 
 $theme-colors: (
-  "primary": #ff6c6c,
+  "primary": #069DBF,
   "dark": #323232
 );
 
 @import "~bootstrap/scss/bootstrap.scss";
+@import "./pages/movie.scss";
 @import "./components/strike.scss";
 @import "./components/header.scss";
 @import "./components/ads.scss";
+@import "./components/movie-preview.scss";
+@import "./components/sidebar.scss";
 
-.container {
-   background: #fff;
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+   font-family: 'Oswald';
 }
 
+body {
+   font-family: 'Rubik';
+}
+
+// .container {
+//    background: #fff;
+// }
+
+.c35-section {
+   background: $body-bg; // theme-color("dark");
+   background: #F0F0F0;
+   padding-top: 15px;
+   padding-bottom: 15px;
+   padding-left: 11px;
+   padding-right: 11px;
+
+   .strike {
+      margin-right: -26px;
+   }
+}
+
+.c35-btn {
+   border-radius: 0px;
+   padding-left: 1rem;
+   padding-right: 1rem;
+   font-style: italic;
+}
+
+.c35-more {
+  width: 100%;
+  text-align: right;
+  cursor: pointer;
+  background: theme-color("primary");
+
+  span {
+     color: #FFF;
+     font-size: 1.5rem;
+     vertical-align: middle;
+  }
+
+  svg {
+     color: #FFF;
+     font-size: 4rem;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+   .c35-more {
+      height: 0;
+      padding-bottom: 65%;
+      background: transparent;
+      text-align: center;
+
+      & > div {
+         display: inline-block;
+         margin-top: 23%;
+      }
+
+      span {
+         color: theme-color("primary");
+      }
+
+      svg {
+         color: theme-color("primary");
+         font-size: 3rem;
+      }
+
+      &:hover {
+         background: theme-color("primary");
+         span, svg {
+          color: #FFF;
+         }
+      }
+   }
+}
+
+@include media-breakpoint-up(xl) {
+   .c35-more {
+      height: 0;
+      padding-bottom: 133.333%;
+      background: transparent;
+      text-align: center;
+
+      & > div {
+         margin-top: 50%;
+      }
+
+      span {
+         display: none;
+      }
+
+      svg {
+         color: theme-color("primary");
+      }
+
+      &:hover {
+         background: theme-color("primary");
+         svg {
+          color: #FFF;
+         }
+      }
+   }
+}

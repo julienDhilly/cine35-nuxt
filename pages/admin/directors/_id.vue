@@ -1,5 +1,5 @@
 <template>
-  <div class="container pt-4">
+  <div>
     <c35-breadcrumb :crumbs="crumbs" />
     <template v-if="notFound">
       Model not found
@@ -40,6 +40,7 @@ import { v4 as uuidv4 } from "uuid"
 import C35Breadcrumb from "~/components/partial/Breadcrumb"
 
 export default {
+  layout: "admin",
   components: { C35Breadcrumb },
   async asyncData({ store, params }) {
     const { id } = params

@@ -1,0 +1,150 @@
+.cine35-movie-banner {
+   position: relative;
+   height: 400px;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+   z-index: 1;
+   background: #393939;
+   overflow: hidden;
+}
+
+.cine35-movie-banner .backdrop {
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   top: 0;
+   left: 0;
+   background-size: cover;
+   background-position: center top 30%;
+}
+
+.cine35-movie-banner .backdrop:after {
+   position: absolute;
+   content: '';
+   height: 100%;
+   width: 100%;
+   top: 0;
+   left: 0;
+   background-image: radial-gradient(ellipse at 60% 40%, rgba(0,0,0,0) 5%, #000 90%);
+}
+
+.cine35-movie-banner .cine35-content-wrapper {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   max-width: 1440px;
+   margin: 0 auto;
+   position: relative;
+   height: 100%;
+}
+
+.cine35-movie-banner .cine35-content-wrapper .cine35-content {
+   min-height: 100%;
+   padding-top: 150px;
+   width: calc(100% - 460px);
+   /* min-height: 700px; */
+   position: relative;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+   -webkit-transition: opacity .3s ease-in-out;
+   transition: opacity .3s ease-in-out
+}
+
+.cine35-movie-banner .cine35-content-wrapper .cine35-content .top,
+.cine35-movie-banner .cine35-content-wrapper .cine35-content .bottom {
+   position: absolute;
+   left: 0;
+   width: 100%;
+   padding-left: 80px;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+.cine35-movie-banner .cine35-content-wrapper .cine35-content .top {
+   top: 40px;
+   bottom: 250px;
+}
+
+.cine35-movie-banner .cine35-content-wrapper .cine35-content .bottom {
+   bottom: 70px;
+   width: 100%;
+}
+
+.cine35-movie-banner .cine35-content-wrapper .cine35-content h1 {
+   color: #FFF;
+   display: -webkit-box;
+   font-size: 54px;
+   line-height: 1.15em;
+   margin-bottom: 19px;
+   margin-top: 20px;
+   font-weight: 900;
+   -webkit-line-clamp: 3;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+}
+
+.cine35-movie-banner .cine35-content-wrapper aside {
+   display: block;
+   -ms-flex-item-align: center;
+   align-self: center;
+   text-align: center;
+   margin-bottom: 50px;
+   width: 380px;
+   min-height: 100px;
+   padding-left: 40px;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+   z-index: 30;
+}
+
+.cine35-movie-banner .cine35-content-wrapper aside .img-wrapper {
+   display: inline-block;
+   position: relative;
+}
+
+.actors, .directors {
+   font-size: 16px;
+   line-height: 1.5em;
+   max-width: 500px;
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+}
+
+.directors {
+   font-weight: 500;
+}
+
+.actors {
+   display: inline-block;
+   vertical-align: middle;
+   color: rgba(255,255,255,0.7);
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+}
+
+.valign-container {
+   font-size: 0;
+}
+
+.valign-helper, .valign-item, .valign-container:before {
+   display: inline-block;
+   vertical-align: middle;
+}
+
+.valign-container:before {
+   content: '';
+   height: 100%;
+   width: 0;
+   position: relative;
+}
+
+.valign-item {
+   max-width: 100%;
+}
+
+.valign-helper, .valign-item, .valign-container:before {
+   display: inline-block;
+   vertical-align: middle;
+}

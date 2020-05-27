@@ -1,0 +1,42 @@
+.c35-sidebar-block {
+   background: theme-color("dark");
+   color: #FFF;
+   padding-top: 15px;
+   padding-bottom: 15px;
+   margin-bottom: 1rem;
+
+   h3 {
+      text-align: center;
+      text-transform: uppercase;
+   }
+
+   .c35-sidebar-content-wrapper {
+      padding-bottom: .5rem;
+      padding-top: .5rem;
+   }
+
+   .c35-sibera-content-title {
+      // background: theme-color("primary");
+      text-align: center;
+      // padding: 10px;
+      text-transform: uppercase;
+      // font-weight: bold;
+      font-family: 'Oswald';
+   }
+
+   .c35-sibera-content-desc {
+      padding-bottom: 1rem;
+      border-bottom: 1px solid theme-color("primary");
+   }
+
+
+   .c35-sibera-content-action {
+      text-align: center;
+   }
+
+   .c35-sidebar-content-wrapper:last-child {
+      .c35-sibera-content-desc {
+         border-bottom: 0px;
+      }
+   }
+}

@@ -1,5 +1,5 @@
 <template>
-  <div class="container pt-4">
+  <div>
     <c35-breadcrumb :crumbs="crumbs" />
     <c35-admin-list :collection="collection" @edit="onEdit" @delete="onDelete">
       <template #title="{model}">
@@ -10,7 +10,7 @@
       :to="{ name: 'admin-actors-id', params: { id: 'new' } }"
       class="btn btn-primary mt-4"
     >
-      Create new director
+      Create new actor
     </nuxt-link>
   </div>
 </template>
@@ -20,6 +20,7 @@ import C35Breadcrumb from "~/components/partial/Breadcrumb"
 import C35AdminList from "~/components/commons/AdminList"
 
 export default {
+  layout: "admin",
   components: { C35Breadcrumb, C35AdminList },
   async fetch({ store }) {
     await store.dispatch("actors/fetch")

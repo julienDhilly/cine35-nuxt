@@ -1,5 +1,5 @@
 <template>
-  <div class="container pt-4 pb-4">
+  <div>
     <c35-breadcrumb :crumbs="crumbs" />
     <template v-if="notFound">
       Model not found
@@ -146,6 +146,7 @@ import C35Breadcrumb from "~/components/partial/Breadcrumb"
 import C35Select from "~/components/commons/forms/Select"
 
 export default {
+  layout: "admin",
   components: { C35Breadcrumb, C35Select },
   async fetch({ store }) {
     await store.dispatch("actors/fetch")

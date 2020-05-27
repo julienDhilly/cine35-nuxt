@@ -9,12 +9,14 @@
    .nav-item {
       padding-left: 10px;
       padding-right: 10px;
-      margin-left: 10px;
-      margin-right: 10px;
+      margin-left: 5px;
+      margin-right: 5px;
    }
 
    .header-dropdown-active, .nuxt-link-exact-active {
-      background:  theme-color("primary");
+      &:not(.navbar-brand) {
+         background:  theme-color("primary");
+      }
    }
 
    .dropdown-menu {

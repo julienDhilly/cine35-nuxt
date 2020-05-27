@@ -1,35 +1,49 @@
 
 .c35-responsive-ads {
-   background: #fcba03;
+   background: #cccccc;
    width: 320px;
    height: 100px;
 }
 
-@include media-breakpoint-up(xs) {
+// Extra small devices (portrait phones, less than 576px)
+// @media (max-width: 575.98px) { ... }
+@include media-breakpoint-only(xs) {
    .c35-responsive-ads {
-      width: 468px;
-      height: 60px;
+      width: 320px;
+      height: 50px;
    }
 }
-@include media-breakpoint-up(sm) {
-   .c35-responsive-ads {
-      width: 728px;
-      height: 90px;
-   }
-}
-@include media-breakpoint-up(md) {
-   .c35-responsive-ads {
-      width: 728px;
-      height: 90px;
-   }
-}
-@include media-breakpoint-up(lg) {
+
+// Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) and (max-width: 767.98px) { ... }
+@include media-breakpoint-only(sm) {
    .c35-responsive-ads {
       width: 728px;
       height: 90px;
    }
 }
-@include media-breakpoint-up(xl) {
+
+// Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) and (max-width: 991.98px) { ... }
+@include media-breakpoint-only(md) {
+   .c35-responsive-ads {
+      width: 728px;
+      height: 90px;
+   }
+}
+
+// Large devices (desktops, 992px and up)
+// @media (min-width: 992px) and (max-width: 1199.98px) { ... }
+@include media-breakpoint-only(lg) {
+   .c35-responsive-ads {
+      width: 728px;
+      height: 90px;
+   }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) { ... }
+@include media-breakpoint-only(xl) {
    .c35-responsive-ads {
       width: 728px;
       height: 90px;

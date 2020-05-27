@@ -1,5 +1,5 @@
 <template>
-  <div class="container pt-4">
+  <div>
     <c35-breadcrumb :crumbs="crumbs" />
 
     <ul class="list-group mt-4">
@@ -26,6 +26,7 @@
 import C35Breadcrumb from "~/components/partial/Breadcrumb"
 
 export default {
+  layout: "admin",
   components: { C35Breadcrumb },
   data() {
     return {
