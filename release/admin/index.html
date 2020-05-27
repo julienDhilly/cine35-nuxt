@@ -28,9 +28,12 @@
     <link
       data-n-head="ssr"
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&display=swap"
+    />
+    <link
+      data-n-head="ssr"
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap"
     />
     <script
       data-n-head="ssr"
@@ -50,20 +53,32 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
-    <link rel="preload" href="/_nuxt/d5fdbe97c174d5826837.js" as="script" />
-    <link rel="preload" href="/_nuxt/d915261f2a3be2c23b79.js" as="script" />
-    <link rel="preload" href="/_nuxt/c9ef2614f0ed1702d985.css" as="style" />
-    <link rel="preload" href="/_nuxt/6c91101fe554eafceae8.js" as="script" />
-    <link rel="preload" href="/_nuxt/6e499b535fddfe1adf3d.js" as="script" />
-    <link rel="stylesheet" href="/_nuxt/c9ef2614f0ed1702d985.css" />
+    <script
+      data-n-head="ssr"
+      async
+      src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"
+    ></script>
+    <script data-n-head="ssr" src="/ads.js"></script>
+    <link rel="preload" href="/_nuxt/e8b1fa9d00be3c227f3f.js" as="script" />
+    <link rel="preload" href="/_nuxt/0e7ce20b6e364ce4571e.js" as="script" />
+    <link rel="preload" href="/_nuxt/eeb4c2a0264ad6676490.css" as="style" />
+    <link rel="preload" href="/_nuxt/e0649dcdc1edd6495676.js" as="script" />
+    <link rel="preload" href="/_nuxt/6d6568e9147ccc4f63b6.css" as="style" />
+    <link rel="preload" href="/_nuxt/128ba3185d2afbad91e9.js" as="script" />
+    <link rel="stylesheet" href="/_nuxt/eeb4c2a0264ad6676490.css" />
+    <link rel="stylesheet" href="/_nuxt/6d6568e9147ccc4f63b6.css" />
   </head>
   <body>
     <div data-server-rendered="true" id="__nuxt">
       <!---->
       <div id="__layout">
         <div>
-          <nav class="navbar sticky-top navbar-dark bg-dark navbar-expand-lg">
-            <a href="/" class="navbar-brand active">Cine35</a>
+          <nav
+            class="c35-header navbar sticky-top navbar-dark bg-dark navbar-expand-sm"
+          >
+            <a href="/" class="navbar-brand active">
+              Cine35
+            </a>
             <button
               type="button"
               data-toggle="collapse"
@@ -77,58 +92,116 @@
             </button>
             <div id="navbarSupportedContent" class="collapse navbar-collapse">
               <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                  <a href="#" class="nav-link">Evenement</a>
+                <li class="nav-item dropdown">
+                  <a
+                    id="navbarDropdownMovies"
+                    href="#"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    class="nav-link dropdown-toggle"
+                  >
+                    FILMS
+                  </a>
+                  <div
+                    aria-labelledby="navbarDropdownMovies"
+                    class="dropdown-menu"
+                  >
+                    <a href="/movies/onrelease" class="dropdown-item">
+                      A l'affiche
+                    </a>
+                    <a href="#" class="dropdown-item">Prochainement</a>
+                    <a href="#" class="dropdown-item">Critiques</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    id="navbarDropdownMovies"
+                    href="#"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    class="nav-link dropdown-toggle"
+                  >
+                    SALLES
+                  </a>
+                  <div
+                    aria-labelledby="navbarDropdownMovies"
+                    class="dropdown-menu"
+                  >
+                    <a href="/movies/onrelease" class="dropdown-item">
+                      A l'affiche
+                    </a>
+                    <a href="#" class="dropdown-item">Prochainement</a>
+                    <a href="#" class="dropdown-item">Critiques</a>
+                  </div>
                 </li>
                 <li class="nav-item">
-                  <a href="/movies/onrelease" class="nav-link">
-                    A l'affiche
+                  <a
+                    href="/admin"
+                    class="nav-link nuxt-link-exact-active active"
+                  >
+                    ADMIN
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">Prochainement</a>
-                </li>
-                <li class="nav-item"><a href="#" class="nav-link">Films</a></li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">Salles</a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">Critiques</a>
-                </li>
               </ul>
-              <form class="form-inline my-2 my-lg-0">
-                <select class="custom-select form-control mr-sm-2"
-                  ><option selected>Rechercher un film</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option></select
-                >
-                <select class="custom-select form-control mr-sm-2"
-                  ><option selected>Rechercher une salle</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option></select
-                >
-              </form>
             </div>
           </nav>
-          <h1>Admin page</h1>
+          <div class="container py-4">
+            <div class="row">
+              <div class="col-12">
+                <div>
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li aria-current="page" class="breadcrumb-item active">
+                        Admin
+                      </li>
+                    </ol>
+                  </nav>
+                  <ul class="list-group mt-4">
+                    <li class="list-group-item">
+                      <a href="/admin/actors">
+                        Manage actors
+                      </a>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="/admin/directors">
+                        Manage directors
+                      </a>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="/admin/movies">
+                        Manage movies
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <script>
       window.__NUXT__ = {
-        layout: 'default',
+        layout: 'admin',
         data: [{}],
         fetch: [],
         error: null,
+        state: {
+          actors: { collection: [] },
+          directors: { collection: [] },
+          movies: { collection: [] },
+        },
         serverRendered: !0,
         routePath: '/admin',
       };
     </script>
-    <script src="/_nuxt/d5fdbe97c174d5826837.js" defer></script>
-    <script src="/_nuxt/d915261f2a3be2c23b79.js" defer></script>
-    <script src="/_nuxt/6c91101fe554eafceae8.js" defer></script>
-    <script src="/_nuxt/6e499b535fddfe1adf3d.js" defer></script>
+    <script src="/_nuxt/e8b1fa9d00be3c227f3f.js" defer></script>
+    <script src="/_nuxt/0e7ce20b6e364ce4571e.js" defer></script>
+    <script src="/_nuxt/e0649dcdc1edd6495676.js" defer></script>
+    <script src="/_nuxt/128ba3185d2afbad91e9.js" defer></script>
   </body>
 </html>

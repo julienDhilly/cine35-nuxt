@@ -28,9 +28,12 @@
     <link
       data-n-head="ssr"
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&display=swap"
+    />
+    <link
+      data-n-head="ssr"
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap"
     />
     <script
       data-n-head="ssr"
@@ -50,20 +53,32 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
-    <link rel="preload" href="/_nuxt/d5fdbe97c174d5826837.js" as="script" />
-    <link rel="preload" href="/_nuxt/d915261f2a3be2c23b79.js" as="script" />
-    <link rel="preload" href="/_nuxt/c9ef2614f0ed1702d985.css" as="style" />
-    <link rel="preload" href="/_nuxt/6c91101fe554eafceae8.js" as="script" />
-    <link rel="preload" href="/_nuxt/6e499b535fddfe1adf3d.js" as="script" />
-    <link rel="stylesheet" href="/_nuxt/c9ef2614f0ed1702d985.css" />
+    <script
+      data-n-head="ssr"
+      async
+      src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"
+    ></script>
+    <script data-n-head="ssr" src="/ads.js"></script>
+    <link rel="preload" href="/_nuxt/e8b1fa9d00be3c227f3f.js" as="script" />
+    <link rel="preload" href="/_nuxt/0e7ce20b6e364ce4571e.js" as="script" />
+    <link rel="preload" href="/_nuxt/eeb4c2a0264ad6676490.css" as="style" />
+    <link rel="preload" href="/_nuxt/e0649dcdc1edd6495676.js" as="script" />
+    <link rel="preload" href="/_nuxt/6d6568e9147ccc4f63b6.css" as="style" />
+    <link rel="preload" href="/_nuxt/128ba3185d2afbad91e9.js" as="script" />
+    <link rel="stylesheet" href="/_nuxt/eeb4c2a0264ad6676490.css" />
+    <link rel="stylesheet" href="/_nuxt/6d6568e9147ccc4f63b6.css" />
   </head>
   <body>
     <div data-server-rendered="true" id="__nuxt">
       <!---->
       <div id="__layout">
         <div>
-          <nav class="navbar sticky-top navbar-dark bg-dark navbar-expand-lg">
-            <a href="/" class="navbar-brand active">Cine35</a>
+          <nav
+            class="c35-header navbar sticky-top navbar-dark bg-dark navbar-expand-sm"
+          >
+            <a href="/" class="navbar-brand active">
+              Cine35
+            </a>
             <button
               type="button"
               data-toggle="collapse"
@@ -77,56 +92,172 @@
             </button>
             <div id="navbarSupportedContent" class="collapse navbar-collapse">
               <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                  <a href="#" class="nav-link">Evenement</a>
+                <li class="nav-item dropdown header-dropdown-active">
+                  <a
+                    id="navbarDropdownMovies"
+                    href="#"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    class="nav-link dropdown-toggle"
+                  >
+                    FILMS
+                  </a>
+                  <div
+                    aria-labelledby="navbarDropdownMovies"
+                    class="dropdown-menu"
+                  >
+                    <a
+                      href="/movies/onrelease"
+                      class="dropdown-item nuxt-link-exact-active active"
+                    >
+                      A l'affiche
+                    </a>
+                    <a href="#" class="dropdown-item">Prochainement</a>
+                    <a href="#" class="dropdown-item">Critiques</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    id="navbarDropdownMovies"
+                    href="#"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    class="nav-link dropdown-toggle"
+                  >
+                    SALLES
+                  </a>
+                  <div
+                    aria-labelledby="navbarDropdownMovies"
+                    class="dropdown-menu"
+                  >
+                    <a
+                      href="/movies/onrelease"
+                      class="dropdown-item nuxt-link-exact-active active"
+                    >
+                      A l'affiche
+                    </a>
+                    <a href="#" class="dropdown-item">Prochainement</a>
+                    <a href="#" class="dropdown-item">Critiques</a>
+                  </div>
                 </li>
                 <li class="nav-item">
-                  <a
-                    href="/movies/onrelease"
-                    class="nav-link nuxt-link-exact-active active"
-                  >
-                    A l'affiche
+                  <a href="/admin" class="nav-link">
+                    ADMIN
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">Prochainement</a>
-                </li>
-                <li class="nav-item"><a href="#" class="nav-link">Films</a></li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">Salles</a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">Critiques</a>
-                </li>
               </ul>
-              <form class="form-inline my-2 my-lg-0">
-                <select class="custom-select form-control mr-sm-2"
-                  ><option selected>Rechercher un film</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option></select
-                >
-                <select class="custom-select form-control mr-sm-2"
-                  ><option selected>Rechercher une salle</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option></select
-                >
-              </form>
             </div>
           </nav>
+          <div class="container py-4">
+            <div class="row justify-content-center">
+              <div id="google-ads-test-banner" class="c35-responsive-ads"></div>
+            </div>
+          </div>
           <div>
-            <div class="row align-items-start">
-              <div class="cine35-movie-preview col-6 col-sm-3 col-md-2">
-                <img
-                  src="http://www.cine35.com/Affiches/14372.jpg"
-                  alt="ALERTE"
-                />
-                <div class="cine35-movie-preview-overlay">
-                  <div class="cine35-movie-preview-overlay-text">
-                    <span>Alerte</span>
-                    <div>
-                      de Dustin Hoffman
+            <div class="c35-section">
+              <div class="container-md px-1">
+                <div class="row mx-n1">
+                  <div class="col-12 pl-1">
+                    <h2 class="strike">
+                      <span>
+                        A l'affiche
+                      </span>
+                    </h2>
+                  </div>
+                </div>
+                <div class="row mx-n1">
+                  <div
+                    class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3 py-1 px-1"
+                  >
+                    <div class="cine35-movie-preview">
+                      <img src="/previews/just_kids.jpg" alt="ALERTE" />
+                      <div class="cine35-movie-preview-overlay">
+                        <div class="cine35-movie-preview-overlay-text">
+                          <span>Just Kids</span>
+                          <div>
+                            de Jonás Trueba
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3 py-1 px-1"
+                  >
+                    <div class="cine35-movie-preview">
+                      <img src="/previews/ballon.jpg" alt="ALERTE" />
+                      <div class="cine35-movie-preview-overlay">
+                        <div class="cine35-movie-preview-overlay-text">
+                          <span>Ballong</span>
+                          <div>
+                            de Pema Tseden
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3 py-1 px-1"
+                  >
+                    <div class="cine35-movie-preview">
+                      <img src="/previews/away.jpg" alt="ALERTE" />
+                      <div class="cine35-movie-preview-overlay">
+                        <div class="cine35-movie-preview-overlay-text">
+                          <span>Away</span>
+                          <div>
+                            de Jonás Trueba
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3 py-1 px-1"
+                  >
+                    <div class="cine35-movie-preview">
+                      <img src="/previews/eva_et_moi.jpg" alt="ALERTE" />
+                      <div class="cine35-movie-preview-overlay">
+                        <div class="cine35-movie-preview-overlay-text">
+                          <span>Eva en août</span>
+                          <div>
+                            de Jonás Trueba
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3 py-1 px-1"
+                  >
+                    <div class="cine35-movie-preview">
+                      <img src="/previews/malmkrog.jpg" alt="ALERTE" />
+                      <div class="cine35-movie-preview-overlay">
+                        <div class="cine35-movie-preview-overlay-text">
+                          <span>Malmkrog</span>
+                          <div>
+                            de Cristi Puiu
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3 py-1 px-1"
+                  >
+                    <div class="cine35-movie-preview">
+                      <img src="/previews/alerte.jpg" alt="ALERTE" />
+                      <div class="cine35-movie-preview-overlay">
+                        <div class="cine35-movie-preview-overlay-text">
+                          <span>Alerte</span>
+                          <div>
+                            de Wolfgang Petersen
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -137,31 +268,204 @@
       </div>
     </div>
     <script>
-      window.__NUXT__ = (function (e, r) {
+      window.__NUXT__ = (function (
+        a,
+        e,
+        s,
+        i,
+        t,
+        r,
+        d,
+        f,
+        m,
+        o,
+        c,
+        N,
+        l,
+        n,
+        b,
+        u,
+        p,
+        v,
+        g,
+        w,
+        y,
+        j,
+        T,
+        _,
+        h,
+        k,
+        A,
+        P,
+        J,
+        S,
+      ) {
         return {
           layout: 'default',
-          data: [
-            {
-              movies: [
+          data: [{}],
+          fetch: [],
+          error: a,
+          state: {
+            actors: { collection: [] },
+            directors: { collection: [] },
+            movies: {
+              collection: [
+                {
+                  id: '2446822f-b48d-4a39-9dc8-08c07fae05f4',
+                  name: 'Just Kids',
+                  duration: '5148',
+                  preview: u,
+                  cover: u,
+                  synopsis: a,
+                  actors: [
+                    { id: _, lastName: n, firstName: j },
+                    { id: d, firstName: s, lastName: l },
+                    {
+                      id: '452911cf-cb79-4235-aa68-5a402e651267',
+                      firstName: 'Alice',
+                      lastName: 'Braga',
+                    },
+                    { id: i, firstName: t, lastName: r },
+                  ],
+                  directors: [{ id: N, firstName: f, lastName: m }],
+                },
+                {
+                  id: '353680c1-5de6-44b9-8144-245cc74e56e1',
+                  name: 'Ballong',
+                  duration: '5112',
+                  preview: b,
+                  cover: b,
+                  synopsis: a,
+                  actors: [
+                    {
+                      id: '65d2b10c-0683-43bb-abfc-ed809e4a6722',
+                      firstName: 'Sonam',
+                      lastName: 'Wangmo',
+                    },
+                    { id: S, firstName: p, lastName: v },
+                    { id: g, firstName: w, lastName: 'Tso' },
+                  ],
+                  directors: [
+                    {
+                      id: '98c68e10-47f5-4904-b16f-c9ef10ced123',
+                      firstName: 'Pema',
+                      lastName: 'Tseden',
+                    },
+                  ],
+                },
+                {
+                  id: '744e0d9c-227a-4c60-91da-c79f2254025d',
+                  name: 'Away',
+                  duration: '4104',
+                  preview: y,
+                  cover: y,
+                  synopsis: a,
+                  actors: [
+                    { id: o, lastName: c, firstName: e },
+                    { id: g, firstName: w, lastName: 'Tso' },
+                    { id: d, firstName: s, lastName: l },
+                  ],
+                  directors: [{ id: N, firstName: f, lastName: m }],
+                },
+                {
+                  id: 'a93f27dc-2de5-4a2f-b534-a5afb64f2305',
+                  name: 'Eva en août',
+                  duration: '10440',
+                  preview: h,
+                  cover: h,
+                  synopsis: a,
+                  actors: [
+                    { id: o, lastName: c, firstName: e },
+                    { id: k, firstName: A, lastName: P },
+                    { id: i, firstName: t, lastName: r },
+                    {
+                      id: 'b9f95d7d-55f2-44d4-b572-c49392132b94',
+                      lastName: 'Stoffel',
+                      firstName: 'Isabelle',
+                    },
+                  ],
+                  directors: [{ id: N, firstName: f, lastName: m }],
+                },
+                {
+                  id: 'cbfc0413-cb8d-4b91-a312-290505a735df',
+                  name: 'Malmkrog',
+                  duration: '11556',
+                  preview: J,
+                  cover: J,
+                  synopsis: a,
+                  actors: [
+                    {
+                      id: '032e4951-171b-4fd1-bef6-b843d0c751c4',
+                      firstName: 'Vito',
+                      lastName: 'Sanz',
+                    },
+                    { id: k, firstName: A, lastName: P },
+                    { id: o, lastName: c, firstName: e },
+                    { id: S, firstName: p, lastName: v },
+                  ],
+                  directors: [
+                    {
+                      id: 'f06abfa8-01e3-402e-951b-f4be42eb2903',
+                      lastName: 'Puiu',
+                      firstName: 'Cristi',
+                    },
+                  ],
+                },
                 {
                   id: 'xJABSfO0P91AUEXcKzLj',
                   name: 'Alerte',
-                  actors: [{ lastName: e, firstName: r }],
-                  directors: [{ lastName: e, firstName: r }],
+                  duration: 5400,
+                  preview: T,
+                  cover: T,
+                  synopsis: 'this synopsis',
+                  actors: [
+                    { id: _, lastName: n, firstName: j },
+                    { id: i, firstName: t, lastName: r },
+                  ],
+                  directors: [{ id: d, lastName: 'Petersen', firstName: s }],
                 },
               ],
             },
-          ],
-          fetch: [],
-          error: null,
+          },
           serverRendered: !0,
           routePath: '/movies/onrelease',
         };
-      })('Hoffman', 'Dustin');
+      })(
+        null,
+        'Itsaso',
+        'Wolfgang',
+        'abf093d2-a457-481f-99f6-79410994131c',
+        'Cuba',
+        'Gooding Jr.',
+        'K5TSg5rkOlRqHwzynwxw',
+        'Jonás',
+        'Trueba',
+        '923c2d2f-5b62-463a-ae38-c0dfc5d58385',
+        'Arana',
+        'f017bb5a-02a5-4f4c-b1de-eb819e364f9a',
+        'Petersena',
+        'Ruffalo',
+        'ballon.jpg',
+        'just_kids.jpg',
+        'Jinpachi',
+        'Nezu',
+        'b63dc4ab-cec4-40c7-a806-813c506d97a7',
+        'Yangshik',
+        'away.jpg',
+        'Mark',
+        'alerte.jpg',
+        '3aae074a-69b2-47a5-8650-b39419bba8b4',
+        'eva_et_moi.jpg',
+        'CVNlIcj9Qj1hNsaTe7lK',
+        'Dustin',
+        'Hoffman',
+        'malmkrog.jpg',
+        'e19e1f03-fde3-4ed5-8f07-be1fffea9c56',
+      );
     </script>
-    <script src="/_nuxt/d5fdbe97c174d5826837.js" defer></script>
-    <script src="/_nuxt/d915261f2a3be2c23b79.js" defer></script>
-    <script src="/_nuxt/6c91101fe554eafceae8.js" defer></script>
-    <script src="/_nuxt/6e499b535fddfe1adf3d.js" defer></script>
+    <script src="/_nuxt/e8b1fa9d00be3c227f3f.js" defer></script>
+    <script src="/_nuxt/0e7ce20b6e364ce4571e.js" defer></script>
+    <script src="/_nuxt/e0649dcdc1edd6495676.js" defer></script>
+    <script src="/_nuxt/128ba3185d2afbad91e9.js" defer></script>
   </body>
 </html>
