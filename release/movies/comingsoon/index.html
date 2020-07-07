@@ -214,13 +214,13 @@
                     aria-labelledby="navbarDropdownMovies"
                     class="dropdown-menu"
                   >
-                    <a
-                      href="/movies/onrelease"
-                      class="dropdown-item nuxt-link-exact-active active"
-                    >
+                    <a href="/movies/onrelease" class="dropdown-item">
                       A l'affiche
                     </a>
-                    <a href="/movies/comingsoon" class="dropdown-item">
+                    <a
+                      href="/movies/comingsoon"
+                      class="dropdown-item nuxt-link-exact-active active"
+                    >
                       Prochainement
                     </a>
                     <a href="#" class="dropdown-item">Critiques</a>
@@ -285,7 +285,7 @@
                       <div class="col-12 pl-1">
                         <h2 class="strike">
                           <span>
-                            A l'affiche
+                            Prochainement
                           </span>
                         </h2>
                       </div>
@@ -566,8 +566,8 @@
         b,
         u,
         p,
-        v,
         g,
+        v,
         w,
         j,
         y,
@@ -628,8 +628,8 @@
                   cover: M,
                   synopsis: a,
                   actors: [
-                    { id: u, lastName: p, firstName: v },
-                    { id: g, lastName: w, firstName: j },
+                    { id: u, lastName: p, firstName: g },
+                    { id: v, lastName: w, firstName: j },
                     { id: O, firstName: h, lastName: 'Tso' },
                   ],
                   directors: [
@@ -663,7 +663,7 @@
                   synopsis: a,
                   actors: [
                     { id: P, lastName: S, firstName: z },
-                    { id: u, lastName: p, firstName: v },
+                    { id: u, lastName: p, firstName: g },
                     { id: l, firstName: n, lastName: b },
                     { id: R, lastName: C, firstName: 'Joe' },
                   ],
@@ -717,7 +717,7 @@
                     },
                     { id: l, firstName: n, lastName: b },
                     { id: c, firstName: o, lastName: N },
-                    { id: g, lastName: w, firstName: j },
+                    { id: v, lastName: w, firstName: j },
                   ],
                   directors: [
                     {
@@ -744,7 +744,7 @@
             },
           },
           serverRendered: !0,
-          routePath: '/movies/onrelease',
+          routePath: '/movies/comingsoon',
         };
       })(
         null,

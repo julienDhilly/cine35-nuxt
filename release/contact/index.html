@@ -249,7 +249,10 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="/contact" class="nav-link">
+                  <a
+                    href="/contact"
+                    class="nav-link nuxt-link-exact-active active"
+                  >
                     contact
                   </a>
                 </li>
@@ -261,7 +264,130 @@
               <div id="google-ads-test-banner" class="c35-responsive-ads"></div>
             </div>
           </div>
-          <div class="container"><h1>404 - page not found</h1></div>
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <nav aria-label="breadcrumb" class="c35-breadcrumb">
+                  <ol class="breadcrumb">
+                    <li aria-current="page" class="breadcrumb-item">
+                      <a href="/" class="active">
+                        Accueil
+                      </a>
+                    </li>
+                    <li aria-current="page" class="breadcrumb-item active">
+                      Contact
+                    </li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+            <div class="c35-section">
+              <div class="row">
+                <div class="col-12">
+                  <h2 class="strike">
+                    <span>
+                      CONTACT
+                    </span>
+                  </h2>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8">
+                  <div class="text-center">
+                    <p>
+                      Vous souhaitez faire parvenir un message à l'équipe du
+                      site ?<br />
+                      Nous vous apporterons une réponse sous 72 heures.
+                    </p>
+                    <br />
+                    <p>
+                      ATTENTION : Vous allez écrire au webmaster de Cine35.com
+                      et non à un cinéma en particulier. Pour toute question
+                      concernant les billets, les réservations ou les tarifs,
+                      merci de contacter directement l'établissement concerné.
+                    </p>
+                  </div>
+                  <form class="mt-5">
+                    <div class="form-group row">
+                      <label
+                        for="name"
+                        class="col-sm-3 col-form-label text-right"
+                      >
+                        Nom* :
+                      </label>
+                      <div class="col-sm-9">
+                        <input id="name" required class="form-control" />
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label
+                        for="firstName"
+                        class="col-sm-3 col-form-label text-right"
+                      >
+                        Prénom :
+                      </label>
+                      <div class="col-sm-9">
+                        <input id="firstName" class="form-control" />
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label
+                        for="email"
+                        class="col-sm-3 col-form-label text-right"
+                      >
+                        Addresse mail* :
+                      </label>
+                      <div class="col-sm-9">
+                        <input
+                          id="email"
+                          type="email"
+                          required
+                          class="form-control"
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label
+                        for="object"
+                        class="col-sm-3 col-form-label text-right"
+                      >
+                        Object :
+                      </label>
+                      <div class="col-sm-9">
+                        <input id="object" required class="form-control" />
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label
+                        for="message"
+                        class="col-sm-3 col-form-label text-right"
+                      >
+                        Message* :
+                      </label>
+                      <div class="col-sm-9">
+                        <textarea
+                          id="message"
+                          row="5"
+                          required
+                          class="form-control"
+                        ></textarea>
+                      </div>
+                    </div>
+                    <div class="text-center">
+                      <input
+                        type="submit"
+                        value="Envoyer"
+                        class="btn btn-primary c35-btn"
+                        style="text-transform: uppercase;"
+                      />
+                    </div>
+                  </form>
+                </div>
+                <div class="col-2"></div>
+              </div>
+            </div>
+          </div>
           <div class="c35-footer bg-dark mt-4 py-5">
             I'm the footer
           </div>
@@ -280,7 +406,7 @@
           movies: { collection: [] },
         },
         serverRendered: !0,
-        routePath: '/404',
+        routePath: '/contact',
       };
     </script>
     <script src="/_nuxt/a1343f09395e6f918e8e.js" defer></script>
