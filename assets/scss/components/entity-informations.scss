@@ -1,0 +1,20 @@
+.c35-entity-informations {
+   .c35-entity-informations-row {
+      padding-bottom: 2rem;
+
+      &:last-child {
+         padding-bottom: 0;
+      }
+   }
+
+   .c35-entity-informations-col-left {
+      font-weight: bold;
+   }
+}
+
+
+@include media-breakpoint-up(md) {
+   .c35-entity-informations-col-left {
+      text-align: right;
+   }
+}

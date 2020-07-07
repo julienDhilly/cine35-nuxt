@@ -4,12 +4,16 @@
       <div class="col-12 col-lg-8">
         <c35-movie-preview-list
           :movies="movies"
+          link-to-more-title="Voir tous les films à l'affiche"
+          link-to-more-name="movies-onrelease"
           limited
           title="A l'affiche"
           link-to-more="movies-onrelease"
         />
         <c35-movie-preview-list
           :movies="movies"
+          link-to-more-title="Voir tous les films à l'affiche"
+          link-to-more-name="movies-onrelease"
           limited
           title="Prochainement"
           class="mt-3"

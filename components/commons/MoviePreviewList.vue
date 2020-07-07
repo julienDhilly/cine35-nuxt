@@ -8,6 +8,7 @@
           </c35-strike>
         </div>
       </div>
+      <slot name="before-list" />
       <div class="row mx-n1">
         <template v-for="(movie, index) in movies">
           <div :key="movie.id" :class="responsiveClasses(index)">
@@ -15,38 +16,18 @@
           </div>
         </template>
       </div>
+      <template v-if="linkToMoreName">
+        <div class="text-center mt-3">
+          <nuxt-link
+            :to="{ name: linkToMoreName }"
+            class="btn btn-primary c35-btn"
+          >
+            {{ linkToMoreTitle }}
+          </nuxt-link>
+        </div>
+      </template>
     </div>
   </div>
-  <!-- <div
-          v-if="limited"
-          class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-2 py-1 px-1"
-          @click="onClick"
-        >
-          <div class="c35-more">
-            <div>
-              <span>Voir plus</span>
-              <svg
-                class="bi bi-arrow-right-short"
-                width="1em"
-                height="1em"
-                viewBox="0 0 16 16"
-                fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M8.146 4.646a.5.5 0 01.708 0l3 3a.5.5 0 010 .708l-3 3a.5.5 0 01-.708-.708L10.793 8 8.146 5.354a.5.5 0 010-.708z"
-                  clip-rule="evenodd"
-                />
-                <path
-                  fill-rule="evenodd"
-                  d="M4 8a.5.5 0 01.5-.5H11a.5.5 0 010 1H4.5A.5.5 0 014 8z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </div>
-          </div>
-        </div> -->
 </template>
 
 <script>
@@ -71,33 +52,38 @@ export default {
       required: false,
       default: null,
     },
-    linkToMore: {
+    linkToMoreName: {
       type: String,
       required: false,
       default: null,
     },
+    linkToMoreTitle: {
+      type: String,
+      required: false,
+      default: null,
+    },
+    nbPreviewPerLineLg: {
+      type: Number,
+      required: false,
+      default: 4,
+    },
   },
   methods: {
-    responsiveClasses(/*index*/) {
+    responsiveClasses(index) {
       const classes = [
         "col-6",
-        "col-sm-4",
+        "col-sm-3",
         "col-md-3",
-        "col-lg-3",
-        "col-xl-3",
+        `col-lg-${12 / this.nbPreviewPerLineLg}`,
+        `col-xl-${12 / this.nbPreviewPerLineLg}`,
         "py-1",
         "px-1",
       ]
-      // if (this.limited) {
-      //   if (index > 3) {
-      //     classes.push("d-none d-sm-block")
-      //   }
-      //   if (index > 4) {
-      //     classes.push("d-xl-none")
-      //   } else {
-      //     classes.push("d-xl-block")
-      //   }
-      // }
+      if (this.limited) {
+        if (index > 3) {
+          classes.push("d-none d-lg-block")
+        }
+      }
 
       return classes
     },

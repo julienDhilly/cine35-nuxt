@@ -1,6 +1,18 @@
 
+#logo {
+   background: theme-color("primary");
+   // padding-top: 10px;
+   // padding-bottom: 10px;
+   padding-left: 3rem;
+   padding-right: 3rem;
+   img {
+      height: 60px;
+   }
+}
+
 .c35-header {
-   padding: 1rem 1rem;
+   // padding: 1rem 1rem;
+   padding: 0;
 
    .navbar-nav .nav-link {
       color: #FFF;
@@ -11,6 +23,7 @@
       padding-right: 10px;
       margin-left: 5px;
       margin-right: 5px;
+      text-transform: uppercase;
    }
 
    .header-dropdown-active, .nuxt-link-exact-active {
@@ -33,4 +46,15 @@
    // .dropdown-toggle::after {
    //    display: none;
    // }
+}
+
+@include media-breakpoint-up(lg) {
+   .c35-header {
+      .navbar-nav .nav-link {
+         padding-left: 1rem;
+         padding-top: 1rem;
+         padding-right: 1rem;
+         padding-bottom: 1rem;
+      }
+   }
 }

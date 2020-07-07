@@ -1,13 +1,51 @@
-.cine35-movie-banner {
+.c35-movie-banner {
    position: relative;
-   height: 400px;
+   padding-top: 2rem;
+   padding-bottom: 2rem;
    -webkit-box-sizing: border-box;
    box-sizing: border-box;
    z-index: 1;
    background: #393939;
    overflow: hidden;
+
+   img {
+      width: 100%;
+   }
+
+   .c35-movie-title {
+      display: inline-block;
+      font-size: 2rem;
+      text-transform: uppercase;
+      background: theme-color("primary");
+      color: #FFF;
+      padding: 0.5rem 1rem;
+   }
+
+   .c35-movie-description {
+      color: #FFF;
+      font-family: "Rubik", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 1.5rem;
+      font-style: italic;
+   }
 }
 
+.c35-movie-tab-informations {
+   .c35-movie-tab-informations-row {
+      padding-bottom: 2rem;
+
+      &:last-child {
+         padding-bottom: 0;
+      }
+   }
+
+
+   .c35-movie-tab-informations-col-left {
+      text-align: right;
+      font-weight: bold;
+   }
+}
+
+/*
 .cine35-movie-banner .backdrop {
    position: absolute;
    height: 100%;
@@ -42,7 +80,6 @@
    min-height: 100%;
    padding-top: 150px;
    width: calc(100% - 460px);
-   /* min-height: 700px; */
    position: relative;
    -webkit-box-sizing: border-box;
    box-sizing: border-box;
@@ -148,3 +185,4 @@
    display: inline-block;
    vertical-align: middle;
 }
+*/

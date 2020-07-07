@@ -1,0 +1,42 @@
+.c35-cinema-preview {
+   display: block;
+   padding: 0;
+   cursor: pointer;
+   position: relative;
+   text-align: center;
+   background-size: cover;
+
+   .c35-cinema-preview-overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      padding: 10px;
+      background: rgba(3,3,3,.3);
+    }
+
+    .c35-cinema-preview-content {
+      position: relative;
+      padding: 5rem 1rem;
+    }
+
+    .c35-cinema-preview-title {
+       display: inline-block;
+       color: #FFF;
+       cursor: pointer;
+       background: theme-color("primary");
+       padding: 0.5rem 1rem;
+    }
+
+    .c35-cinema-preview-description {
+       position: absolute;
+       width: 100%;
+       left: 0;
+       right: 0;
+       padding-top: 10px;
+       color: #FFF;
+    }
+}

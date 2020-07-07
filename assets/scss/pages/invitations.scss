@@ -1,0 +1,18 @@
+#page-invitations {
+   .invitation-option {
+      border-top: 1px solid theme-color("primary");
+      padding-top: 1rem;
+      margin-bottom: 1.5rem;
+
+      &:first-child {
+         border-top: 0 none;
+      }
+   }
+
+   .invitation-option-title {
+      text-transform: uppercase;
+      color: theme-color("primary");
+      font-size: 2rem;
+      line-height: 2rem;
+   }
+}

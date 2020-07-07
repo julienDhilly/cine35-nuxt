@@ -1,0 +1,15 @@
+.c35-breadcrumb {
+   .breadcrumb {
+      background: transparent;
+      padding-bottom: 0;
+
+      .breadcrumb-item {
+         text-transform: uppercase;
+         color: theme-color("primary");
+
+         &.active {
+            color: theme-color("primary");
+         }
+      }
+   }
+}

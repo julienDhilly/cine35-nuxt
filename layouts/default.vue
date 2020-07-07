@@ -7,13 +7,15 @@
       </div>
     </div>
     <nuxt />
+    <c35-footer />
   </div>
 </template>
 
 <script>
 import C35Header from "~/components/partial/Header.vue"
+import C35Footer from "~/components/partial/Footer.vue"
 
 export default {
-  components: { C35Header },
+  components: { C35Header, C35Footer },
 }
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <nav v-if="crumbs.length" aria-label="breadcrumb">
+  <nav v-if="crumbs.length" class="c35-breadcrumb" aria-label="breadcrumb">
     <ol class="breadcrumb">
       <template v-for="(crumb, index) in crumbs">
         <li

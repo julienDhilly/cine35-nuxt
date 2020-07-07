@@ -1,0 +1,66 @@
+.c35-prog {
+   .c35-prog-poster {
+      display: none;
+      padding-top: 40px;
+      border-right: 1px solid theme-color("primary");
+      img {
+         width: 100%;
+      }
+   }
+   .c35-prog-content {
+      padding-bottom: 30px;
+   }
+
+   .c35-prog-movie-title {
+      text-transform: uppercase;
+      color: theme-color("primary");
+      font-size: 1.5rem;
+   }
+
+   .c35-prog-schedule {
+      display: flex;
+      padding-top: 20px;
+
+      .c35-prog-schedule-dates {
+         width: 25%;
+         min-width: 140px;
+         padding-right: 10px;
+      }
+
+      .c35-prog-schedule-hours-icons {
+         width: 75%;
+         padding-bottom: 20px;
+         border-bottom: 1px solid theme-color("primary");
+
+         .c35-prog-schedule-hours,
+         .c35-prog-schedule-icons {
+            width: 100%;
+         }
+
+         .c35-prog-schedule-icons {
+            & > div {
+               margin-right: 5px;
+               margin-left: 5px;
+            }
+         }
+      }
+   }
+}
+
+@include media-breakpoint-up(sm) {
+   .c35-prog {
+      .c35-prog-poster {
+         display: block;
+      }
+   }
+}
+
+
+@include media-breakpoint-up(lg) {
+   .c35-prog {
+      .c35-prog-schedule-hours,
+      .c35-prog-schedule-icons {
+         width: 50% !important;
+      }
+   }
+}

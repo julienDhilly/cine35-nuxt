@@ -1,0 +1,41 @@
+.c35-nav-tabs {
+   .nav-item {
+      margin-bottom: -2px;
+      flex-grow: 1;
+      padding: 0;
+      text-align: center;
+      margin-left: .5rem;
+      margin-right: .5rem;
+
+      &:first-child {
+         margin-left: 0;
+      }
+
+      &:last-child {
+         margin-right: 0;
+      }
+   }
+
+   .nav-link {
+      border-radius: 0;
+      text-align: center;
+      text-transform: uppercase;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      background: #f0f0f0;
+      border: 0 none;
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+   }
+
+   .nav-link.active, .nav-item.show .nav-link {
+      background: theme-color("primary");
+      color: #FFF;
+   }
+}
+
+.c35-tab-content {
+   padding: 3rem 2rem;
+   background: #f0f0f0;
+}

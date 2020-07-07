@@ -52,3 +52,17 @@
      }
    }
  }
+
+ @include media-breakpoint-up(lg) {
+   .cine35-movie-preview {
+      // max-height: 185.33px;
+      // overflow: hidden;
+   }
+ }
+
+ @include media-breakpoint-up(xl) {
+   .cine35-movie-preview {
+      // max-height: 224.58px;
+      // overflow: hidden;
+   }
+ }
