@@ -142,6 +142,22 @@ export default {
   },
   generate: {
     dir: "release",
+    routes: [
+       '/cinemas/1541',
+       '/cinemas/846',
+       '/cinemas/98746',
+       '/cinemas/181',
+       '/cinemas/451',
+       '/cinemas/2156',
+       '/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4',
+       '/movies/353680c1-5de6-44b9-8144-245cc74e56e1',
+       '/movies/744e0d9c-227a-4c60-91da-c79f2254025d',
+       '/movies/754d7aca-3922-447b-9e3b-469565260a5d',
+       '/movies/7e43f64d-23ba-470f-abd3-c840a1511463',
+       '/movies/a93f27dc-2de5-4a2f-b534-a5afb64f2305',
+       '/movies/cbfc0413-cb8d-4b91-a312-290505a735df',
+       '/movies/xJABSfO0P91AUEXcKzLj',
+    ]
     // see https://fr.nuxtjs.org/api/configuration-generate#routes
   },
 }
