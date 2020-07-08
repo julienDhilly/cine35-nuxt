@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="c35-header navbar sticky-top navbar-dark bg-dark navbar-expand-xl"
+    class="c35-header navbar sticky-top navbar-dark bg-dark navbar-expand-lg"
   >
     <nuxt-link id="logo" to="/" class="navbar-brand">
       <c35-logo />

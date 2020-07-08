@@ -1,8 +1,6 @@
 <template>
   <svg
     class="c35-logo"
-    width="122.5"
-    height="90"
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
