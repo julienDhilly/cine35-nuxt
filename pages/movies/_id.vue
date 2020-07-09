@@ -76,6 +76,16 @@
             aria-labelledby="informations-tab"
           >
             <c35-entity-informations :informations="informations" />
+            <div class="mt-5 d-flex justify-content-center">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/momDLiUwqzM"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
           </div>
           <div
             id="sessions"
@@ -83,7 +93,7 @@
             role="tabpanel"
             aria-labelledby="sessions-tab"
           >
-            Content Sessions
+            <c35-prog-list />
           </div>
           <div
             id="reviews"
@@ -91,7 +101,7 @@
             role="tabpanel"
             aria-labelledby="reviews-tab"
           >
-            Content Reviews
+            <c35-movie-critique />
           </div>
         </div>
       </div>
@@ -102,9 +112,16 @@
 <script>
 import C35Breadcrumb from "~/components/partial/Breadcrumb"
 import C35EntityInformations from "~/components/commons/EntityInformations"
+import C35ProgList from "~/components/partial/movie/ProgList"
+import C35MovieCritique from "~/components/partial/movie/MovieCritique"
 
 export default {
-  components: { C35Breadcrumb, C35EntityInformations },
+  components: {
+    C35Breadcrumb,
+    C35EntityInformations,
+    C35ProgList,
+    C35MovieCritique,
+  },
   data() {
     return {
       crumbs: [
@@ -116,7 +133,7 @@ export default {
           title: "Films",
         },
         {
-          title: "{{Movie name}}",
+          title: "La fureur de vaincre",
           active: true,
         },
       ],
