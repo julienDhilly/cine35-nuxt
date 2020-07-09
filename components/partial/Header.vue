@@ -44,7 +44,10 @@
             <a class="dropdown-item" href="#">Critiques</a>
           </div>
         </li>
-        <li class="nav-item">
+        <li
+          class="nav-item"
+          :class="{ 'header-dropdown-active': isActive('cinemas') }"
+        >
           <nuxt-link :to="{ name: 'cinemas' }" class="nav-link">
             Salles
           </nuxt-link>
