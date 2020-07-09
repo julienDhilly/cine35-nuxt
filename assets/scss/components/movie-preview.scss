@@ -1,4 +1,6 @@
-.cine35-movie-preview {
+.c35-movie-preview {
+   display: block;
+   text-decoration: none;
    padding: 0;
    cursor: pointer;
    position: relative;
@@ -9,7 +11,7 @@
      height: auto;
    }
 
-   .cine35-movie-preview-overlay {
+   .c35-movie-preview-overlay {
      position: absolute;
      top: 0;
      bottom: 0;
@@ -28,40 +30,62 @@
      );
    }
 
-   .cine35-movie-preview-overlay-text {
+   .c35-movie-preview-overlay-text {
      color: rgb(228, 228, 228);
      font-size: 12px;
      position: absolute;
      top: 50%;
-     left: 50%;
-     -webkit-transform: translate(-50%, -50%);
-     -ms-transform: translate(-50%, -50%);
-     transform: translate(-50%, -50%);
+     left: 0;
+     width: 100%;
+     -webkit-transform: translate(0, -50%);
+     -ms-transform: translate(0, -50%);
+     transform: translate(0, -50%);
      text-align: center;
 
      & > span {
+       display: block;
        color: white;
-       font-size: 18px;
-       font-weight: bold;
+       font-size: 14px;
+       background: theme-color("primary");
+       padding: .5rem 0;
+       margin: 0 1rem 1rem;
+       max-height: 108px;
+       overflow: hidden;
+     }
+
+     & > div {
+        font-style: italic;
      }
    }
 
    &:hover {
-     .cine35-movie-preview-overlay {
+     .c35-movie-preview-overlay {
        opacity: 1;
      }
    }
  }
 
+ .c35-box-office-score {
+   position: absolute;
+   right: 4px;
+   top: 4px;
+   padding: 1rem;
+   z-index:1;
+   background: theme-color("primary");
+   color: #FFF;
+   font-size: .9rem;
+   text-align: center;
+ }
+
  @include media-breakpoint-up(lg) {
-   .cine35-movie-preview {
+   .c35-movie-preview {
       // max-height: 185.33px;
       // overflow: hidden;
    }
  }
 
  @include media-breakpoint-up(xl) {
-   .cine35-movie-preview {
+   .c35-movie-preview {
       // max-height: 224.58px;
       // overflow: hidden;
    }

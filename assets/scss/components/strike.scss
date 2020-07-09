@@ -5,12 +5,17 @@
    white-space: nowrap;
    color: theme-color("primary");
    margin-right: -15px;
-   text-transform: uppercase;
+   margin-bottom: 0;
  }
 
  .strike > span {
    position: relative;
    display: inline-block;
+   font-style: normal;
+   font-weight: normal;
+   font-size: 34px;
+   line-height: 50px;
+   text-transform: uppercase;
  }
 
  .strike > span:before,

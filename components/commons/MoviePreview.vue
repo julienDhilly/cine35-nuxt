@@ -1,22 +1,37 @@
 <template>
   <!-- This is the component for movie preview -->
-  <div class="cine35-movie-preview" @click="onClick">
+  <a
+    class="c35-movie-preview"
+    :href="`/movies/${movie.id}`"
+    :title="movie.name"
+  >
     <img :src="`/previews/${movie.preview}`" alt="ALERTE" />
-    <div class="cine35-movie-preview-overlay">
-      <div class="cine35-movie-preview-overlay-text">
+    <div class="c35-movie-preview-overlay">
+      <div class="c35-movie-preview-overlay-text">
         <span>{{ movie.name }}</span>
         <div>
-          de
-          <template v-for="director in movie.directors">
-            {{ `${director.firstName} ${director.lastName}` }}
-          </template>
+          {{ directors }}<br />
+          {{ realeseYear }}<br />
+          {{ duration }}
         </div>
       </div>
     </div>
-  </div>
+  </a>
 </template>
 
 <script>
+function secondsToHms(d) {
+  d = Number(d)
+  const h = Math.floor(d / 3600)
+  const m = Math.floor((d % 3600) / 60)
+  //   const s = Math.floor((d % 3600) % 60)
+
+  const hDisplay = h > 0 ? `${h}h` : ""
+  const mDisplay = m > 0 ? (m < 10 ? `0${m}m` : `${m}m`) : ""
+  //  var sDisplay = s > 0 ? s + (s == 1 ? " second" : " seconds") : "";
+  return hDisplay + mDisplay
+}
+
 export default {
   name: "C35MoviePreview",
   props: {
@@ -25,9 +40,18 @@ export default {
       required: true,
     },
   },
-  methods: {
-    onClick() {
-      this.$router.push({ name: "movies-id", params: { id: this.movie.id } })
+  computed: {
+    directors() {
+      const directors = this.movie.directors.map(
+        ({ firstName, lastName }) => `${firstName} ${lastName}`
+      )
+      return directors.join(",")
+    },
+    realeseYear() {
+      return "2018"
+    },
+    duration() {
+      return secondsToHms(this.movie.duration)
     },
   },
 }

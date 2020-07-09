@@ -1,10 +1,20 @@
 
-.c35-responsive-ads {
+.c35-responsive-ads,
+.c35-responsive-ads-colomn{
    background: #cccccc;
-   width: 320px;
-   height: 100px;
    overflow-x: hidden;
 }
+
+.c35-responsive-ads {
+   width: 320px;
+   height: 100px;
+}
+
+.c35-responsive-ads-colomn{
+   width: 300px;
+   height: 600px;
+}
+
 
 // Extra small devices (portrait phones, less than 576px)
 // @media (max-width: 575.98px) { ... }
