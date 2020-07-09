@@ -8,12 +8,11 @@
           link-to-more-name="movies-onrelease"
           limited
           title="À l'affiche"
-          link-to-more="movies-onrelease"
         />
         <c35-movie-preview-list
           :movies="movies"
-          link-to-more-title="Voir tous les films à l'affiche"
-          link-to-more-name="movies-onrelease"
+          link-to-more-title="Voir toutes les prochaines sorties"
+          link-to-more-name="movies-comingsoon"
           limited
           title="Prochainement"
           class="mt-3"

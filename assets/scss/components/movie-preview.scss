@@ -4,6 +4,7 @@
    padding: 0;
    cursor: pointer;
    position: relative;
+   overflow: hidden;
 
    img {
      display: block;
@@ -63,6 +64,19 @@
        opacity: 1;
      }
    }
+ }
+
+ .c35-movie-list-date-section {
+    display: inline-block;
+    background: #FFF;
+    border-radius: 15px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    padding: .5rem;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
  }
 
  .c35-box-office-score {

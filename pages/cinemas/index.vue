@@ -23,6 +23,7 @@
           </div>
         </template>
       </div>
+      <c35-pagination class="mt-3" />
     </div>
   </div>
 </template>
@@ -31,12 +32,14 @@
 import C35Breadcrumb from "~/components/partial/Breadcrumb"
 import C35Strike from "~/components/commons/Strike"
 import C35CinemaPreview from "~/components/commons/CinemaPreview"
+import C35Pagination from "~/components/commons/Pagination"
 
 export default {
   components: {
     C35Breadcrumb,
     C35Strike,
     C35CinemaPreview,
+    C35Pagination,
   },
   data() {
     return {

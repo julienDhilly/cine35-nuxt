@@ -6,34 +6,43 @@
    color: theme-color("primary");
    margin-right: -15px;
    margin-bottom: 0;
+
+   & > span {
+      position: relative;
+      display: inline-block;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 50px;
+      text-transform: uppercase;
+   }
+
+   & > span:before,
+   & > span:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 9999px;
+      height: 5px;
+      background: theme-color("primary");
+   }
+
+   & > span:before {
+      right: 100%;
+      margin-right: 15px;
+   }
+
+   & > span:after {
+      left: 100%;
+      margin-left: 15px;
+   }
  }
 
- .strike > span {
-   position: relative;
-   display: inline-block;
-   font-style: normal;
-   font-weight: normal;
-   font-size: 34px;
-   line-height: 50px;
-   text-transform: uppercase;
- }
 
- .strike > span:before,
- .strike > span:after {
-   content: "";
-   position: absolute;
-   top: 50%;
-   width: 9999px;
-   height: 5px;
-   background: theme-color("primary");
- }
-
- .strike > span:before {
-   right: 100%;
-   margin-right: 15px;
- }
-
- .strike > span:after {
-   left: 100%;
-   margin-left: 15px;
- }
+@include media-breakpoint-up(sm) {
+   .strike {
+      & > span {
+         font-size: 34px;
+      }
+   }
+}
