@@ -18,7 +18,7 @@ export default {
             name: "Bluebird",
             preview: "bluebird.jpg",
             releaseYear: 2010,
-            pegi: 12,
+            pegi: 3,
             additional: "",
           },
           schedules: [
@@ -74,7 +74,7 @@ export default {
             name: "Ballong",
             preview: "ballon.jpg",
             releaseYear: 2010,
-            pegi: 12,
+            pegi: 6,
             additional: "",
           },
           schedules: [

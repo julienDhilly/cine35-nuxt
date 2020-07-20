@@ -29,6 +29,7 @@ $theme-colors: (
 @import "~bootstrap/scss/bootstrap.scss";
 @import "./pages/home.scss";
 @import "./pages/movie.scss";
+@import "./pages/news.scss";
 @import "./pages/invitations.scss";
 @import "./components/breadcrumb.scss";
 @import "./components/strike.scss";
@@ -95,6 +96,26 @@ body {
      color: #FFF;
      font-size: 4rem;
   }
+}
+
+hr {
+   max-width: 500px;
+   margin-left: auto;
+   margin-right: auto;
+   background: theme-color("primary");
+   margin-top: 2rem;
+   margin-bottom: 2rem;
+}
+
+.c35-block-title {
+   display: block;
+   background: theme-color("primary");
+   font-size: 24px;
+   font-family: 'Oswald', "Rubik", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+   padding: .5rem;
+   color: #FFF;
+   text-transform: uppercase;
+   text-align: center;
 }
 
 @include media-breakpoint-up(sm) {

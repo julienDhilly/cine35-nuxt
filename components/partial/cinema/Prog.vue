@@ -17,12 +17,20 @@
           {{ prog.movie.name }}
         </a>
         <span> ({{ prog.movie.releaseYear }}) </span>
+        <template v-if="prog.movie.pegi">
+          <img
+            :src="`/icons/picto_age_${prog.movie.pegi}_100.png`"
+            width="40"
+            :alt="`Pegi ${prog.movie.pegi}`"
+          />
+        </template>
       </div>
       <div class="c35-prog-schedules">
         <c35-schedule
           v-for="(schedule, index) in prog.schedules"
           :key="index"
           :schedule="schedule"
+          class="ml-2"
         />
       </div>
     </div>

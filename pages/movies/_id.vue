@@ -31,7 +31,7 @@
           <li class="nav-item">
             <a
               id="informations-tab"
-              class="nav-link active"
+              class="nav-link"
               data-toggle="tab"
               href="#informations"
               role="tab"
@@ -44,14 +44,14 @@
           <li class="nav-item">
             <a
               id="sessions-tab"
-              class="nav-link"
+              class="nav-link active"
               data-toggle="tab"
               href="#sessions"
               role="tab"
               aria-controls="sessions"
               aria-selected="false"
             >
-              Scéance
+              Séance
             </a>
           </li>
           <li class="nav-item">
@@ -71,7 +71,7 @@
         <div class="tab-content c35-tab-content c35-movie-tab-informations">
           <div
             id="informations"
-            class="tab-pane fade show active"
+            class="tab-pane fade"
             role="tabpanel"
             aria-labelledby="informations-tab"
           >
@@ -89,7 +89,7 @@
           </div>
           <div
             id="sessions"
-            class="tab-pane fade"
+            class="tab-pane fade show active"
             role="tabpanel"
             aria-labelledby="sessions-tab"
           >

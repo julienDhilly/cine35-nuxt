@@ -2,7 +2,9 @@
   <div class="row c35-prog">
     <div class="c35-prog-content col-12">
       <div class="c35-prog-movie-title">
-        {{ prog.cinema.name }}
+        <a href="/cinemas/1541" title="Voir CGR La Mézière">
+          {{ prog.cinema.name }}
+        </a>
       </div>
       <div class="c35-prog-schedules">
         <c35-schedule

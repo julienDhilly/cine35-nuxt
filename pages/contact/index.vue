@@ -13,9 +13,9 @@
           </c35-strike>
         </div>
       </div>
-      <div class="row">
-        <div class="col-2"></div>
-        <div class="col-8">
+      <div class="row mt-4">
+        <div class="d-none d-md-block col-md-2"></div>
+        <div class="col-12 col-md-8">
           <div class="text-center">
             <p>
               Vous souhaitez faire parvenir un message à l'équipe du site ?<br />
@@ -32,42 +32,57 @@
 
           <form class="mt-5">
             <div class="form-group row">
-              <label for="name" class="col-sm-3 col-form-label text-right">
+              <label
+                for="name"
+                class="col-4 col-md-3 col-form-label text-right"
+              >
                 Nom* :
               </label>
-              <div class="col-sm-9">
+              <div class="col-8 col-md-9">
                 <input id="name" type="text" class="form-control" required />
               </div>
             </div>
             <div class="form-group row">
-              <label for="firstName" class="col-sm-3 col-form-label text-right">
+              <label
+                for="firstName"
+                class="col-4 col-md-3 col-form-label text-right"
+              >
                 Prénom :
               </label>
-              <div class="col-sm-9">
+              <div class="col-8 col-md-9">
                 <input id="firstName" type="text" class="form-control" />
               </div>
             </div>
             <div class="form-group row">
-              <label for="email" class="col-sm-3 col-form-label text-right">
+              <label
+                for="email"
+                class="col-4 col-md-3 col-form-label text-right"
+              >
                 Addresse mail* :
               </label>
-              <div class="col-sm-9">
+              <div class="col-8 col-md-9">
                 <input id="email" type="email" class="form-control" required />
               </div>
             </div>
             <div class="form-group row">
-              <label for="object" class="col-sm-3 col-form-label text-right">
+              <label
+                for="object"
+                class="col-4 col-md-3 col-form-label text-right"
+              >
                 Object :
               </label>
-              <div class="col-sm-9">
+              <div class="col-8 col-md-9">
                 <input id="object" type="text" class="form-control" required />
               </div>
             </div>
             <div class="form-group row">
-              <label for="message" class="col-sm-3 col-form-label text-right">
+              <label
+                for="message"
+                class="col-4 col-md-3 col-form-label text-right"
+              >
                 Message* :
               </label>
-              <div class="col-sm-9">
+              <div class="col-8 col-md-9">
                 <textarea id="message" class="form-control" row="5" required />
               </div>
             </div>
@@ -81,7 +96,7 @@
             </div>
           </form>
         </div>
-        <div class="col-2"></div>
+        <div class="d-none d-md-block col-md-2"></div>
       </div>
     </div>
   </div>

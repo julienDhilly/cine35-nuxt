@@ -157,6 +157,8 @@ export default {
        '/movies/a93f27dc-2de5-4a2f-b534-a5afb64f2305',
        '/movies/cbfc0413-cb8d-4b91-a312-290505a735df',
        '/movies/xJABSfO0P91AUEXcKzLj',
+       '/news/123',
+       '/movies/critiques/123'
     ]
     // see https://fr.nuxtjs.org/api/configuration-generate#routes
   },

@@ -53,7 +53,7 @@
       padding-right: 1rem;
 
       svg {
-         height: 90px;
+         height: 70px;
          // width: 122.5;
       }
    }
@@ -81,8 +81,8 @@
 
 @include media-breakpoint-up(xl) {
    #logo {
-      padding-left: 3rem;
-      padding-right: 3rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
    }
 
    .c35-header {

@@ -10,37 +10,46 @@
         <div class="row mx-n1">
           <div class="col-12 pl-1">
             <c35-strike>
-              Actualité
+              Critiques
             </c35-strike>
           </div>
         </div>
       </div>
 
       <div class="news-list mt-4">
+        <div class="text-center mb-4">
+          <a
+            href="/movies/critiques/list"
+            title="Voir la liste des critiques"
+            class="btn btn-primary c35-btn"
+            style="padding-left: 2rem; padding-right: 2rem; font-size: 1.2rem;"
+          >
+            Voir la liste des critiques
+          </a>
+        </div>
         <div class="news row mx-auto">
           <div class="col-12 col-md-6">
-            <a href="/news/123" title="Lire la suite">
+            <a href="/movies/critiques/123" title="Lire la critique">
               <img
-                src="/images/news/all_inclusive.jpg"
-                alt="All Inclusive"
+                src="/images/critiques/le_dahlia_noir.jpg"
+                alt="Le dahlia noir"
                 style="width: 100%;"
               />
             </a>
           </div>
           <div class="col-12 col-md-6 mt-2 mt-md-0">
             <div class="c35-block-title" style="max-width: 280px;">
-              avant-première
+              LE DAHLIA NOIR
             </div>
             <div class="h4 text-primary my-3">
-              <a href="/news/123" title="Lire la suite">
-                All Inclusive
+              <a href="/movies/critiques/123" title="Lire la critique">
+                par Martin G.
               </a>
             </div>
             <div class="font-italic">
-              Avant-première du film All Inclusive au CGR La Mézière. Mardi 12
-              février à 21h30.
-              <a href="/news/123" title="Lire la suite">
-                Lire la suite
+              Un désastre d’1h45”.
+              <a href="/movies/critiques/123" title="Lire la critique">
+                Lire la critique
               </a>
             </div>
           </div>
@@ -50,28 +59,27 @@
 
         <div class="news row mx-auto">
           <div class="col-12 col-md-6">
-            <a href="/news/123" title="Lire la suite">
+            <a href="/movies/critiques/123" title="Lire la critique">
               <img
-                src="/images/news/bon_dieu.jpg"
-                alt="All Inclusive"
+                src="/images/critiques/un_apresmidi_de_chien.png"
+                alt="Un après-midi de chien"
                 style="width: 100%;"
               />
             </a>
           </div>
           <div class="col-12 col-md-6 mt-2 mt-md-0">
             <div class="c35-block-title" style="max-width: 280px;">
-              équipe de film
+              Un après-midi de chien
             </div>
             <div class="h4 text-primary my-3">
-              <a href="/news/123" title="Lire la suite">
-                Qu’est-ce qu’on a fait au bon dieu ?
+              <a href="/movies/critiques/123" title="Lire la critique">
+                par Laura T.
               </a>
             </div>
             <div class="font-italic">
-              L’équipe de Qu’est-ce qu’on a fait au bon dieu ? présente à
-              Vern-sur-Seiche.
-              <a href="/news/123" title="Lire la suite">
-                Lire la suite
+              “Le chef d’oeuvre de son auteur”.
+              <a href="/movies/critiques/123" title="Lire la critique">
+                Lire la critique
               </a>
             </div>
           </div>
@@ -81,32 +89,34 @@
 
         <div class="news row mx-auto">
           <div class="col-12 col-md-6">
-            <a href="/news/123" title="Lire la suite">
+            <a href="/movies/critiques/123" title="Lire la critique">
               <img
-                src="/images/news/all_inclusive.jpg"
-                alt="All Inclusive"
+                src="/images/critiques/les_tortues_ninja.jpg"
+                alt="Les tortues ninja"
                 style="width: 100%;"
               />
             </a>
           </div>
           <div class="col-12 col-md-6 mt-2 mt-md-0">
             <div class="c35-block-title" style="max-width: 280px;">
-              évenement
+              Les tortues ninja
             </div>
             <div class="h4 text-primary my-3">
-              <a href="/news/123" title="Lire la suite">
-                Festival Court Métrange
+              <a href="/movies/critiques/123" title="Lire la critique">
+                par John G.
               </a>
             </div>
             <div class="font-italic">
-              Festival Court Métrange à Rennes du 25 mars au 14 avril 2019.
-              <a href="/news/123" title="Lire la suite">
-                Lire la suite
+              Vous reprendrez bien de la pizza ?
+              <a href="/movies/critiques/123" title="Lire la critique">
+                Lire la critique
               </a>
             </div>
           </div>
         </div>
       </div>
+
+      <c35-pagination class="mt-4" />
     </div>
   </div>
 </template>
@@ -114,12 +124,14 @@
 <script>
 import C35Strike from "~/components/commons/Strike"
 import C35Breadcrumb from "~/components/partial/Breadcrumb"
+import C35Pagination from "~/components/commons/Pagination"
 
 export default {
-  name: "C35SearchResult",
+  name: "C35Critiques",
   components: {
     C35Strike,
     C35Breadcrumb,
+    C35Pagination,
   },
   data() {
     return {
@@ -129,7 +141,7 @@ export default {
           title: "Accueil",
         },
         {
-          title: "Actualités",
+          title: "Critiques",
           active: true,
         },
       ],

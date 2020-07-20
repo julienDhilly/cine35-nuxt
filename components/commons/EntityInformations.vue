@@ -1,7 +1,7 @@
 <template>
   <div class="c35-entity-informations">
     <template v-for="(information, index) in informations">
-      <div :key="index" class="row c35-entity-informations-row">
+      <div :key="index" class="row c35-entity-informations-row" :style="style">
         <div class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left">
           {{ information.title }} :
         </div>
@@ -20,6 +20,19 @@ export default {
     informations: {
       type: Array,
       required: true,
+    },
+    space: {
+      type: String,
+      required: false,
+      default: null,
+    },
+  },
+  computed: {
+    style() {
+      if (this.space) {
+        return { paddingBottom: this.space }
+      }
+      return {}
     },
   },
 }

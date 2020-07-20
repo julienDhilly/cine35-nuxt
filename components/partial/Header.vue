@@ -41,7 +41,9 @@
             <nuxt-link to="/movies/comingsoon" class="dropdown-item">
               Prochainement
             </nuxt-link>
-            <a class="dropdown-item" href="#">Critiques</a>
+            <nuxt-link to="/movies/critiques" class="dropdown-item">
+              Critiques
+            </nuxt-link>
           </div>
         </li>
         <li
@@ -52,7 +54,10 @@
             Salles
           </nuxt-link>
         </li>
-        <li class="nav-item">
+        <li
+          class="nav-item"
+          :class="{ 'header-dropdown-active': isActive('news') }"
+        >
           <nuxt-link :to="{ name: 'news' }" class="nav-link">
             actualités
           </nuxt-link>
@@ -78,6 +83,23 @@
           </nuxt-link>
         </li>
       </ul>
+      <form
+        class="form-inline mr-2 my-2 my-lg-0 ml-2 ml-lg-0"
+        action="/results"
+      >
+        <input
+          name="search"
+          type="text"
+          class="form-control"
+          placeholder="Rechercher..."
+          aria-label="Rechercher"
+        />
+        <div class="input-group-append">
+          <button class="btn btn-primary" type="submit">
+            <img src="/icons/picto_search_white_100.png" width="20" />
+          </button>
+        </div>
+      </form>
     </div>
   </nav>
 </template>
