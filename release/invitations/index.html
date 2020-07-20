@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html data-n-head-ssr>
   <head>
-    <title>cine35-nuxt</title>
+    <title>
+      Cine35.com - Tous les films, Toutes les salles de cinéma d'Ille-et-Vilaine
+    </title>
     <meta data-n-head="ssr" charset="utf-8" />
     <meta
       data-n-head="ssr"
@@ -12,7 +14,7 @@
       data-n-head="ssr"
       data-hid="description"
       name="description"
-      content="Cine35 website"
+      content="Programmes des cinémas en Ille-et-Vilaine (Département 35)"
     />
     <link
       data-n-head="ssr"
@@ -23,12 +25,12 @@
     <link
       data-n-head="ssr"
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
     />
     <link
       data-n-head="ssr"
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap"
     />
     <link
       data-n-head="ssr"
@@ -59,14 +61,14 @@
       src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"
     ></script>
     <script data-n-head="ssr" src="/ads.js"></script>
-    <link rel="preload" href="/_nuxt/a1343f09395e6f918e8e.js" as="script" />
-    <link rel="preload" href="/_nuxt/83bde4bf99680867a778.js" as="script" />
+    <link rel="preload" href="/_nuxt/5dd7950e092c28f1eb58.js" as="script" />
+    <link rel="preload" href="/_nuxt/870345e323bfc84cec54.js" as="script" />
     <link rel="preload" href="/_nuxt/5982dc8608b6293bd7d9.css" as="style" />
-    <link rel="preload" href="/_nuxt/a6a7691d3c7f65f37f80.js" as="script" />
-    <link rel="preload" href="/_nuxt/6c2a26fc3a7642d9e012.css" as="style" />
-    <link rel="preload" href="/_nuxt/576079392b666c01ded6.js" as="script" />
+    <link rel="preload" href="/_nuxt/33af398403db843cdc23.js" as="script" />
+    <link rel="preload" href="/_nuxt/b3087d3771d1854d9db4.css" as="style" />
+    <link rel="preload" href="/_nuxt/b5d43530e27a29c5f56c.js" as="script" />
     <link rel="stylesheet" href="/_nuxt/5982dc8608b6293bd7d9.css" />
-    <link rel="stylesheet" href="/_nuxt/6c2a26fc3a7642d9e012.css" />
+    <link rel="stylesheet" href="/_nuxt/b3087d3771d1854d9db4.css" />
   </head>
   <body>
     <div data-server-rendered="true" id="__nuxt">
@@ -74,12 +76,10 @@
       <div id="__layout">
         <div>
           <nav
-            class="c35-header navbar sticky-top navbar-dark bg-dark navbar-expand-xl"
+            class="c35-header navbar sticky-top navbar-dark bg-dark navbar-expand-lg"
           >
             <a href="/" id="logo" class="navbar-brand active"
               ><svg
-                width="122.5"
-                height="90"
                 version="1.1"
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -220,7 +220,9 @@
                     <a href="/movies/comingsoon" class="dropdown-item">
                       Prochainement
                     </a>
-                    <a href="#" class="dropdown-item">Critiques</a>
+                    <a href="/movies/critiques" class="dropdown-item">
+                      Critiques
+                    </a>
                   </div>
                 </li>
                 <li class="nav-item">
@@ -257,911 +259,948 @@
                   </a>
                 </li>
               </ul>
+              <form
+                action="/results"
+                class="form-inline mr-2 my-2 my-lg-0 ml-2 ml-lg-0"
+              >
+                <input
+                  name="search"
+                  placeholder="Rechercher..."
+                  aria-label="Rechercher"
+                  class="form-control"
+                />
+                <div class="input-group-append">
+                  <button type="submit" class="btn btn-primary">
+                    <img src="/icons/picto_search_white_100.png" width="20" />
+                  </button>
+                </div>
+              </form>
             </div>
           </nav>
-          <div class="container py-4">
-            <div class="row justify-content-center">
-              <div id="google-ads-test-banner" class="c35-responsive-ads"></div>
+          <div class="pub-container">
+            <div class="container py-4">
+              <div class="row justify-content-center">
+                <div
+                  id="google-ads-test-banner"
+                  class="c35-responsive-ads"
+                ></div>
+              </div>
             </div>
           </div>
-          <div id="page-invitations" class="container">
-            <div class="row">
-              <div class="col-12">
-                <nav aria-label="breadcrumb" class="c35-breadcrumb">
-                  <ol class="breadcrumb">
-                    <li aria-current="page" class="breadcrumb-item">
-                      <a href="/" class="active">
-                        Accueil
-                      </a>
-                    </li>
-                    <li aria-current="page" class="breadcrumb-item active">
-                      Invitations
-                    </li>
-                  </ol>
-                </nav>
-              </div>
-            </div>
-            <div class="c35-section">
+          <div id="main-container">
+            <div id="page-invitations" class="container">
               <div class="row">
                 <div class="col-12">
-                  <h2 class="strike">
-                    <span>
-                      INVITATIONS
-                    </span>
-                  </h2>
+                  <nav aria-label="breadcrumb" class="c35-breadcrumb">
+                    <ol class="breadcrumb">
+                      <li aria-current="page" class="breadcrumb-item">
+                        <a href="/" class="active">
+                          Accueil
+                        </a>
+                      </li>
+                      <li aria-current="page" class="breadcrumb-item active">
+                        Invitations
+                      </li>
+                    </ol>
+                  </nav>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-2"></div>
-                <div class="col-8">
-                  <div class="text-center">
-                    <p>
-                      <strong>
-                        Cine35.com et ses partenaires vous invitent au cinéma !
-                      </strong>
-                    </p>
-                    <br />
-                    <p>
-                      ATTENTION : Vous allez écrire au webmaster de Cine35.com
-                      et non à un cinéma en particulier. Pour toute question
-                      concernant les billets, les réservations ou les tarifs,
-                      merci de contacter directement l'établissement concerné.
-                    </p>
-                    <br />
-                    <p>
-                      <strong>
-                        Informations importantes :
-                      </strong>
-                      <br />
-                      Vous pouvez demander des invitations pour plusieurs
-                      films.<br />
-                      Il est inutile de faire des demandes multiples avec le
-                      même nom pour une même séance, vous n'augmentez pas vos
-                      chances, seule la première validation est prise en compte.
-                    </p>
-                    <br />
-                    <br />
-                    <p>
-                      <strong>
-                        Cochez la séance qui vous intéresse :
-                      </strong>
-                    </p>
+              <div class="c35-section">
+                <div class="row">
+                  <div class="col-12">
+                    <h2 class="strike">
+                      <span>
+                        INVITATIONS
+                      </span>
+                    </h2>
                   </div>
-                  <form>
-                    <div class="invitation-option">
-                      <div class="form-check invitation-option-title">
-                        <input
-                          id="input1"
-                          type="radio"
-                          name="1548"
-                          value="1548"
-                          checked
-                          class="form-check-input"
-                        />
-                        <label for="input1" class="form-check-label">
-                          SCOTT PILGRIM (2010)
-                        </label>
-                      </div>
-                      <div class="row mt-3">
-                        <div class="col-9">
-                          <div>
-                            <div class="row mt-2">
-                              <div class="col-4 text-right">
-                                Réalisateur :
-                              </div>
-                              <div class="col-8">
-                                Edgar Wright
-                              </div>
-                            </div>
-                            <div class="row mt-2">
-                              <div class="col-4 text-right">
-                                Casting :
-                              </div>
-                              <div class="col-8">
-                                Michael Cera, Mary Elizabeth Winstead, Ellen
-                                Wong
-                              </div>
-                            </div>
-                            <div class="row mt-2">
-                              <div class="col-4 text-right">
-                                Pays d'origine :
-                              </div>
-                              <div class="col-8">
-                                Etats-Unis
-                              </div>
-                            </div>
-                            <div class="row mt-2">
-                              <div class="col-4 text-right">
-                                Durée :
-                              </div>
-                              <div class="col-8">
-                                1h52
-                              </div>
-                            </div>
-                            <div class="row mt-2">
-                              <div class="col-4 text-right">
-                                <strong>
-                                  CGR CINEMAS 10/06/2020
-                                </strong>
-                              </div>
-                              <div class="col-8">
-                                <strong>
-                                  La Mézière 19:30 et 22h15
-                                </strong>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-3">
-                          <img
-                            src="/previews/eva_et_moi.jpg"
-                            alt="ALERTE"
-                            style="width: 100%;"
-                          />
-                        </div>
-                      </div>
+                </div>
+                <div class="row">
+                  <div class="col-2"></div>
+                  <div class="col-8">
+                    <div class="text-center">
+                      <p>
+                        <strong>
+                          Cine35.com et ses partenaires vous invitent au cinéma
+                          !
+                        </strong>
+                      </p>
+                      <br />
+                      <p>
+                        ATTENTION : Vous allez écrire au webmaster de Cine35.com
+                        et non à un cinéma en particulier. Pour toute question
+                        concernant les billets, les réservations ou les tarifs,
+                        merci de contacter directement l'établissement concerné.
+                      </p>
+                      <br />
+                      <p>
+                        <strong>
+                          Informations importantes :
+                        </strong>
+                        <br />
+                        Vous pouvez demander des invitations pour plusieurs
+                        films.<br />
+                        Il est inutile de faire des demandes multiples avec le
+                        même nom pour une même séance, vous n'augmentez pas vos
+                        chances, seule la première validation est prise en
+                        compte.
+                      </p>
+                      <br />
+                      <br />
+                      <p>
+                        <strong>
+                          Cochez la séance qui vous intéresse :
+                        </strong>
+                      </p>
                     </div>
-                    <div class="invitation-option">
-                      <div class="form-check invitation-option-title">
-                        <input
-                          id="input1"
-                          type="radio"
-                          name="1548"
-                          value="1548"
-                          checked
-                          class="form-check-input"
-                        />
-                        <label for="input1" class="form-check-label">
-                          SCOTT PILGRIM (2010)
-                        </label>
-                      </div>
-                      <div class="row mt-3">
-                        <div class="col-9">
-                          <div>
-                            <div class="row mt-2">
-                              <div class="col-4 text-right">
-                                Réalisateur :
-                              </div>
-                              <div class="col-8">
-                                Edgar Wright
-                              </div>
-                            </div>
-                            <div class="row mt-2">
-                              <div class="col-4 text-right">
-                                Casting :
-                              </div>
-                              <div class="col-8">
-                                Michael Cera, Mary Elizabeth Winstead, Ellen
-                                Wong
-                              </div>
-                            </div>
-                            <div class="row mt-2">
-                              <div class="col-4 text-right">
-                                Pays d'origine :
-                              </div>
-                              <div class="col-8">
-                                Etats-Unis
-                              </div>
-                            </div>
-                            <div class="row mt-2">
-                              <div class="col-4 text-right">
-                                Durée :
-                              </div>
-                              <div class="col-8">
-                                1h52
-                              </div>
-                            </div>
-                            <div class="row mt-2">
-                              <div class="col-4 text-right">
-                                <strong>
-                                  CGR CINEMAS 10/06/2020
-                                </strong>
-                              </div>
-                              <div class="col-8">
-                                <strong>
-                                  La Mézière 19:30 et 22h15
-                                </strong>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-3">
-                          <img
-                            src="/previews/eva_et_moi.jpg"
-                            alt="ALERTE"
-                            style="width: 100%;"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="invitation-option">
-                      <div class="form-check invitation-option-title">
-                        <input
-                          id="input1"
-                          type="radio"
-                          name="1548"
-                          value="1548"
-                          checked
-                          class="form-check-input"
-                        />
-                        <label for="input1" class="form-check-label">
-                          SCOTT PILGRIM (2010)
-                        </label>
-                      </div>
-                      <div class="row mt-3">
-                        <div class="col-9">
-                          <div>
-                            <div class="row mt-2">
-                              <div class="col-4 text-right">
-                                Réalisateur :
-                              </div>
-                              <div class="col-8">
-                                Edgar Wright
-                              </div>
-                            </div>
-                            <div class="row mt-2">
-                              <div class="col-4 text-right">
-                                Casting :
-                              </div>
-                              <div class="col-8">
-                                Michael Cera, Mary Elizabeth Winstead, Ellen
-                                Wong
-                              </div>
-                            </div>
-                            <div class="row mt-2">
-                              <div class="col-4 text-right">
-                                Pays d'origine :
-                              </div>
-                              <div class="col-8">
-                                Etats-Unis
-                              </div>
-                            </div>
-                            <div class="row mt-2">
-                              <div class="col-4 text-right">
-                                Durée :
-                              </div>
-                              <div class="col-8">
-                                1h52
-                              </div>
-                            </div>
-                            <div class="row mt-2">
-                              <div class="col-4 text-right">
-                                <strong>
-                                  CGR CINEMAS 10/06/2020
-                                </strong>
-                              </div>
-                              <div class="col-8">
-                                <strong>
-                                  La Mézière 19:30 et 22h15
-                                </strong>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-3">
-                          <img
-                            src="/previews/eva_et_moi.jpg"
-                            alt="ALERTE"
-                            style="width: 100%;"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="invitation-option">
-                      <div class="form-check invitation-option-title">
-                        <input
-                          id="input1"
-                          type="radio"
-                          name="1548"
-                          value="1548"
-                          checked
-                          class="form-check-input"
-                        />
-                        <label for="input1" class="form-check-label">
-                          SCOTT PILGRIM (2010)
-                        </label>
-                      </div>
-                      <div class="row mt-3">
-                        <div class="col-9">
-                          <div>
-                            <div class="row mt-2">
-                              <div class="col-4 text-right">
-                                Réalisateur :
-                              </div>
-                              <div class="col-8">
-                                Edgar Wright
-                              </div>
-                            </div>
-                            <div class="row mt-2">
-                              <div class="col-4 text-right">
-                                Casting :
-                              </div>
-                              <div class="col-8">
-                                Michael Cera, Mary Elizabeth Winstead, Ellen
-                                Wong
-                              </div>
-                            </div>
-                            <div class="row mt-2">
-                              <div class="col-4 text-right">
-                                Pays d'origine :
-                              </div>
-                              <div class="col-8">
-                                Etats-Unis
-                              </div>
-                            </div>
-                            <div class="row mt-2">
-                              <div class="col-4 text-right">
-                                Durée :
-                              </div>
-                              <div class="col-8">
-                                1h52
-                              </div>
-                            </div>
-                            <div class="row mt-2">
-                              <div class="col-4 text-right">
-                                <strong>
-                                  CGR CINEMAS 10/06/2020
-                                </strong>
-                              </div>
-                              <div class="col-8">
-                                <strong>
-                                  La Mézière 19:30 et 22h15
-                                </strong>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-3">
-                          <img
-                            src="/previews/eva_et_moi.jpg"
-                            alt="ALERTE"
-                            style="width: 100%;"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="mt-5">
-                      <div class="form-group row">
-                        <label
-                          for="inputCivility"
-                          class="col-sm-3 col-form-label text-right"
-                        >
-                          Civilité* :
-                        </label>
-                        <div class="col-sm-9">
-                          <select
-                            id="inputCivility"
-                            required
-                            class="form-control"
-                            ><option selected>
-                              Monsieur
-                            </option>
-                            <option>
-                              Madame
-                            </option></select
-                          >
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label
-                          for="name"
-                          class="col-sm-3 col-form-label text-right"
-                        >
-                          Nom* :
-                        </label>
-                        <div class="col-sm-9">
-                          <input id="name" required class="form-control" />
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label
-                          for="firstName"
-                          class="col-sm-3 col-form-label text-right"
-                        >
-                          Prénom* :
-                        </label>
-                        <div class="col-sm-9">
-                          <input id="firstName" required class="form-control" />
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label class="col-sm-3 col-form-label text-right">
-                          Né(e) le* :
-                        </label>
-                        <div class="col-sm-9">
-                          <div class="form-check form-check-inline">
-                            <select
-                              id="inputBirthDay"
-                              required
-                              class="form-control"
-                              ><option>
-                                1 </option
-                              ><option>
-                                2 </option
-                              ><option>
-                                3 </option
-                              ><option>
-                                4 </option
-                              ><option>
-                                5 </option
-                              ><option>
-                                6 </option
-                              ><option>
-                                7 </option
-                              ><option>
-                                8 </option
-                              ><option>
-                                9 </option
-                              ><option>
-                                10 </option
-                              ><option>
-                                11 </option
-                              ><option>
-                                12 </option
-                              ><option>
-                                13 </option
-                              ><option>
-                                14 </option
-                              ><option>
-                                15 </option
-                              ><option>
-                                16 </option
-                              ><option>
-                                17 </option
-                              ><option>
-                                18 </option
-                              ><option>
-                                19 </option
-                              ><option>
-                                20 </option
-                              ><option>
-                                21 </option
-                              ><option>
-                                22 </option
-                              ><option>
-                                23 </option
-                              ><option>
-                                24 </option
-                              ><option>
-                                25 </option
-                              ><option>
-                                26 </option
-                              ><option>
-                                27 </option
-                              ><option>
-                                28 </option
-                              ><option>
-                                29 </option
-                              ><option>
-                                30 </option
-                              ><option>
-                                31
-                              </option></select
-                            >
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <select
-                              id="inputBirthMonth"
-                              required
-                              class="form-control"
-                              ><option>
-                                1 </option
-                              ><option>
-                                2 </option
-                              ><option>
-                                3 </option
-                              ><option>
-                                4 </option
-                              ><option>
-                                5 </option
-                              ><option>
-                                6 </option
-                              ><option>
-                                7 </option
-                              ><option>
-                                8 </option
-                              ><option>
-                                9 </option
-                              ><option>
-                                10 </option
-                              ><option>
-                                11 </option
-                              ><option>
-                                12
-                              </option></select
-                            >
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <select
-                              id="inputBirthYear"
-                              required
-                              class="form-control"
-                              ><option>
-                                1900 </option
-                              ><option>
-                                1901 </option
-                              ><option>
-                                1902 </option
-                              ><option>
-                                1903 </option
-                              ><option>
-                                1904 </option
-                              ><option>
-                                1905 </option
-                              ><option>
-                                1906 </option
-                              ><option>
-                                1907 </option
-                              ><option>
-                                1908 </option
-                              ><option>
-                                1909 </option
-                              ><option>
-                                1910 </option
-                              ><option>
-                                1911 </option
-                              ><option>
-                                1912 </option
-                              ><option>
-                                1913 </option
-                              ><option>
-                                1914 </option
-                              ><option>
-                                1915 </option
-                              ><option>
-                                1916 </option
-                              ><option>
-                                1917 </option
-                              ><option>
-                                1918 </option
-                              ><option>
-                                1919 </option
-                              ><option>
-                                1920 </option
-                              ><option>
-                                1921 </option
-                              ><option>
-                                1922 </option
-                              ><option>
-                                1923 </option
-                              ><option>
-                                1924 </option
-                              ><option>
-                                1925 </option
-                              ><option>
-                                1926 </option
-                              ><option>
-                                1927 </option
-                              ><option>
-                                1928 </option
-                              ><option>
-                                1929 </option
-                              ><option>
-                                1930 </option
-                              ><option>
-                                1931 </option
-                              ><option>
-                                1932 </option
-                              ><option>
-                                1933 </option
-                              ><option>
-                                1934 </option
-                              ><option>
-                                1935 </option
-                              ><option>
-                                1936 </option
-                              ><option>
-                                1937 </option
-                              ><option>
-                                1938 </option
-                              ><option>
-                                1939 </option
-                              ><option>
-                                1940 </option
-                              ><option>
-                                1941 </option
-                              ><option>
-                                1942 </option
-                              ><option>
-                                1943 </option
-                              ><option>
-                                1944 </option
-                              ><option>
-                                1945 </option
-                              ><option>
-                                1946 </option
-                              ><option>
-                                1947 </option
-                              ><option>
-                                1948 </option
-                              ><option>
-                                1949 </option
-                              ><option>
-                                1950 </option
-                              ><option>
-                                1951 </option
-                              ><option>
-                                1952 </option
-                              ><option>
-                                1953 </option
-                              ><option>
-                                1954 </option
-                              ><option>
-                                1955 </option
-                              ><option>
-                                1956 </option
-                              ><option>
-                                1957 </option
-                              ><option>
-                                1958 </option
-                              ><option>
-                                1959 </option
-                              ><option>
-                                1960 </option
-                              ><option>
-                                1961 </option
-                              ><option>
-                                1962 </option
-                              ><option>
-                                1963 </option
-                              ><option>
-                                1964 </option
-                              ><option>
-                                1965 </option
-                              ><option>
-                                1966 </option
-                              ><option>
-                                1967 </option
-                              ><option>
-                                1968 </option
-                              ><option>
-                                1969 </option
-                              ><option>
-                                1970 </option
-                              ><option>
-                                1971 </option
-                              ><option>
-                                1972 </option
-                              ><option>
-                                1973 </option
-                              ><option>
-                                1974 </option
-                              ><option>
-                                1975 </option
-                              ><option>
-                                1976 </option
-                              ><option>
-                                1977 </option
-                              ><option>
-                                1978 </option
-                              ><option>
-                                1979 </option
-                              ><option>
-                                1980 </option
-                              ><option>
-                                1981 </option
-                              ><option>
-                                1982 </option
-                              ><option>
-                                1983 </option
-                              ><option>
-                                1984 </option
-                              ><option>
-                                1985 </option
-                              ><option>
-                                1986 </option
-                              ><option>
-                                1987 </option
-                              ><option>
-                                1988 </option
-                              ><option>
-                                1989 </option
-                              ><option>
-                                1990 </option
-                              ><option>
-                                1991 </option
-                              ><option>
-                                1992 </option
-                              ><option>
-                                1993 </option
-                              ><option>
-                                1994 </option
-                              ><option>
-                                1995 </option
-                              ><option>
-                                1996 </option
-                              ><option>
-                                1997 </option
-                              ><option>
-                                1998 </option
-                              ><option>
-                                1999 </option
-                              ><option>
-                                2000 </option
-                              ><option>
-                                2001 </option
-                              ><option>
-                                2002 </option
-                              ><option>
-                                2003 </option
-                              ><option>
-                                2004 </option
-                              ><option>
-                                2005 </option
-                              ><option>
-                                2006 </option
-                              ><option>
-                                2007 </option
-                              ><option>
-                                2008 </option
-                              ><option>
-                                2009 </option
-                              ><option>
-                                2010 </option
-                              ><option>
-                                2011 </option
-                              ><option>
-                                2012 </option
-                              ><option>
-                                2013 </option
-                              ><option>
-                                2014 </option
-                              ><option>
-                                2015 </option
-                              ><option>
-                                2016 </option
-                              ><option>
-                                2017 </option
-                              ><option>
-                                2018 </option
-                              ><option>
-                                2019 </option
-                              ><option>
-                                2020
-                              </option></select
-                            >
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label
-                          for="email"
-                          class="col-sm-3 col-form-label text-right"
-                        >
-                          Addresse mail* :
-                        </label>
-                        <div class="col-sm-9">
+                    <form>
+                      <div class="invitation-option">
+                        <div class="form-check invitation-option-title">
                           <input
-                            id="email"
-                            type="email"
-                            required
-                            class="form-control"
-                          />
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <div class="col-sm-3"></div>
-                        <div class="col-sm-9 text-left">
-                          <input
-                            id="inputSubscribeNL"
-                            type="checkbox"
-                            name="subscribeNL"
+                            id="input1"
+                            type="radio"
+                            name="1548"
+                            value="1548"
+                            checked
                             class="form-check-input"
                           />
-                          <label for="inputSubscribeNL">
-                            M’inscrire gratuitement à la newsletter de
-                            Cine35.com
+                          <label for="input1" class="form-check-label">
+                            SCOTT PILGRIM (2010)
                           </label>
                         </div>
-                      </div>
-                      <div class="text-center">
-                        <input
-                          type="submit"
-                          value="Envoyer"
-                          class="btn btn-primary c35-btn"
-                          style="text-transform: uppercase;"
-                        />
-                      </div>
-                    </div>
-                    <div class="mt-5">
-                      <div class="row">
-                        <div class="col-4 text-right">
-                          <strong>Salles participantes</strong>
-                        </div>
-                        <div class="col-4 text-center">
-                          <strong>Billets gratuits</strong>
-                        </div>
-                        <div class="col-4">
-                          <strong>Bons de réduction</strong>
-                        </div>
-                      </div>
-                      <div class="row mt-3">
-                        <div class="col-4 text-right">
-                          <strong>
-                            Arvor
-                          </strong>
-                        </div>
-                        <div class="col-4 text-center">
-                          oui
-                        </div>
-                        <div class="col-4">
-                          non
-                        </div>
-                      </div>
-                      <div class="row mt-3">
-                        <div class="col-4 text-right">
-                          <strong>
-                            Ciné-TNB
-                          </strong>
-                        </div>
-                        <div class="col-4 text-center">
-                          oui
-                        </div>
-                        <div class="col-4">
-                          non
-                        </div>
-                      </div>
-                      <div class="row mt-3">
-                        <div class="col-4 text-right">
-                          <strong>
-                            Cinéville Bruz / Vern
-                          </strong>
-                        </div>
-                        <div class="col-4 text-center">
-                          oui
-                        </div>
-                        <div class="col-4">
-                          non
+                        <div class="row mt-3">
+                          <div class="col-9">
+                            <div>
+                              <div class="row mt-2">
+                                <div class="col-4 text-right">
+                                  Réalisateur :
+                                </div>
+                                <div class="col-8">
+                                  Edgar Wright
+                                </div>
+                              </div>
+                              <div class="row mt-2">
+                                <div class="col-4 text-right">
+                                  Casting :
+                                </div>
+                                <div class="col-8">
+                                  Michael Cera, Mary Elizabeth Winstead, Ellen
+                                  Wong
+                                </div>
+                              </div>
+                              <div class="row mt-2">
+                                <div class="col-4 text-right">
+                                  Pays d'origine :
+                                </div>
+                                <div class="col-8">
+                                  Etats-Unis
+                                </div>
+                              </div>
+                              <div class="row mt-2">
+                                <div class="col-4 text-right">
+                                  Durée :
+                                </div>
+                                <div class="col-8">
+                                  1h52
+                                </div>
+                              </div>
+                              <div class="row mt-2">
+                                <div class="col-4 text-right">
+                                  <strong>
+                                    CGR CINEMAS 10/06/2020
+                                  </strong>
+                                </div>
+                                <div class="col-8">
+                                  <strong>
+                                    La Mézière 19:30 et 22h15
+                                  </strong>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <img
+                              src="/previews/eva_et_moi.jpg"
+                              alt="ALERTE"
+                              style="width: 100%;"
+                            />
+                          </div>
                         </div>
                       </div>
-                      <div class="row mt-3">
-                        <div class="col-4 text-right">
-                          <strong>
-                            Cinéma Gaumont
-                          </strong>
+                      <div class="invitation-option">
+                        <div class="form-check invitation-option-title">
+                          <input
+                            id="input1"
+                            type="radio"
+                            name="1548"
+                            value="1548"
+                            checked
+                            class="form-check-input"
+                          />
+                          <label for="input1" class="form-check-label">
+                            SCOTT PILGRIM (2010)
+                          </label>
                         </div>
-                        <div class="col-4 text-center">
-                          oui
-                        </div>
-                        <div class="col-4">
-                          non
+                        <div class="row mt-3">
+                          <div class="col-9">
+                            <div>
+                              <div class="row mt-2">
+                                <div class="col-4 text-right">
+                                  Réalisateur :
+                                </div>
+                                <div class="col-8">
+                                  Edgar Wright
+                                </div>
+                              </div>
+                              <div class="row mt-2">
+                                <div class="col-4 text-right">
+                                  Casting :
+                                </div>
+                                <div class="col-8">
+                                  Michael Cera, Mary Elizabeth Winstead, Ellen
+                                  Wong
+                                </div>
+                              </div>
+                              <div class="row mt-2">
+                                <div class="col-4 text-right">
+                                  Pays d'origine :
+                                </div>
+                                <div class="col-8">
+                                  Etats-Unis
+                                </div>
+                              </div>
+                              <div class="row mt-2">
+                                <div class="col-4 text-right">
+                                  Durée :
+                                </div>
+                                <div class="col-8">
+                                  1h52
+                                </div>
+                              </div>
+                              <div class="row mt-2">
+                                <div class="col-4 text-right">
+                                  <strong>
+                                    CGR CINEMAS 10/06/2020
+                                  </strong>
+                                </div>
+                                <div class="col-8">
+                                  <strong>
+                                    La Mézière 19:30 et 22h15
+                                  </strong>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <img
+                              src="/previews/eva_et_moi.jpg"
+                              alt="ALERTE"
+                              style="width: 100%;"
+                            />
+                          </div>
                         </div>
                       </div>
-                      <div class="row mt-3">
-                        <div class="col-4 text-right">
-                          <strong>
-                            CGR Cinémas
-                          </strong>
+                      <div class="invitation-option">
+                        <div class="form-check invitation-option-title">
+                          <input
+                            id="input1"
+                            type="radio"
+                            name="1548"
+                            value="1548"
+                            checked
+                            class="form-check-input"
+                          />
+                          <label for="input1" class="form-check-label">
+                            SCOTT PILGRIM (2010)
+                          </label>
                         </div>
-                        <div class="col-4 text-center">
-                          oui
-                        </div>
-                        <div class="col-4">
-                          6,00 EUR
+                        <div class="row mt-3">
+                          <div class="col-9">
+                            <div>
+                              <div class="row mt-2">
+                                <div class="col-4 text-right">
+                                  Réalisateur :
+                                </div>
+                                <div class="col-8">
+                                  Edgar Wright
+                                </div>
+                              </div>
+                              <div class="row mt-2">
+                                <div class="col-4 text-right">
+                                  Casting :
+                                </div>
+                                <div class="col-8">
+                                  Michael Cera, Mary Elizabeth Winstead, Ellen
+                                  Wong
+                                </div>
+                              </div>
+                              <div class="row mt-2">
+                                <div class="col-4 text-right">
+                                  Pays d'origine :
+                                </div>
+                                <div class="col-8">
+                                  Etats-Unis
+                                </div>
+                              </div>
+                              <div class="row mt-2">
+                                <div class="col-4 text-right">
+                                  Durée :
+                                </div>
+                                <div class="col-8">
+                                  1h52
+                                </div>
+                              </div>
+                              <div class="row mt-2">
+                                <div class="col-4 text-right">
+                                  <strong>
+                                    CGR CINEMAS 10/06/2020
+                                  </strong>
+                                </div>
+                                <div class="col-8">
+                                  <strong>
+                                    La Mézière 19:30 et 22h15
+                                  </strong>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <img
+                              src="/previews/eva_et_moi.jpg"
+                              alt="ALERTE"
+                              style="width: 100%;"
+                            />
+                          </div>
                         </div>
                       </div>
-                      <div class="row mt-3">
-                        <div class="col-4 text-right">
-                          <strong>
-                            Espérance
-                          </strong>
+                      <div class="invitation-option">
+                        <div class="form-check invitation-option-title">
+                          <input
+                            id="input1"
+                            type="radio"
+                            name="1548"
+                            value="1548"
+                            checked
+                            class="form-check-input"
+                          />
+                          <label for="input1" class="form-check-label">
+                            SCOTT PILGRIM (2010)
+                          </label>
                         </div>
-                        <div class="col-4 text-center">
-                          non
-                        </div>
-                        <div class="col-4">
-                          4,00 EUR
+                        <div class="row mt-3">
+                          <div class="col-9">
+                            <div>
+                              <div class="row mt-2">
+                                <div class="col-4 text-right">
+                                  Réalisateur :
+                                </div>
+                                <div class="col-8">
+                                  Edgar Wright
+                                </div>
+                              </div>
+                              <div class="row mt-2">
+                                <div class="col-4 text-right">
+                                  Casting :
+                                </div>
+                                <div class="col-8">
+                                  Michael Cera, Mary Elizabeth Winstead, Ellen
+                                  Wong
+                                </div>
+                              </div>
+                              <div class="row mt-2">
+                                <div class="col-4 text-right">
+                                  Pays d'origine :
+                                </div>
+                                <div class="col-8">
+                                  Etats-Unis
+                                </div>
+                              </div>
+                              <div class="row mt-2">
+                                <div class="col-4 text-right">
+                                  Durée :
+                                </div>
+                                <div class="col-8">
+                                  1h52
+                                </div>
+                              </div>
+                              <div class="row mt-2">
+                                <div class="col-4 text-right">
+                                  <strong>
+                                    CGR CINEMAS 10/06/2020
+                                  </strong>
+                                </div>
+                                <div class="col-8">
+                                  <strong>
+                                    La Mézière 19:30 et 22h15
+                                  </strong>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <img
+                              src="/previews/eva_et_moi.jpg"
+                              alt="ALERTE"
+                              style="width: 100%;"
+                            />
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </form>
+                      <div class="mt-5">
+                        <div class="form-group row">
+                          <label
+                            for="inputCivility"
+                            class="col-sm-3 col-form-label text-right"
+                          >
+                            Civilité* :
+                          </label>
+                          <div class="col-sm-9">
+                            <select
+                              id="inputCivility"
+                              required
+                              class="form-control"
+                              ><option selected>
+                                Monsieur
+                              </option>
+                              <option>
+                                Madame
+                              </option></select
+                            >
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label
+                            for="name"
+                            class="col-sm-3 col-form-label text-right"
+                          >
+                            Nom* :
+                          </label>
+                          <div class="col-sm-9">
+                            <input id="name" required class="form-control" />
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label
+                            for="firstName"
+                            class="col-sm-3 col-form-label text-right"
+                          >
+                            Prénom* :
+                          </label>
+                          <div class="col-sm-9">
+                            <input
+                              id="firstName"
+                              required
+                              class="form-control"
+                            />
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label text-right">
+                            Né(e) le* :
+                          </label>
+                          <div class="col-sm-9">
+                            <div class="form-check form-check-inline">
+                              <select
+                                id="inputBirthDay"
+                                required
+                                class="form-control"
+                                ><option>
+                                  1 </option
+                                ><option>
+                                  2 </option
+                                ><option>
+                                  3 </option
+                                ><option>
+                                  4 </option
+                                ><option>
+                                  5 </option
+                                ><option>
+                                  6 </option
+                                ><option>
+                                  7 </option
+                                ><option>
+                                  8 </option
+                                ><option>
+                                  9 </option
+                                ><option>
+                                  10 </option
+                                ><option>
+                                  11 </option
+                                ><option>
+                                  12 </option
+                                ><option>
+                                  13 </option
+                                ><option>
+                                  14 </option
+                                ><option>
+                                  15 </option
+                                ><option>
+                                  16 </option
+                                ><option>
+                                  17 </option
+                                ><option>
+                                  18 </option
+                                ><option>
+                                  19 </option
+                                ><option>
+                                  20 </option
+                                ><option>
+                                  21 </option
+                                ><option>
+                                  22 </option
+                                ><option>
+                                  23 </option
+                                ><option>
+                                  24 </option
+                                ><option>
+                                  25 </option
+                                ><option>
+                                  26 </option
+                                ><option>
+                                  27 </option
+                                ><option>
+                                  28 </option
+                                ><option>
+                                  29 </option
+                                ><option>
+                                  30 </option
+                                ><option>
+                                  31
+                                </option></select
+                              >
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <select
+                                id="inputBirthMonth"
+                                required
+                                class="form-control"
+                                ><option>
+                                  1 </option
+                                ><option>
+                                  2 </option
+                                ><option>
+                                  3 </option
+                                ><option>
+                                  4 </option
+                                ><option>
+                                  5 </option
+                                ><option>
+                                  6 </option
+                                ><option>
+                                  7 </option
+                                ><option>
+                                  8 </option
+                                ><option>
+                                  9 </option
+                                ><option>
+                                  10 </option
+                                ><option>
+                                  11 </option
+                                ><option>
+                                  12
+                                </option></select
+                              >
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <select
+                                id="inputBirthYear"
+                                required
+                                class="form-control"
+                                ><option>
+                                  1900 </option
+                                ><option>
+                                  1901 </option
+                                ><option>
+                                  1902 </option
+                                ><option>
+                                  1903 </option
+                                ><option>
+                                  1904 </option
+                                ><option>
+                                  1905 </option
+                                ><option>
+                                  1906 </option
+                                ><option>
+                                  1907 </option
+                                ><option>
+                                  1908 </option
+                                ><option>
+                                  1909 </option
+                                ><option>
+                                  1910 </option
+                                ><option>
+                                  1911 </option
+                                ><option>
+                                  1912 </option
+                                ><option>
+                                  1913 </option
+                                ><option>
+                                  1914 </option
+                                ><option>
+                                  1915 </option
+                                ><option>
+                                  1916 </option
+                                ><option>
+                                  1917 </option
+                                ><option>
+                                  1918 </option
+                                ><option>
+                                  1919 </option
+                                ><option>
+                                  1920 </option
+                                ><option>
+                                  1921 </option
+                                ><option>
+                                  1922 </option
+                                ><option>
+                                  1923 </option
+                                ><option>
+                                  1924 </option
+                                ><option>
+                                  1925 </option
+                                ><option>
+                                  1926 </option
+                                ><option>
+                                  1927 </option
+                                ><option>
+                                  1928 </option
+                                ><option>
+                                  1929 </option
+                                ><option>
+                                  1930 </option
+                                ><option>
+                                  1931 </option
+                                ><option>
+                                  1932 </option
+                                ><option>
+                                  1933 </option
+                                ><option>
+                                  1934 </option
+                                ><option>
+                                  1935 </option
+                                ><option>
+                                  1936 </option
+                                ><option>
+                                  1937 </option
+                                ><option>
+                                  1938 </option
+                                ><option>
+                                  1939 </option
+                                ><option>
+                                  1940 </option
+                                ><option>
+                                  1941 </option
+                                ><option>
+                                  1942 </option
+                                ><option>
+                                  1943 </option
+                                ><option>
+                                  1944 </option
+                                ><option>
+                                  1945 </option
+                                ><option>
+                                  1946 </option
+                                ><option>
+                                  1947 </option
+                                ><option>
+                                  1948 </option
+                                ><option>
+                                  1949 </option
+                                ><option>
+                                  1950 </option
+                                ><option>
+                                  1951 </option
+                                ><option>
+                                  1952 </option
+                                ><option>
+                                  1953 </option
+                                ><option>
+                                  1954 </option
+                                ><option>
+                                  1955 </option
+                                ><option>
+                                  1956 </option
+                                ><option>
+                                  1957 </option
+                                ><option>
+                                  1958 </option
+                                ><option>
+                                  1959 </option
+                                ><option>
+                                  1960 </option
+                                ><option>
+                                  1961 </option
+                                ><option>
+                                  1962 </option
+                                ><option>
+                                  1963 </option
+                                ><option>
+                                  1964 </option
+                                ><option>
+                                  1965 </option
+                                ><option>
+                                  1966 </option
+                                ><option>
+                                  1967 </option
+                                ><option>
+                                  1968 </option
+                                ><option>
+                                  1969 </option
+                                ><option>
+                                  1970 </option
+                                ><option>
+                                  1971 </option
+                                ><option>
+                                  1972 </option
+                                ><option>
+                                  1973 </option
+                                ><option>
+                                  1974 </option
+                                ><option>
+                                  1975 </option
+                                ><option>
+                                  1976 </option
+                                ><option>
+                                  1977 </option
+                                ><option>
+                                  1978 </option
+                                ><option>
+                                  1979 </option
+                                ><option>
+                                  1980 </option
+                                ><option>
+                                  1981 </option
+                                ><option>
+                                  1982 </option
+                                ><option>
+                                  1983 </option
+                                ><option>
+                                  1984 </option
+                                ><option>
+                                  1985 </option
+                                ><option>
+                                  1986 </option
+                                ><option>
+                                  1987 </option
+                                ><option>
+                                  1988 </option
+                                ><option>
+                                  1989 </option
+                                ><option>
+                                  1990 </option
+                                ><option>
+                                  1991 </option
+                                ><option>
+                                  1992 </option
+                                ><option>
+                                  1993 </option
+                                ><option>
+                                  1994 </option
+                                ><option>
+                                  1995 </option
+                                ><option>
+                                  1996 </option
+                                ><option>
+                                  1997 </option
+                                ><option>
+                                  1998 </option
+                                ><option>
+                                  1999 </option
+                                ><option>
+                                  2000 </option
+                                ><option>
+                                  2001 </option
+                                ><option>
+                                  2002 </option
+                                ><option>
+                                  2003 </option
+                                ><option>
+                                  2004 </option
+                                ><option>
+                                  2005 </option
+                                ><option>
+                                  2006 </option
+                                ><option>
+                                  2007 </option
+                                ><option>
+                                  2008 </option
+                                ><option>
+                                  2009 </option
+                                ><option>
+                                  2010 </option
+                                ><option>
+                                  2011 </option
+                                ><option>
+                                  2012 </option
+                                ><option>
+                                  2013 </option
+                                ><option>
+                                  2014 </option
+                                ><option>
+                                  2015 </option
+                                ><option>
+                                  2016 </option
+                                ><option>
+                                  2017 </option
+                                ><option>
+                                  2018 </option
+                                ><option>
+                                  2019 </option
+                                ><option>
+                                  2020
+                                </option></select
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label
+                            for="email"
+                            class="col-sm-3 col-form-label text-right"
+                          >
+                            Addresse mail* :
+                          </label>
+                          <div class="col-sm-9">
+                            <input
+                              id="email"
+                              type="email"
+                              required
+                              class="form-control"
+                            />
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-sm-3"></div>
+                          <div class="col-sm-9 text-left">
+                            <input
+                              id="inputSubscribeNL"
+                              type="checkbox"
+                              name="subscribeNL"
+                              class="form-check-input"
+                            />
+                            <label for="inputSubscribeNL">
+                              M’inscrire gratuitement à la newsletter de
+                              Cine35.com
+                            </label>
+                          </div>
+                        </div>
+                        <div class="text-center">
+                          <input
+                            type="submit"
+                            value="Envoyer"
+                            class="btn btn-primary c35-btn"
+                            style="text-transform: uppercase;"
+                          />
+                        </div>
+                      </div>
+                      <div class="mt-5">
+                        <div class="row">
+                          <div class="col-4 text-right">
+                            <strong>Salles participantes</strong>
+                          </div>
+                          <div class="col-4 text-center">
+                            <strong>Billets gratuits</strong>
+                          </div>
+                          <div class="col-4">
+                            <strong>Bons de réduction</strong>
+                          </div>
+                        </div>
+                        <div class="row mt-3">
+                          <div class="col-4 text-right">
+                            <strong>
+                              Arvor
+                            </strong>
+                          </div>
+                          <div class="col-4 text-center">
+                            oui
+                          </div>
+                          <div class="col-4">
+                            non
+                          </div>
+                        </div>
+                        <div class="row mt-3">
+                          <div class="col-4 text-right">
+                            <strong>
+                              Ciné-TNB
+                            </strong>
+                          </div>
+                          <div class="col-4 text-center">
+                            oui
+                          </div>
+                          <div class="col-4">
+                            non
+                          </div>
+                        </div>
+                        <div class="row mt-3">
+                          <div class="col-4 text-right">
+                            <strong>
+                              Cinéville Bruz / Vern
+                            </strong>
+                          </div>
+                          <div class="col-4 text-center">
+                            oui
+                          </div>
+                          <div class="col-4">
+                            non
+                          </div>
+                        </div>
+                        <div class="row mt-3">
+                          <div class="col-4 text-right">
+                            <strong>
+                              Cinéma Gaumont
+                            </strong>
+                          </div>
+                          <div class="col-4 text-center">
+                            oui
+                          </div>
+                          <div class="col-4">
+                            non
+                          </div>
+                        </div>
+                        <div class="row mt-3">
+                          <div class="col-4 text-right">
+                            <strong>
+                              CGR Cinémas
+                            </strong>
+                          </div>
+                          <div class="col-4 text-center">
+                            oui
+                          </div>
+                          <div class="col-4">
+                            6,00 EUR
+                          </div>
+                        </div>
+                        <div class="row mt-3">
+                          <div class="col-4 text-right">
+                            <strong>
+                              Espérance
+                            </strong>
+                          </div>
+                          <div class="col-4 text-center">
+                            non
+                          </div>
+                          <div class="col-4">
+                            4,00 EUR
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="col-2"></div>
                 </div>
-                <div class="col-2"></div>
               </div>
             </div>
           </div>
           <div class="c35-footer bg-dark mt-4 py-5">
-            I'm the footer
+            <div class="font-italic">
+              Ciné35 2020, tous droits réservés
+            </div>
+            <div class="mt-4">
+              Mentions Légales |
+              <a href="/contact" title="Nous contacter">
+                Contact
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -1181,9 +1220,9 @@
         routePath: '/invitations',
       };
     </script>
-    <script src="/_nuxt/a1343f09395e6f918e8e.js" defer></script>
-    <script src="/_nuxt/83bde4bf99680867a778.js" defer></script>
-    <script src="/_nuxt/a6a7691d3c7f65f37f80.js" defer></script>
-    <script src="/_nuxt/576079392b666c01ded6.js" defer></script>
+    <script src="/_nuxt/5dd7950e092c28f1eb58.js" defer></script>
+    <script src="/_nuxt/870345e323bfc84cec54.js" defer></script>
+    <script src="/_nuxt/33af398403db843cdc23.js" defer></script>
+    <script src="/_nuxt/b5d43530e27a29c5f56c.js" defer></script>
   </body>
 </html>

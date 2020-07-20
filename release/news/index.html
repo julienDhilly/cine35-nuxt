@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html data-n-head-ssr>
   <head>
-    <title>cine35-nuxt</title>
+    <title>
+      Cine35.com - Tous les films, Toutes les salles de cinéma d'Ille-et-Vilaine
+    </title>
     <meta data-n-head="ssr" charset="utf-8" />
     <meta
       data-n-head="ssr"
@@ -12,7 +14,7 @@
       data-n-head="ssr"
       data-hid="description"
       name="description"
-      content="Cine35 website"
+      content="Programmes des cinémas en Ille-et-Vilaine (Département 35)"
     />
     <link
       data-n-head="ssr"
@@ -23,12 +25,12 @@
     <link
       data-n-head="ssr"
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
     />
     <link
       data-n-head="ssr"
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap"
     />
     <link
       data-n-head="ssr"
@@ -59,14 +61,14 @@
       src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"
     ></script>
     <script data-n-head="ssr" src="/ads.js"></script>
-    <link rel="preload" href="/_nuxt/a1343f09395e6f918e8e.js" as="script" />
-    <link rel="preload" href="/_nuxt/83bde4bf99680867a778.js" as="script" />
+    <link rel="preload" href="/_nuxt/5dd7950e092c28f1eb58.js" as="script" />
+    <link rel="preload" href="/_nuxt/870345e323bfc84cec54.js" as="script" />
     <link rel="preload" href="/_nuxt/5982dc8608b6293bd7d9.css" as="style" />
-    <link rel="preload" href="/_nuxt/a6a7691d3c7f65f37f80.js" as="script" />
-    <link rel="preload" href="/_nuxt/6c2a26fc3a7642d9e012.css" as="style" />
-    <link rel="preload" href="/_nuxt/576079392b666c01ded6.js" as="script" />
+    <link rel="preload" href="/_nuxt/33af398403db843cdc23.js" as="script" />
+    <link rel="preload" href="/_nuxt/b3087d3771d1854d9db4.css" as="style" />
+    <link rel="preload" href="/_nuxt/b5d43530e27a29c5f56c.js" as="script" />
     <link rel="stylesheet" href="/_nuxt/5982dc8608b6293bd7d9.css" />
-    <link rel="stylesheet" href="/_nuxt/6c2a26fc3a7642d9e012.css" />
+    <link rel="stylesheet" href="/_nuxt/b3087d3771d1854d9db4.css" />
   </head>
   <body>
     <div data-server-rendered="true" id="__nuxt">
@@ -74,12 +76,10 @@
       <div id="__layout">
         <div>
           <nav
-            class="c35-header navbar sticky-top navbar-dark bg-dark navbar-expand-xl"
+            class="c35-header navbar sticky-top navbar-dark bg-dark navbar-expand-lg"
           >
             <a href="/" id="logo" class="navbar-brand active"
               ><svg
-                width="122.5"
-                height="90"
                 version="1.1"
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -220,7 +220,9 @@
                     <a href="/movies/comingsoon" class="dropdown-item">
                       Prochainement
                     </a>
-                    <a href="#" class="dropdown-item">Critiques</a>
+                    <a href="/movies/critiques" class="dropdown-item">
+                      Critiques
+                    </a>
                   </div>
                 </li>
                 <li class="nav-item">
@@ -228,7 +230,7 @@
                     Salles
                   </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item header-dropdown-active">
                   <a
                     href="/news"
                     class="nav-link nuxt-link-exact-active active"
@@ -257,16 +259,162 @@
                   </a>
                 </li>
               </ul>
+              <form
+                action="/results"
+                class="form-inline mr-2 my-2 my-lg-0 ml-2 ml-lg-0"
+              >
+                <input
+                  name="search"
+                  placeholder="Rechercher..."
+                  aria-label="Rechercher"
+                  class="form-control"
+                />
+                <div class="input-group-append">
+                  <button type="submit" class="btn btn-primary">
+                    <img src="/icons/picto_search_white_100.png" width="20" />
+                  </button>
+                </div>
+              </form>
             </div>
           </nav>
-          <div class="container py-4">
-            <div class="row justify-content-center">
-              <div id="google-ads-test-banner" class="c35-responsive-ads"></div>
+          <div class="pub-container">
+            <div class="container py-4">
+              <div class="row justify-content-center">
+                <div
+                  id="google-ads-test-banner"
+                  class="c35-responsive-ads"
+                ></div>
+              </div>
             </div>
           </div>
-          <div>News index page</div>
+          <div id="main-container">
+            <div id="news-page" class="container">
+              <div class="row">
+                <div class="col-12">
+                  <nav aria-label="breadcrumb" class="c35-breadcrumb">
+                    <ol class="breadcrumb">
+                      <li aria-current="page" class="breadcrumb-item">
+                        <a href="/" class="active">
+                          Accueil
+                        </a>
+                      </li>
+                      <li aria-current="page" class="breadcrumb-item active">
+                        Actualités
+                      </li>
+                    </ol>
+                  </nav>
+                </div>
+              </div>
+              <div class="c35-section">
+                <div class="container-md px-1">
+                  <div class="row mx-n1">
+                    <div class="col-12 pl-1">
+                      <h2 class="strike">
+                        <span>
+                          Actualité
+                        </span>
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="news-list mt-4">
+                  <div class="news row mx-auto">
+                    <div class="col-12 col-md-6">
+                      <a href="/news/123" title="Lire la suite"
+                        ><img
+                          src="/images/news/all_inclusive.jpg"
+                          alt="All Inclusive"
+                          style="width: 100%;"
+                      /></a>
+                    </div>
+                    <div class="col-12 col-md-6 mt-2 mt-md-0">
+                      <div class="c35-block-title" style="max-width: 280px;">
+                        avant-première
+                      </div>
+                      <div class="h4 text-primary my-3">
+                        <a href="/news/123" title="Lire la suite">
+                          All Inclusive
+                        </a>
+                      </div>
+                      <div class="font-italic">
+                        Avant-première du film All Inclusive au CGR La Mézière.
+                        Mardi 12 février à 21h30.
+                        <a href="/news/123" title="Lire la suite">
+                          Lire la suite
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="news row mx-auto">
+                    <div class="col-12 col-md-6">
+                      <a href="/news/123" title="Lire la suite"
+                        ><img
+                          src="/images/news/bon_dieu.jpg"
+                          alt="All Inclusive"
+                          style="width: 100%;"
+                      /></a>
+                    </div>
+                    <div class="col-12 col-md-6 mt-2 mt-md-0">
+                      <div class="c35-block-title" style="max-width: 280px;">
+                        équipe de film
+                      </div>
+                      <div class="h4 text-primary my-3">
+                        <a href="/news/123" title="Lire la suite">
+                          Qu’est-ce qu’on a fait au bon dieu ?
+                        </a>
+                      </div>
+                      <div class="font-italic">
+                        L’équipe de Qu’est-ce qu’on a fait au bon dieu ?
+                        présente à Vern-sur-Seiche.
+                        <a href="/news/123" title="Lire la suite">
+                          Lire la suite
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="news row mx-auto">
+                    <div class="col-12 col-md-6">
+                      <a href="/news/123" title="Lire la suite"
+                        ><img
+                          src="/images/news/all_inclusive.jpg"
+                          alt="All Inclusive"
+                          style="width: 100%;"
+                      /></a>
+                    </div>
+                    <div class="col-12 col-md-6 mt-2 mt-md-0">
+                      <div class="c35-block-title" style="max-width: 280px;">
+                        évenement
+                      </div>
+                      <div class="h4 text-primary my-3">
+                        <a href="/news/123" title="Lire la suite">
+                          Festival Court Métrange
+                        </a>
+                      </div>
+                      <div class="font-italic">
+                        Festival Court Métrange à Rennes du 25 mars au 14 avril
+                        2019.
+                        <a href="/news/123" title="Lire la suite">
+                          Lire la suite
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="c35-footer bg-dark mt-4 py-5">
-            I'm the footer
+            <div class="font-italic">
+              Ciné35 2020, tous droits réservés
+            </div>
+            <div class="mt-4">
+              Mentions Légales |
+              <a href="/contact" title="Nous contacter">
+                Contact
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -286,9 +434,9 @@
         routePath: '/news',
       };
     </script>
-    <script src="/_nuxt/a1343f09395e6f918e8e.js" defer></script>
-    <script src="/_nuxt/83bde4bf99680867a778.js" defer></script>
-    <script src="/_nuxt/a6a7691d3c7f65f37f80.js" defer></script>
-    <script src="/_nuxt/576079392b666c01ded6.js" defer></script>
+    <script src="/_nuxt/5dd7950e092c28f1eb58.js" defer></script>
+    <script src="/_nuxt/870345e323bfc84cec54.js" defer></script>
+    <script src="/_nuxt/33af398403db843cdc23.js" defer></script>
+    <script src="/_nuxt/b5d43530e27a29c5f56c.js" defer></script>
   </body>
 </html>

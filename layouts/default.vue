@@ -1,7 +1,7 @@
 <template>
   <div>
     <c35-header />
-    <div style="background: #fff;">
+    <div class="pub-container">
       <div class="container py-4">
         <div class="row justify-content-center">
           <div id="google-ads-test-banner" class="c35-responsive-ads"></div>

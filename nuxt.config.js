@@ -4,14 +4,14 @@ export default {
   target: "static",
   ssr: true,
   head: {
-    title: process.env.npm_package_name || "",
+    title: "Cine35.com - Tous les films, Toutes les salles de cinéma d'Ille-et-Vilaine",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
         hid: "description",
         name: "description",
-        content: process.env.npm_package_description || "",
+        content: "Programmes des cinémas en Ille-et-Vilaine (Département 35)",
       },
     ],
     link: [
@@ -142,6 +142,7 @@ export default {
   },
   generate: {
     dir: "release",
+    // see https://fr.nuxtjs.org/api/configuration-generate#routes
     routes: [
        '/cinemas/1541',
        '/cinemas/846',
@@ -160,6 +161,5 @@ export default {
        '/news/123',
        '/movies/critiques/123'
     ]
-    // see https://fr.nuxtjs.org/api/configuration-generate#routes
   },
 }
