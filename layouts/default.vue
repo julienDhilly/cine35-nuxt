@@ -1,12 +1,16 @@
 <template>
   <div>
     <c35-header />
-    <div class="container py-4">
-      <div class="row justify-content-center">
-        <div id="google-ads-test-banner" class="c35-responsive-ads"></div>
+    <div style="background: #fff;">
+      <div class="container py-4">
+        <div class="row justify-content-center">
+          <div id="google-ads-test-banner" class="c35-responsive-ads"></div>
+        </div>
       </div>
     </div>
-    <nuxt />
+    <div id="main-container">
+      <nuxt />
+    </div>
     <c35-footer />
   </div>
 </template>

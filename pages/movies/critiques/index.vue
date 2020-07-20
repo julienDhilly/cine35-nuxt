@@ -29,7 +29,10 @@
         </div>
         <div class="news row mx-auto">
           <div class="col-12 col-md-6">
-            <a href="/movies/critiques/123" title="Lire la critique">
+            <a
+              href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+              title="Lire la critique"
+            >
               <img
                 src="/images/critiques/le_dahlia_noir.jpg"
                 alt="Le dahlia noir"
@@ -42,13 +45,19 @@
               LE DAHLIA NOIR
             </div>
             <div class="h4 text-primary my-3">
-              <a href="/movies/critiques/123" title="Lire la critique">
+              <a
+                href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+                title="Lire la critique"
+              >
                 par Martin G.
               </a>
             </div>
             <div class="font-italic">
               Un désastre d’1h45”.
-              <a href="/movies/critiques/123" title="Lire la critique">
+              <a
+                href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+                title="Lire la critique"
+              >
                 Lire la critique
               </a>
             </div>
@@ -59,7 +68,10 @@
 
         <div class="news row mx-auto">
           <div class="col-12 col-md-6">
-            <a href="/movies/critiques/123" title="Lire la critique">
+            <a
+              href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+              title="Lire la critique"
+            >
               <img
                 src="/images/critiques/un_apresmidi_de_chien.png"
                 alt="Un après-midi de chien"
@@ -72,13 +84,19 @@
               Un après-midi de chien
             </div>
             <div class="h4 text-primary my-3">
-              <a href="/movies/critiques/123" title="Lire la critique">
+              <a
+                href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+                title="Lire la critique"
+              >
                 par Laura T.
               </a>
             </div>
             <div class="font-italic">
               “Le chef d’oeuvre de son auteur”.
-              <a href="/movies/critiques/123" title="Lire la critique">
+              <a
+                href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+                title="Lire la critique"
+              >
                 Lire la critique
               </a>
             </div>
@@ -89,7 +107,10 @@
 
         <div class="news row mx-auto">
           <div class="col-12 col-md-6">
-            <a href="/movies/critiques/123" title="Lire la critique">
+            <a
+              href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+              title="Lire la critique"
+            >
               <img
                 src="/images/critiques/les_tortues_ninja.jpg"
                 alt="Les tortues ninja"
@@ -102,13 +123,19 @@
               Les tortues ninja
             </div>
             <div class="h4 text-primary my-3">
-              <a href="/movies/critiques/123" title="Lire la critique">
+              <a
+                href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+                title="Lire la critique"
+              >
                 par John G.
               </a>
             </div>
             <div class="font-italic">
               Vous reprendrez bien de la pizza ?
-              <a href="/movies/critiques/123" title="Lire la critique">
+              <a
+                href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+                title="Lire la critique"
+              >
                 Lire la critique
               </a>
             </div>

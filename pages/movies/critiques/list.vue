@@ -22,17 +22,26 @@
         </div>
         <ul>
           <li>
-            <a href="/movies/critiques/123" title="Voir la critique">
+            <a
+              href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+              title="Voir la critique"
+            >
               Akira
             </a>
           </li>
           <li>
-            <a href="/movies/critiques/123" title="Voir la critique">
+            <a
+              href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+              title="Voir la critique"
+            >
               Aladdin
             </a>
           </li>
           <li>
-            <a href="/movies/critiques/123" title="Voir la critique">
+            <a
+              href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+              title="Voir la critique"
+            >
               Avengers
             </a>
           </li>
@@ -45,17 +54,26 @@
         </div>
         <ul>
           <li>
-            <a href="/movies/critiques/123" title="Voir la critique">
+            <a
+              href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+              title="Voir la critique"
+            >
               Batman
             </a>
           </li>
           <li>
-            <a href="/movies/critiques/123" title="Voir la critique">
+            <a
+              href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+              title="Voir la critique"
+            >
               Battle Royale
             </a>
           </li>
           <li>
-            <a href="/movies/critiques/123" title="Voir la critique">
+            <a
+              href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+              title="Voir la critique"
+            >
               Bienvenue chez les Ch'tis
             </a>
           </li>
@@ -68,7 +86,10 @@
         </div>
         <ul>
           <li>
-            <a href="/movies/critiques/123" title="Voir la critique">
+            <a
+              href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+              title="Voir la critique"
+            >
               ...
             </a>
           </li>
