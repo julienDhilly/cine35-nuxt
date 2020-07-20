@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div id="movie-page" class="container">
     <c35-breadcrumb :crumbs="crumbs" />
 
     <div
@@ -9,14 +9,14 @@
       <div class="row px-4">
         <div class="col-6 col-lg-9">
           <h1 class="c35-movie-title mt-5">
-            {CINEMA NAME}
+            CGR LA MÉZIÈRE
           </h1>
           <h2 class="c35-movie-description ml-3 mt-3">
-            {City} - {Postal code}
+            Mézière - 35520
           </h2>
         </div>
         <div class="col-6 col-lg-3">
-          <img src="/logos/cgr.png" alt="{CINEMA NAME}" />
+          <img src="/logos/cgr.png" alt="CGR La Mézière" />
         </div>
       </div>
     </div>
@@ -27,12 +27,12 @@
           <li class="nav-item">
             <a
               id="informations-tab"
-              class="nav-link active"
+              class="nav-link"
               data-toggle="tab"
               href="#informations"
               role="tab"
               aria-controls="informations"
-              aria-selected="true"
+              aria-selected="false"
             >
               Informations
             </a>
@@ -40,12 +40,12 @@
           <li class="nav-item">
             <a
               id="sessions-tab"
-              class="nav-link"
+              class="nav-link active"
               data-toggle="tab"
               href="#programmation"
               role="tab"
               aria-controls="sessions"
-              aria-selected="false"
+              aria-selected="true"
             >
               Programmation
             </a>
@@ -54,15 +54,50 @@
         <div class="tab-content c35-tab-content c35-movie-tab-informations">
           <div
             id="informations"
-            class="tab-pane fade show active"
+            class="tab-pane fade"
             role="tabpanel"
             aria-labelledby="informations-tab"
           >
+            <div class="c35-cinema-title d-flex justify-content-between mb-4">
+              <div>
+                <h1>CGR LA MÉZIÈRE/</h1>
+                <h2>Mézière</h2>
+                <div class="c35-distance">
+                  à 15km
+                </div>
+              </div>
+              <div class="mt-2">
+                <a
+                  href="https://www.facebook.com/CGRLaMeziere/"
+                  title="page facebook"
+                  target="_blank"
+                  class="mr-3"
+                >
+                  <img
+                    src="/icons/picto_fb_100.png"
+                    alt="page facebook"
+                    width="40"
+                  />
+                </a>
+                <a
+                  href="https://www.cgrcinemas.fr/lameziere/"
+                  title="page facebook"
+                  target="_blank"
+                  class="mr-3"
+                >
+                  <img
+                    src="/icons/picto_web_100.png"
+                    alt="site internet"
+                    width="40"
+                  />
+                </a>
+              </div>
+            </div>
             <c35-entity-informations :informations="informations" />
           </div>
           <div
             id="programmation"
-            class="tab-pane fade"
+            class="tab-pane fade show active"
             role="tabpanel"
             aria-labelledby="sessions-tab"
           >

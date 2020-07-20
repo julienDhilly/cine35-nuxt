@@ -45,6 +45,17 @@
    }
 }
 
+
+#movie-page {
+   .c35-cinema-title {
+      color: theme-color("primary");
+
+      .c35-distance {
+         font-size: 1.3rem;
+      }
+   }
+}
+
 /*
 .cine35-movie-banner .backdrop {
    position: absolute;
