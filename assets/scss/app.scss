@@ -27,6 +27,7 @@ $theme-colors: (
 );
 
 @import "~bootstrap/scss/bootstrap.scss";
+@import "./pages/home.scss";
 @import "./pages/movie.scss";
 @import "./pages/invitations.scss";
 @import "./components/breadcrumb.scss";

@@ -1,7 +1,7 @@
 <template>
-  <div class="container-md">
+  <div id="home-page" class="container-md">
     <div class="row">
-      <div class="col-12 col-lg-8">
+      <div class="col c35-col-left">
         <c35-movie-preview-list
           :movies="movies"
           link-to-more-title="Voir tous les films à l'affiche"
@@ -20,7 +20,7 @@
         <c35-home-cinemas class="mt-3" />
         <c35-home-box-office class="mt-3 mb-3" :movies="movies" />
       </div>
-      <div class="col-12 col-lg-4">
+      <div class="col c35-col-right">
         <c35-home-news-sidebar />
         <c35-home-critiques-sidebar />
 
