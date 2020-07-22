@@ -1,5 +1,5 @@
 <template>
-  <div id="critiques-list-page" class="container">
+  <div id="critiques-list-page">
     <div class="row">
       <div class="col-12">
         <c35-breadcrumb :crumbs="crumbs" />

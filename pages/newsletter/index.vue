@@ -1,5 +1,5 @@
 <template>
-  <div id="page-invitations" class="container">
+  <div id="page-invitations">
     <div class="row">
       <div class="col-12">
         <c35-breadcrumb :crumbs="crumbs" />
@@ -53,7 +53,6 @@
                 class="btn btn-primary c35-btn"
                 type="submit"
                 value="S'inscrire"
-                style="text-transform: uppercase;"
               />
             </div>
           </form>
@@ -87,7 +86,6 @@
                 class="btn btn-primary c35-btn"
                 type="submit"
                 value="Se désinscrire"
-                style="text-transform: uppercase;"
               />
             </div>
           </form>

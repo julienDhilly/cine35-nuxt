@@ -1,5 +1,5 @@
 <template>
-  <div id="home-page" class="container-md">
+  <div id="home-page">
     <div class="row">
       <div class="col c35-col-left">
         <c35-movie-preview-list

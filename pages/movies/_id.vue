@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div>
     <c35-breadcrumb :crumbs="crumbs" />
 
     <div
@@ -10,16 +10,26 @@
       }"
     >
       <div class="row px-4">
-        <div class="col-6 col-lg-9">
-          <h1 class="c35-movie-title mt-5">
-            La fureur de vaincre
-          </h1>
+        <div class="col-12 col-sm-9">
+          <div class="d-flex mt-5">
+            <h1 class="c35-movie-title">
+              La fureur de vaincre
+            </h1>
+            <span>
+              <img
+                src="/icons/picto_age_10_100.png"
+                alt="Pegi 10"
+                class="ml-4"
+                style="width: 55px;"
+              />
+            </span>
+          </div>
           <h2 class="c35-movie-description ml-3 mt-3">
             La Mérière<br />
             à 15km
           </h2>
         </div>
-        <div class="col-6 col-lg-3">
+        <div class="col-12 d-none d-sm-flex col-sm-3">
           <img :src="`/previews/bluebird.jpg`" alt="ALERTE" />
         </div>
       </div>

@@ -5,17 +5,47 @@
     <nuxt-link id="logo" to="/" class="navbar-brand">
       <c35-logo />
     </nuxt-link>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon" />
-    </button>
+
+    <div class="d-flex">
+      <button
+        id="c35-btn-search-mobile"
+        class="d-block d-lg-none navbar-toggler"
+        type="button"
+      >
+        <img src="/icons/picto_search_white_100.png" width="20" />
+      </button>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon" />
+      </button>
+    </div>
+
+    <div id="navbarSearchContext" class="collapse navbar-collapse">
+      <form
+        class="c35-header-form-search form-inline mr-2 my-2 my-lg-0 ml-2 ml-lg-0"
+        action="/results"
+      >
+        <input
+          name="search"
+          type="text"
+          class="form-control flex-grow-1"
+          placeholder="Rechercher un film ou une salle..."
+          aria-label="Rechercher"
+        />
+        <div class="input-group-append">
+          <button class="btn btn-primary" type="submit">
+            <img src="/icons/picto_search_white_100.png" width="20" />
+          </button>
+        </div>
+      </form>
+    </div>
 
     <div id="navbarSupportedContent" class="collapse navbar-collapse">
       <ul class="navbar-nav mr-auto">
@@ -84,7 +114,7 @@
         </li>
       </ul>
       <form
-        class="form-inline mr-2 my-2 my-lg-0 ml-2 ml-lg-0"
+        class="c35-header-form-search form-inline mr-2 my-2 my-lg-0 ml-2 ml-lg-0 d-none d-lg-flex"
         action="/results"
       >
         <input

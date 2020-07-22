@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div>
     <div class="row">
       <div class="col-12">
         <c35-breadcrumb :crumbs="crumbs" />
@@ -10,7 +10,7 @@
         <div class="row mx-n1">
           <div class="col-12 pl-1">
             <c35-strike>
-              Prochainement
+              à l'affiche
             </c35-strike>
           </div>
         </div>

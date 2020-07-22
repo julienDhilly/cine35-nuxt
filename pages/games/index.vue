@@ -1,5 +1,5 @@
 <template>
-  <div id="page-invitations" class="container">
+  <div id="page-invitations">
     <div class="row">
       <div class="col-12">
         <c35-breadcrumb :crumbs="crumbs" />

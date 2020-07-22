@@ -6,6 +6,9 @@
           {{ prog.cinema.name }}
         </a>
       </div>
+      <div class="c35-prog-movie-city">
+        {{ prog.cinema.city }}
+      </div>
       <div class="c35-prog-schedules">
         <c35-schedule
           v-for="(schedule, index) in prog.schedules"

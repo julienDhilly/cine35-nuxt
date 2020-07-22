@@ -1,5 +1,5 @@
 <template>
-  <div id="page-invitations" class="container">
+  <div id="page-invitations">
     <div class="row">
       <div class="col-12">
         <c35-breadcrumb :crumbs="crumbs" />
@@ -9,56 +9,52 @@
       <div class="row">
         <div class="col-12">
           <c35-strike>
-            INVITATIONS
+            Invitations
           </c35-strike>
         </div>
       </div>
-      <div class="row">
-        <div class="col-2"></div>
-        <div class="col-8">
-          <div class="text-center">
-            <p>
-              <strong>
-                Cine35.com et ses partenaires vous invitent au cinéma !
-              </strong>
-            </p>
+      <div class="mx-auto mt-5 px-2" style="max-width: 800px;">
+        <div class="text-center">
+          <p>
+            <strong>
+              Cine35.com et ses partenaires vous invitent au cinéma !
+            </strong>
+          </p>
+          <br />
+          <p>
+            ATTENTION : Vous allez écrire au webmaster de Cine35.com et non à un
+            cinéma en particulier. Pour toute question concernant les billets,
+            les réservations ou les tarifs, merci de contacter directement
+            l'établissement concerné.
+          </p>
+          <br />
+          <p>
+            <strong>
+              Informations importantes :
+            </strong>
             <br />
-            <p>
-              ATTENTION : Vous allez écrire au webmaster de Cine35.com et non à
-              un cinéma en particulier. Pour toute question concernant les
-              billets, les réservations ou les tarifs, merci de contacter
-              directement l'établissement concerné.
-            </p>
-            <br />
-            <p>
-              <strong>
-                Informations importantes :
-              </strong>
-              <br />
-              Vous pouvez demander des invitations pour plusieurs films.<br />
-              Il est inutile de faire des demandes multiples avec le même nom
-              pour une même séance, vous n'augmentez pas vos chances, seule la
-              première validation est prise en compte.
-            </p>
-            <br />
-            <br />
-            <p>
-              <strong>
-                Cochez la séance qui vous intéresse :
-              </strong>
-            </p>
-          </div>
-
-          <form>
-            <c35-invitation />
-            <c35-invitation />
-            <c35-invitation />
-            <c35-invitation />
-            <c35-invitation-inputs class="mt-5" />
-            <c35-invitation-partners class="mt-5" />
-          </form>
+            Vous pouvez demander des invitations pour plusieurs films.<br />
+            Il est inutile de faire des demandes multiples avec le même nom pour
+            une même séance, vous n'augmentez pas vos chances, seule la première
+            validation est prise en compte.
+          </p>
+          <br />
+          <br />
+          <p>
+            <strong>
+              Cochez la séance qui vous intéresse :
+            </strong>
+          </p>
         </div>
-        <div class="col-2"></div>
+
+        <form>
+          <c35-invitation :id="1" />
+          <c35-invitation :id="2" />
+          <c35-invitation :id="3" />
+          <c35-invitation :id="4" />
+          <c35-invitation-inputs style="margin-top: 8rem;" />
+          <c35-invitation-partners style="margin-top: 8rem;" />
+        </form>
       </div>
     </div>
   </div>

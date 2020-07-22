@@ -1,5 +1,5 @@
 <template>
-  <div id="news-page" class="container">
+  <div id="news-page">
     <div class="row">
       <div class="col-12">
         <c35-breadcrumb :crumbs="crumbs" />
@@ -17,7 +17,7 @@
       </div>
 
       <div class="news-list mt-4">
-        <div class="text-center mb-4">
+        <div class="text-center mb-5">
           <a
             href="/movies/critiques/list"
             title="Voir la liste des critiques"
@@ -27,7 +27,7 @@
             Voir la liste des critiques
           </a>
         </div>
-        <div class="news row mx-auto">
+        <div class="news row mx-auto mt-5">
           <div class="col-12 col-md-6">
             <a
               href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
@@ -42,15 +42,15 @@
           </div>
           <div class="col-12 col-md-6 mt-2 mt-md-0">
             <div class="c35-block-title" style="max-width: 280px;">
-              LE DAHLIA NOIR
-            </div>
-            <div class="h4 text-primary my-3">
               <a
                 href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
                 title="Lire la critique"
               >
-                par Martin G.
+                LE DAHLIA NOIR
               </a>
+            </div>
+            <div class="h4 text-primary my-3">
+              par Martin G.
             </div>
             <div class="font-italic">
               Un désastre d’1h45”.
@@ -81,15 +81,15 @@
           </div>
           <div class="col-12 col-md-6 mt-2 mt-md-0">
             <div class="c35-block-title" style="max-width: 280px;">
-              Un après-midi de chien
-            </div>
-            <div class="h4 text-primary my-3">
               <a
                 href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
                 title="Lire la critique"
               >
-                par Laura T.
+                Un après-midi de chien
               </a>
+            </div>
+            <div class="h4 text-primary my-3">
+              par Laura T.
             </div>
             <div class="font-italic">
               “Le chef d’oeuvre de son auteur”.
@@ -120,15 +120,15 @@
           </div>
           <div class="col-12 col-md-6 mt-2 mt-md-0">
             <div class="c35-block-title" style="max-width: 280px;">
-              Les tortues ninja
-            </div>
-            <div class="h4 text-primary my-3">
               <a
                 href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
                 title="Lire la critique"
               >
-                par John G.
+                Les tortues ninja
               </a>
+            </div>
+            <div class="h4 text-primary my-3">
+              par John G.
             </div>
             <div class="font-italic">
               Vous reprendrez bien de la pizza ?

@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-12">
           <h3>critiques</h3>
-          <div class="mt-1">
+          <div class="mt-3">
             <c35-sidebar-content>
               <template #title>
                 LE DAHLIA NOIR

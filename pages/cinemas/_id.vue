@@ -1,5 +1,5 @@
 <template>
-  <div id="movie-page" class="container">
+  <div id="movie-page">
     <c35-breadcrumb :crumbs="crumbs" />
 
     <div

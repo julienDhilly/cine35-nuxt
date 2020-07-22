@@ -15,7 +15,8 @@ export default {
       list: [
         {
           cinema: {
-            name: "CINEVILLE VERN VAL D'ORSON - Vern-sur-Seiche à 20km",
+            name: "CINEVILLE VERN VAL D'ORSON",
+            city: "Vern-sur-Seiche à 20km",
             additional: "",
           },
           schedules: [
@@ -68,7 +69,8 @@ export default {
         },
         {
           cinema: {
-            name: "CINEVILLE BRUZ VERT BUISSON - Bruz à 15km",
+            name: "CINEVILLE BRUZ VERT BUISSON",
+            city: "Bruz à 15km",
             additional: "",
           },
           schedules: [

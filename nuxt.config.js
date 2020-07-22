@@ -29,7 +29,7 @@ export default {
        {
           rel: "stylesheet",
           href:
-            "https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap",
+            "https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap",
         },
       // {
       //   rel: "stylesheet",
@@ -72,6 +72,9 @@ export default {
       },
       {
          src: '/ads.js',
+      },
+      {
+         src: '/js/custom.js',
       }
     ],
   },
