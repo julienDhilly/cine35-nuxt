@@ -4,6 +4,7 @@
     :src="`/icons/picto_age_${pegi}_100.png`"
     :alt="`pagi ${pegi}`"
     :title="title"
+    :width="width"
     data-toggle="tooltip"
     data-placement="top"
   />
@@ -17,6 +18,11 @@ export default {
       type: Number,
       required: false,
       default: null,
+    },
+    width: {
+      type: Number,
+      required: false,
+      default: 40,
     },
   },
   computed: {

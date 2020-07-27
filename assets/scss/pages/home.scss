@@ -4,10 +4,11 @@
    }
 }
 
-@include media-breakpoint-down(lg) {
+@include media-breakpoint-down(md) {
    #home-page {
       .c35-col-right {
-         display: none;
+         min-width: 100%;
+         max-width: 100%;
       }
    }
 }

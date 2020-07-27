@@ -41,7 +41,7 @@
               </template>
             </c35-sidebar-content>
 
-            <c35-sidebar-content>
+            <c35-sidebar-content class="d-none d-lg-block">
               <template #title>
                 LE DAHLIA NOIR
               </template>
@@ -53,7 +53,7 @@
               </template>
             </c35-sidebar-content>
 
-            <c35-sidebar-content>
+            <c35-sidebar-content class="d-none d-lg-block">
               <template #title>
                 UN APRÈS-MIDI DE CHIEN
               </template>
@@ -65,7 +65,7 @@
               </template>
             </c35-sidebar-content>
 
-            <c35-sidebar-content>
+            <c35-sidebar-content class="d-none d-lg-block">
               <template #title>
                 LES TORTUES NINJAS
               </template>
@@ -78,8 +78,12 @@
             </c35-sidebar-content>
           </div>
           <div class="c35-sibera-content-action">
-            <a class="btn btn-primary c35-btn">
-              Voir toutes les actualités
+            <a
+              href="/movies/critiques"
+              class="btn btn-primary c35-btn"
+              title="Voir plus de critiques"
+            >
+              Voir plus de critiques
             </a>
           </div>
         </div>

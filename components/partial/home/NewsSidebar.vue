@@ -17,6 +17,7 @@
                 à Rennes du 25 mars au 14 avril 2019
               </template>
             </c35-sidebar-content>
+
             <c35-sidebar-content>
               <template #title>
                 avant-première
@@ -28,6 +29,7 @@
                 au CGR La Mézière. Mardi 12 février à 21h30
               </template>
             </c35-sidebar-content>
+
             <c35-sidebar-content>
               <template #title>
                 ÉQUIPE DE FILM
@@ -41,7 +43,7 @@
               </template>
             </c35-sidebar-content>
 
-            <c35-sidebar-content>
+            <c35-sidebar-content class="d-none d-lg-block">
               <template #title>
                 événement
               </template>
@@ -53,7 +55,7 @@
                 à Rennes du 25 mars au 14 avril 2019
               </template>
             </c35-sidebar-content>
-            <c35-sidebar-content>
+            <c35-sidebar-content class="d-none d-lg-block">
               <template #title>
                 avant-première
               </template>
@@ -64,7 +66,7 @@
                 au CGR La Mézière. Mardi 12 février à 21h30
               </template>
             </c35-sidebar-content>
-            <c35-sidebar-content>
+            <c35-sidebar-content class="d-none d-lg-block">
               <template #title>
                 ÉQUIPE DE FILM
               </template>
@@ -78,7 +80,11 @@
             </c35-sidebar-content>
           </div>
           <div class="c35-sibera-content-action">
-            <a class="btn btn-primary c35-btn">
+            <a
+              href="/news"
+              class="btn btn-primary c35-btn"
+              title="Voir toutes les actualités"
+            >
               Voir toutes les actualités
             </a>
           </div>

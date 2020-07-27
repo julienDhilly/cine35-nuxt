@@ -6,7 +6,7 @@
       </div>
     </div>
     <div class="c35-section">
-      <div class="container-md px-1">
+      <div class="px-1">
         <div class="row mx-n1">
           <div class="col-12 pl-1">
             <c35-strike>

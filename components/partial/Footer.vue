@@ -4,7 +4,10 @@
       Ciné35 2020, tous droits réservés
     </div>
     <div class="mt-4">
-      Mentions Légales |
+      <a href="/mentions-legales" title="Mentions légales">
+        Mentions Légales
+      </a>
+      |
       <a href="/contact" title="Nous contacter">
         Contact
       </a>

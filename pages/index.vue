@@ -1,7 +1,7 @@
 <template>
   <div id="home-page">
     <div class="row">
-      <div class="col c35-col-left">
+      <div class="col">
         <c35-movie-preview-list
           :movies="movies"
           link-to-more-title="Voir tous les films à l'affiche"
@@ -25,7 +25,7 @@
         <c35-home-critiques-sidebar />
 
         <!-- pub 300x600 -->
-        <div class="c35-sidebar-block d-none d-lg-block">
+        <div class="c35-sidebar-block d-none d-xl-block">
           <div class="container">
             <div class="row">
               <div class="col-12">
@@ -39,7 +39,7 @@
         </div>
 
         <!-- plugin Faceboob 300x500 -->
-        <div class="c35-sidebar-block d-none d-lg-block">
+        <div class="c35-sidebar-block d-none d-xl-block">
           <div class="container">
             <div class="row">
               <div class="col-12">
