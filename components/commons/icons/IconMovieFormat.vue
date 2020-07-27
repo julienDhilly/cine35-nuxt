@@ -1,5 +1,13 @@
 <template>
-  <img v-if="format" :src="imgSource" :alt="format" width="40" />
+  <img
+    v-if="format"
+    :src="imgSource"
+    :alt="format"
+    :title="title"
+    width="40"
+    data-toggle="tooltip"
+    data-placement="top"
+  />
 </template>
 
 <script>
@@ -23,6 +31,17 @@ export default {
           return "/icons/picto_image_4Kplus_100.png"
       }
       return "/icons/picto_image_4k_100.png"
+    },
+    title() {
+      switch (this.format) {
+        case "35mm":
+          return "Format pellicule 35 mm"
+        case "4k":
+          return "Format numérique 4K"
+        case "4k+":
+          return "Format numérique 4K+"
+      }
+      return null
     },
   },
 }

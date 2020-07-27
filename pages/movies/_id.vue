@@ -21,6 +21,9 @@
                 alt="Pegi 10"
                 class="ml-4"
                 style="width: 55px;"
+                title=" Recommandé à partir de 10 ans"
+                data-toggle="tooltip"
+                data-placement="top"
               />
             </span>
           </div>

@@ -1,4 +1,7 @@
 $.when( $.ready ).then(function() {
+   // tooltip
+   $('[data-toggle="tooltip"]').tooltip()
+
    // menu
    $('#c35-btn-search-mobile').click(function() {
       var btn = $('#navbarSearchContext');

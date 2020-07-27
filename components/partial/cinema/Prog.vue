@@ -17,13 +17,7 @@
           {{ prog.movie.name }}
         </a>
         <span> ({{ prog.movie.releaseYear }}) </span>
-        <template v-if="prog.movie.pegi">
-          <img
-            :src="`/icons/picto_age_${prog.movie.pegi}_100.png`"
-            width="40"
-            :alt="`Pegi ${prog.movie.pegi}`"
-          />
-        </template>
+        <c35-icon-pegi v-if="prog.movie.pegi" :pegi="prog.movie.pegi" />
       </div>
       <div class="c35-prog-schedules">
         <c35-schedule
@@ -39,10 +33,11 @@
 
 <script>
 import C35Schedule from "./Schedule"
+import C35IconPegi from "~/components/commons/icons/IconPegi.vue"
 
 export default {
   name: "C35Prog",
-  components: { C35Schedule },
+  components: { C35Schedule, C35IconPegi },
   props: {
     prog: {
       type: Object,
