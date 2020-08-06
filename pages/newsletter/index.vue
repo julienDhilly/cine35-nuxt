@@ -13,7 +13,7 @@
           </c35-strike>
         </div>
       </div>
-      <div class="row">
+      <div class="row mt-5">
         <div class="col-2"></div>
         <div class="col-8">
           <div class="text-center">
@@ -41,7 +41,7 @@
 
           <form class="mt-4">
             <div class="form-group row">
-              <label for="email" class="col-sm-3 col-form-label text-right">
+              <label for="email" class="col-sm-3 col-form-label text-sm-right">
                 Addresse mail* :
               </label>
               <div class="col-sm-9">
@@ -74,7 +74,7 @@
 
           <form class="mt-4">
             <div class="form-group row">
-              <label for="email" class="col-sm-3 col-form-label text-right">
+              <label for="email" class="col-sm-3 col-form-label text-sm-right">
                 Addresse mail* :
               </label>
               <div class="col-sm-9">

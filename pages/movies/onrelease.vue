@@ -14,6 +14,7 @@
             </c35-strike>
           </div>
         </div>
+        <c35-movie-preview-list-filters />
         <div class="c35-movie-list-date-section">
           En sortie cette semaine
         </div>
@@ -50,14 +51,14 @@
 import C35Strike from "~/components/commons/Strike"
 import C35Breadcrumb from "~/components/partial/Breadcrumb"
 import C35MoviePreview from "~/components/commons/MoviePreview"
-// import C35MoviePreviewListFilters from "~/components/commons/MoviePreviewListFilters"
+import C35MoviePreviewListFilters from "~/components/commons/MoviePreviewListFilters"
 
 export default {
   components: {
     C35Strike,
     C35Breadcrumb,
     C35MoviePreview,
-    //  C35MoviePreviewListFilters,
+    C35MoviePreviewListFilters,
   },
   async fetch({ store }) {
     await store.dispatch("movies/fetch")

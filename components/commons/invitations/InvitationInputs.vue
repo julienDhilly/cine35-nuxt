@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="form-group row">
-      <label for="inputCivility" class="col-sm-3 col-form-label text-right">
+      <label for="inputCivility" class="col-sm-3 col-form-label text-sm-right">
         Civilité* :
       </label>
       <div class="col-sm-9">
@@ -16,7 +16,7 @@
       </div>
     </div>
     <div class="form-group row">
-      <label for="name" class="col-sm-3 col-form-label text-right">
+      <label for="name" class="col-sm-3 col-form-label text-sm-right">
         Nom* :
       </label>
       <div class="col-sm-9">
@@ -24,7 +24,7 @@
       </div>
     </div>
     <div class="form-group row">
-      <label for="firstName" class="col-sm-3 col-form-label text-right">
+      <label for="firstName" class="col-sm-3 col-form-label text-sm-right">
         Prénom* :
       </label>
       <div class="col-sm-9">
@@ -32,7 +32,7 @@
       </div>
     </div>
     <div class="form-group row">
-      <label class="col-sm-3 col-form-label text-right">
+      <label class="col-sm-3 col-form-label text-sm-right">
         Né(e) le* :
       </label>
       <div class="col-sm-9">
@@ -66,7 +66,7 @@
       </div>
     </div>
     <div class="form-group row">
-      <label for="email" class="col-sm-3 col-form-label text-right">
+      <label for="email" class="col-sm-3 col-form-label text-sm-right">
         Addresse mail* :
       </label>
       <div class="col-sm-9">
@@ -88,12 +88,7 @@
       </div>
     </div>
     <div class="text-center">
-      <input
-        class="btn btn-primary c35-btn"
-        type="submit"
-        value="Envoyer"
-        style="text-transform: uppercase;"
-      />
+      <input class="btn btn-primary c35-btn" type="submit" value="Envoyer" />
     </div>
   </div>
 </template>

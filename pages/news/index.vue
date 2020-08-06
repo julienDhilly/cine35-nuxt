@@ -10,7 +10,7 @@
         <div class="row mx-n1">
           <div class="col-12 pl-1">
             <c35-strike>
-              Actualité
+              Actualités
             </c35-strike>
           </div>
         </div>

@@ -10,11 +10,13 @@
                 événement
               </template>
               <template #content>
-                Festibal
-                <span class="text-primary font-weight-bold">
-                  Court métrange
-                </span>
-                à Rennes du 25 mars au 14 avril 2019
+                <a href="/news/123" title="Festival court métrange">
+                  Festival
+                  <span class="text-primary font-weight-bold">
+                    Court métrange
+                  </span>
+                  à Rennes du 25 mars au 14 avril 2019
+                </a>
               </template>
             </c35-sidebar-content>
 
@@ -23,10 +25,12 @@
                 avant-première
               </template>
               <template #content>
-                <span class="text-primary font-weight-bold">
-                  All inclusive
-                </span>
-                au CGR La Mézière. Mardi 12 février à 21h30
+                <a href="/news/123" title="All inclusive">
+                  <span class="text-primary font-weight-bold">
+                    All inclusive
+                  </span>
+                  au CGR La Mézière. Mardi 12 février à 21h30
+                </a>
               </template>
             </c35-sidebar-content>
 
@@ -35,11 +39,16 @@
                 ÉQUIPE DE FILM
               </template>
               <template #content>
-                L’équipe de
-                <span class="text-primary font-weight-bold">
-                  Qu’est-ce qu’on a fait au bon dieu ?
-                </span>
-                à Vern sur Seiche
+                <a
+                  href="/news/123"
+                  title="équipe de qu'est-ce qu’on a fait au bon dieu ?"
+                >
+                  L’équipe de
+                  <span class="text-primary font-weight-bold">
+                    Qu’est-ce qu’on a fait au bon dieu ?
+                  </span>
+                  à Vern sur Seiche
+                </a>
               </template>
             </c35-sidebar-content>
 
@@ -48,11 +57,13 @@
                 événement
               </template>
               <template #content>
-                Festibal
-                <span class="text-primary font-weight-bold">
-                  Court métrange
-                </span>
-                à Rennes du 25 mars au 14 avril 2019
+                <a href="/news/123" title="Festival court métrange">
+                  Festival
+                  <span class="text-primary font-weight-bold">
+                    Court métrange
+                  </span>
+                  à Rennes du 25 mars au 14 avril 2019
+                </a>
               </template>
             </c35-sidebar-content>
             <c35-sidebar-content class="d-none d-lg-block">
@@ -60,10 +71,12 @@
                 avant-première
               </template>
               <template #content>
-                <span class="text-primary font-weight-bold">
-                  All inclusive
-                </span>
-                au CGR La Mézière. Mardi 12 février à 21h30
+                <a href="/news/123" title="All inclusive">
+                  <span class="text-primary font-weight-bold">
+                    All inclusive
+                  </span>
+                  au CGR La Mézière. Mardi 12 février à 21h30
+                </a>
               </template>
             </c35-sidebar-content>
             <c35-sidebar-content class="d-none d-lg-block">
@@ -71,11 +84,16 @@
                 ÉQUIPE DE FILM
               </template>
               <template #content>
-                L’équipe de
-                <span class="text-primary font-weight-bold">
-                  Qu’est-ce qu’on a fait au bon dieu ?
-                </span>
-                à Vern sur Seiche
+                <a
+                  href="/news/123"
+                  title="équipe de qu'est-ce qu’on a fait au bon dieu ?"
+                >
+                  L’équipe de
+                  <span class="text-primary font-weight-bold">
+                    Qu’est-ce qu’on a fait au bon dieu ?
+                  </span>
+                  à Vern sur Seiche
+                </a>
               </template>
             </c35-sidebar-content>
           </div>

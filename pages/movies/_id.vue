@@ -64,7 +64,7 @@
               aria-controls="sessions"
               aria-selected="false"
             >
-              Séance
+              Séances
             </a>
           </li>
           <li class="nav-item">
@@ -77,7 +77,7 @@
               aria-controls="reviews"
               aria-selected="false"
             >
-              Critiques
+              Critique
             </a>
           </li>
         </ul>

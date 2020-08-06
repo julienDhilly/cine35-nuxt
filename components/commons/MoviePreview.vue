@@ -4,6 +4,7 @@
     class="c35-movie-preview"
     :href="`/movies/${movie.id}`"
     :title="movie.name"
+    :data-filter-pegi="pegi"
   >
     <img :src="`/previews/${movie.preview}`" alt="ALERTE" />
     <div class="c35-movie-preview-overlay">
@@ -40,6 +41,11 @@ export default {
       required: true,
     },
   },
+  data() {
+    return {
+      pegi: null,
+    }
+  },
   computed: {
     directors() {
       const directors = this.movie.directors.map(
@@ -53,6 +59,11 @@ export default {
     duration() {
       return secondsToHms(this.movie.duration)
     },
+  },
+  created() {
+    const pegies = [0, 3, 6, 10, 12, 16, 18]
+    const rand = Math.floor(Math.random() * pegies.length)
+    this.pegi = pegies[rand]
   },
 }
 </script>

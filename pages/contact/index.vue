@@ -91,7 +91,6 @@
                 class="btn btn-primary c35-btn"
                 type="submit"
                 value="Envoyer"
-                style="text-transform: uppercase;"
               />
             </div>
           </form>

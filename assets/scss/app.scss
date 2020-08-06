@@ -147,6 +147,13 @@ hr {
    }
 }
 
+@include media-breakpoint-down(sm) {
+   .c35-block-title {
+      font-size: 16px;
+      max-width: 100% !important;
+   }
+}
+
 @include media-breakpoint-up(sm) {
    .c35-more {
       height: 0;

@@ -14,7 +14,7 @@
         </a>
       </div>
       <div class="col-9">
-        <div class="h2 text-primary">
+        <div class="h3 text-primary" style="font-weight: 400;">
           <a
             href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4"
             title="Just Kids"
@@ -45,7 +45,7 @@
         </a>
       </div>
       <div class="col-9">
-        <div class="h2 text-primary">
+        <div class="h3 text-primary" style="font-weight: 400;">
           <a
             href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4"
             title="Eva et moi"
@@ -75,7 +75,7 @@
         </a>
       </div>
       <div class="col-9">
-        <div class="h2 text-primary">
+        <div class="h3 text-primary" style="font-weight: 400;">
           <a
             href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4"
             title="Malmkrog"

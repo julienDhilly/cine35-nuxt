@@ -10,10 +10,15 @@
                 LE DAHLIA NOIR
               </template>
               <template #content>
-                <span class="font-italic">
-                  "Un désastre d'1h45"
-                </span>
-                par Martin G.
+                <a
+                  href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+                  title="Un désastre d'1h45"
+                >
+                  <span class="font-italic">
+                    "Un désastre d'1h45"
+                  </span>
+                  par Martin G.
+                </a>
               </template>
             </c35-sidebar-content>
 
@@ -22,10 +27,15 @@
                 UN APRÈS-MIDI DE CHIEN
               </template>
               <template #content>
-                <span class="font-italic">
-                  "Le chef d’oeuvre de son auteur"
-                </span>
-                par Laura T.
+                <a
+                  href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+                  title="Le chef d’oeuvre de son auteur"
+                >
+                  <span class="font-italic">
+                    "Le chef d’oeuvre de son auteur"
+                  </span>
+                  par Laura T.
+                </a>
               </template>
             </c35-sidebar-content>
 
@@ -34,46 +44,66 @@
                 LES TORTUES NINJAS
               </template>
               <template #content>
-                <span class="font-italic">
-                  "Vous reprendrez de la pizza ?"
-                </span>
-                par John G.
+                <a
+                  href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+                  title="Vous reprendrez de la pizza ?"
+                >
+                  <span class="font-italic">
+                    "Vous reprendrez de la pizza ?"
+                  </span>
+                  par John G.
+                </a>
               </template>
             </c35-sidebar-content>
 
-            <c35-sidebar-content class="d-none d-lg-block">
+            <c35-sidebar-content>
               <template #title>
                 LE DAHLIA NOIR
               </template>
               <template #content>
-                <span class="font-italic">
-                  "Un désastre d'1h45"
-                </span>
-                par Martin G.
+                <a
+                  href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+                  title="Un désastre d'1h45"
+                >
+                  <span class="font-italic">
+                    "Un désastre d'1h45"
+                  </span>
+                  par Martin G.
+                </a>
               </template>
             </c35-sidebar-content>
 
-            <c35-sidebar-content class="d-none d-lg-block">
+            <c35-sidebar-content>
               <template #title>
                 UN APRÈS-MIDI DE CHIEN
               </template>
               <template #content>
-                <span class="font-italic">
-                  "Le chef d’oeuvre de son auteur"
-                </span>
-                par Laura T.
+                <a
+                  href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+                  title="Le chef d’oeuvre de son auteur"
+                >
+                  <span class="font-italic">
+                    "Le chef d’oeuvre de son auteur"
+                  </span>
+                  par Laura T.
+                </a>
               </template>
             </c35-sidebar-content>
 
-            <c35-sidebar-content class="d-none d-lg-block">
+            <c35-sidebar-content>
               <template #title>
                 LES TORTUES NINJAS
               </template>
               <template #content>
-                <span class="font-italic">
-                  "Vous reprendrez de la pizza ?"
-                </span>
-                par John G.
+                <a
+                  href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+                  title="Vous reprendrez de la pizza ?"
+                >
+                  <span class="font-italic">
+                    "Vous reprendrez de la pizza ?"
+                  </span>
+                  par John G.
+                </a>
               </template>
             </c35-sidebar-content>
           </div>
