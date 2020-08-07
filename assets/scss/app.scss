@@ -147,6 +147,39 @@ hr {
    }
 }
 
+.c35-btn-filter {
+   background: #FFF;
+   border-radius: 5px;
+   text-transform: uppercase;
+   font-size: 1rem;
+   font-weight: 500;
+   font-family: "Rubik", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+#c35-btn-filter-movies-ok,
+#c35-filter-movie-filters-container {
+   display: none;
+}
+
+#c35-movie-filter-mobile-container {
+   padding: 10px;
+
+   &.active {
+      background: #FFF;
+      border-radius: 5px;
+
+      #c35-btn-filter-movies-ok,
+      #c35-filter-movie-filters-container {
+         display: block;
+      }
+
+      .c35-btn-filter {
+         color: theme-color("primary");
+         background: transparent;
+      }
+   }
+}
+
 @include media-breakpoint-down(sm) {
    .c35-block-title {
       font-size: 16px;

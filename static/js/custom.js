@@ -12,7 +12,20 @@ $.when( $.ready ).then(function() {
       }
    });
 
-   // filters
+   // onrelease filters display on mobile
+   $('#c35-btn-movie-filters-mobile').click(function() {
+      if ($('#c35-movie-filter-mobile-container').hasClass('active')) {
+         $('#c35-movie-filter-mobile-container').removeClass('active');
+      } else {
+         $('#c35-movie-filter-mobile-container').addClass('active');
+      }
+   });
+
+   $('#c35-btn-filter-movies-ok').click(function() {
+      $('#c35-movie-filter-mobile-container').removeClass('active');
+   });
+
+   // onrelease filters business
    var filters = [];
    $('.c35-movie-list-filters').find('.c35-filter-input').change(function(event) {
       var elt = event.currentTarget;
