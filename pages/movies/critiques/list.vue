@@ -23,7 +23,7 @@
         <ul>
           <li>
             <a
-              href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+              href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=2"
               title="Voir la critique"
             >
               Akira
@@ -31,7 +31,7 @@
           </li>
           <li>
             <a
-              href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+              href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=2"
               title="Voir la critique"
             >
               Aladdin
@@ -39,7 +39,7 @@
           </li>
           <li>
             <a
-              href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+              href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=2"
               title="Voir la critique"
             >
               Avengers
@@ -55,7 +55,7 @@
         <ul>
           <li>
             <a
-              href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+              href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=2"
               title="Voir la critique"
             >
               Batman
@@ -63,7 +63,7 @@
           </li>
           <li>
             <a
-              href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+              href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=2"
               title="Voir la critique"
             >
               Battle Royale
@@ -71,7 +71,7 @@
           </li>
           <li>
             <a
-              href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+              href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=2"
               title="Voir la critique"
             >
               Bienvenue chez les Ch'tis
@@ -87,7 +87,7 @@
         <ul>
           <li>
             <a
-              href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+              href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=2"
               title="Voir la critique"
             >
               ...

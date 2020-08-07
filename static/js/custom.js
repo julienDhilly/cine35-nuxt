@@ -1,6 +1,6 @@
 $.when( $.ready ).then(function() {
    // tooltip
-   $('[data-toggle="tooltip"]').tooltip()
+   $('[data-toggle="tooltip"]').tooltip();
 
    // menu
    $('#c35-btn-search-mobile').click(function() {
@@ -11,6 +11,21 @@ $.when( $.ready ).then(function() {
          $('#navbarSearchContext').addClass('show');
       }
    });
+
+   // ready tab index from query
+   var urlParams = new URLSearchParams(window.location.search);
+   if (urlParams.has('tabIndex')) {
+      var tabIndex = urlParams.get('tabIndex');
+      $('.c35-nav-tabs').each(function(index, elt) {
+         $(elt).find('.nav-link.active').removeClass('active');
+         $(elt).children().eq(tabIndex).find('.nav-link').addClass('active');
+      });
+
+      $('.c35-tab-content').each(function(index, elt) {
+         $(elt).find('.tab-pane.active').removeClass('active');
+         $(elt).children().eq(tabIndex).addClass('active').addClass('show');
+      });
+   }
 
    // onrelease filters display on mobile
    $('#c35-btn-movie-filters-mobile').click(function() {

@@ -11,7 +11,7 @@
               </template>
               <template #content>
                 <a
-                  href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+                  href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=2"
                   title="Un désastre d'1h45"
                 >
                   <span class="font-italic">
@@ -28,7 +28,7 @@
               </template>
               <template #content>
                 <a
-                  href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+                  href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=2"
                   title="Le chef d’oeuvre de son auteur"
                 >
                   <span class="font-italic">
@@ -45,7 +45,7 @@
               </template>
               <template #content>
                 <a
-                  href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+                  href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=2"
                   title="Vous reprendrez de la pizza ?"
                 >
                   <span class="font-italic">
@@ -62,7 +62,7 @@
               </template>
               <template #content>
                 <a
-                  href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+                  href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=2"
                   title="Un désastre d'1h45"
                 >
                   <span class="font-italic">
@@ -79,7 +79,7 @@
               </template>
               <template #content>
                 <a
-                  href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+                  href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=2"
                   title="Le chef d’oeuvre de son auteur"
                 >
                   <span class="font-italic">
@@ -96,7 +96,7 @@
               </template>
               <template #content>
                 <a
-                  href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+                  href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=2"
                   title="Vous reprendrez de la pizza ?"
                 >
                   <span class="font-italic">

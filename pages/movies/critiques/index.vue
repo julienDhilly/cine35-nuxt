@@ -30,7 +30,7 @@
         <div class="news row mx-auto mt-5">
           <div class="col-12 col-md-6">
             <a
-              href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+              href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=2"
               title="Lire la critique"
             >
               <img
@@ -43,7 +43,7 @@
           <div class="col-12 col-md-6 mt-2 mt-md-0">
             <div class="c35-block-title" style="max-width: 280px;">
               <a
-                href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+                href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=2"
                 title="Lire la critique"
               >
                 LE DAHLIA NOIR
@@ -55,7 +55,7 @@
             <div class="font-italic">
               Un désastre d’1h45”.
               <a
-                href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+                href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=2"
                 title="Lire la critique"
               >
                 Lire la critique
@@ -69,7 +69,7 @@
         <div class="news row mx-auto">
           <div class="col-12 col-md-6">
             <a
-              href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+              href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=2"
               title="Lire la critique"
             >
               <img
@@ -82,7 +82,7 @@
           <div class="col-12 col-md-6 mt-2 mt-md-0">
             <div class="c35-block-title" style="max-width: 280px;">
               <a
-                href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+                href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=2"
                 title="Lire la critique"
               >
                 Un après-midi de chien
@@ -94,7 +94,7 @@
             <div class="font-italic">
               “Le chef d’oeuvre de son auteur”.
               <a
-                href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+                href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=2"
                 title="Lire la critique"
               >
                 Lire la critique
@@ -108,7 +108,7 @@
         <div class="news row mx-auto">
           <div class="col-12 col-md-6">
             <a
-              href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+              href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=2"
               title="Lire la critique"
             >
               <img
@@ -121,7 +121,7 @@
           <div class="col-12 col-md-6 mt-2 mt-md-0">
             <div class="c35-block-title" style="max-width: 280px;">
               <a
-                href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+                href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=2"
                 title="Lire la critique"
               >
                 Les tortues ninja
@@ -133,7 +133,7 @@
             <div class="font-italic">
               Vous reprendrez bien de la pizza ?
               <a
-                href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=3"
+                href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4?tabIndex=2"
                 title="Lire la critique"
               >
                 Lire la critique
