@@ -89,4 +89,60 @@ $.when( $.ready ).then(function() {
          case '18': return ['12', '16', '18'];
       }
    }
+
+   // prog list filters
+   var progListActiveFilters = [];
+   var progListElts = $('#c35-prog-list-filters-values').find('.c35-prog-schedule');
+
+   $('.c35-prog-list-filters').find('.c35-prog-list-filter > input').change(function(event) {
+      var elt = event.currentTarget;
+      var isChecked = $(elt).is(':checked');
+      var filterValue = elt.attributes.value.value;
+      var filterGroup = elt.attributes['data-group'].value;
+
+      if (!isChecked) {
+         var index = progListActiveFilters.findIndex(function(filter) {
+            return filter.value === filterValue && filter.group === filterGroup;
+         });
+         if (index > -1) {
+            progListActiveFilters.splice(index, 1);
+         }
+      } else {
+         progListActiveFilters.push({
+            value: filterValue,
+            group: filterGroup
+         });
+      }
+
+      if (progListActiveFilters.length === 0) {
+         $('#c35-prog-list-filters-values').find('.c35-prog-schedule').show();
+      } else {
+         progListElts.each(function(index, elt) {
+            var valid = progListActiveFilters.some(function(filter) {
+               var eltValue = $(elt).attr('data-' + filter.group);
+               return eltValue === filter.value;
+            });
+
+            if (valid) {
+               $(elt).show();
+            } else {
+               $(elt).hide();
+            }
+         });
+      }
+   });
+
+   // prog list filtersdisplay on mobile
+   $('#c35-btn-movie-filters-mobile').click(function() {
+      console.log('jere');
+      if ($('#c35-prog-list-filters-mobile-container').hasClass('active')) {
+         $('#c35-prog-list-filters-mobile-container').removeClass('active');
+      } else {
+         $('#c35-prog-list-filters-mobile-container').addClass('active');
+      }
+   });
+
+   $('#c35-btn-filter-prog-list-ok').click(function() {
+      $('#c35-prog-list-filters-mobile-container').removeClass('active');
+   });
  });

@@ -1,3 +1,51 @@
+.c35-prog-list-filters {
+   border-right: 1px solid theme-color('primary');
+
+   .c35-prog-list-filters-title {
+      font-size: 18px;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 500;
+   }
+
+   .c35-prog-list-filters-group-title {
+      font-weight: bold;
+   }
+}
+
+
+
+@include media-breakpoint-down(sm) {
+   .c35-prog-list-filters {
+      border-right: 0 none;
+   }
+}
+
+
+#c35-btn-filter-prog-list-ok,
+#c35-prog-list-filters-filters-container {
+   display: none;
+}
+
+#c35-prog-list-filters-mobile-container {
+   padding: 10px;
+
+   &.active {
+      background: #FFF;
+      border-radius: 5px;
+
+      #c35-btn-filter-prog-list-ok,
+      #c35-prog-list-filters-filters-container {
+         display: block;
+      }
+
+      .c35-btn-filter {
+         color: theme-color("primary");
+         background: transparent;
+      }
+   }
+}
+
 .c35-movie-banner {
    position: relative;
    padding-top: 2rem;

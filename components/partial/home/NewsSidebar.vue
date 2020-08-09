@@ -93,7 +93,7 @@
                     Qu’est-ce qu’on a fait au bon dieu ?
                   </span>
                   à Vern sur Seiche
-                Ar</a>
+                </a>
               </template>
             </c35-sidebar-content>
           </div>

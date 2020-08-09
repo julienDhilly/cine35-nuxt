@@ -1,15 +1,21 @@
 <template>
-  <div class="c35-prog">
-    <c35-prog v-for="(prog, index) in list" :key="index" :prog="prog" />
+  <div class="row">
+    <div class="col-12 col-md-3">
+      <c35-prog-list-filters />
+    </div>
+    <div id="c35-prog-list-filters-values" class="col-12 col-md-9">
+      <c35-prog v-for="(prog, index) in list" :key="index" :prog="prog" />
+    </div>
   </div>
 </template>
 
 <script>
 import C35Prog from "./Prog"
+import C35ProgListFilters from "./ProgListFilters"
 
 export default {
   name: "C35ProgList",
-  components: { C35Prog },
+  components: { C35Prog, C35ProgListFilters },
   data() {
     return {
       list: [

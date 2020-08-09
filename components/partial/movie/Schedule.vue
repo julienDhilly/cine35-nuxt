@@ -1,5 +1,12 @@
 <template>
-  <div class="c35-prog-schedule">
+  <div
+    class="c35-prog-schedule"
+    :data-lang="schedule.lang"
+    :data-dimension="schedule.dimension"
+    :data-format="schedule.format"
+    :data-confort="schedule.confort"
+    :data-sound="schedule.sound"
+  >
     <div class="c35-prog-schedule-dates">
       <template v-if="schedule.startDate !== schedule.endDate">
         <div>Du {{ schedule.startDate }}</div>
