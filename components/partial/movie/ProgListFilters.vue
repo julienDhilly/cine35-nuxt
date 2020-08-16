@@ -115,7 +115,7 @@ export default {
           ],
         },
         {
-          name: "Formart",
+          name: "Format",
           key: "dimension",
           filters: [
             {

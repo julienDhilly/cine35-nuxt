@@ -67,7 +67,7 @@
     </div>
     <div class="form-group row">
       <label for="email" class="col-sm-3 col-form-label text-sm-right">
-        Addresse mail* :
+        Adresse mail* :
       </label>
       <div class="col-sm-9">
         <input id="email" type="email" class="form-control" required />

@@ -58,7 +58,7 @@
                 for="email"
                 class="col-4 col-md-3 col-form-label text-right"
               >
-                Addresse mail* :
+                Adresse mail* :
               </label>
               <div class="col-8 col-md-9">
                 <input id="email" type="email" class="form-control" required />
@@ -69,7 +69,7 @@
                 for="object"
                 class="col-4 col-md-3 col-form-label text-right"
               >
-                Object :
+                Objet :
               </label>
               <div class="col-8 col-md-9">
                 <input id="object" type="text" class="form-control" required />
