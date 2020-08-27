@@ -13,6 +13,11 @@
           </c35-strike>
         </div>
       </div>
+      <div class="text-right mb-3">
+        <div class="btn btn-primary c35-btn c35-geoloc-btn">
+          Voir les salles autour de moi
+        </div>
+      </div>
       <div class="row mx-n1">
         <template v-for="cinema in cinemas">
           <div

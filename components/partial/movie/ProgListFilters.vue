@@ -109,8 +109,8 @@ export default {
               value: "vo",
             },
             {
-              label: "VOSTF",
-              value: "vostfr",
+              label: "VOST",
+              value: "vost",
             },
           ],
         },

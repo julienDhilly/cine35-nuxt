@@ -7,14 +7,14 @@
       }
    }
 
-   .c35-entity-informations-col-left {
+   .c35-entity-informations-col-left.style1 {
       font-weight: bold;
    }
 }
 
 
 @include media-breakpoint-up(md) {
-   .c35-entity-informations-col-left {
+   .c35-entity-informations-col-left.style1 {
       text-align: right;
    }
 }

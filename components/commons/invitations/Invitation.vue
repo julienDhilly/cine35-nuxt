@@ -16,7 +16,26 @@
     </div>
     <div class="row mt-3">
       <div class="col-9">
-        <c35-entity-informations :informations="informations" space="20px" />
+        <c35-entity-informations
+          :informations="informations"
+          classes="style2"
+          space="10px"
+        />
+        <div class="mt-3">
+          <div class="font-weight-bold">
+            CGR CINEMAS - La Mézière
+          </div>
+          <div class="mt-2">
+            24/09/2020
+          </div>
+          <div class="font-weight-bold">
+            12:30, 20:30
+          </div>
+          <div class="mt-2">
+            25/09/2020
+          </div>
+          <div>12:30, 20:30</div>
+        </div>
       </div>
       <div class="col-3">
         <img src="/previews/eva_et_moi.jpg" alt="ALERTE" style="width: 100%;" />
@@ -46,24 +65,20 @@ export default {
           content: "Lo Wei",
         },
         {
-          title: "Casting",
+          title: "Acteurs",
           content: "Bruce Lee, Nora Miao, James Tien",
         },
         {
-          title: "Pays d'origine",
+          title: "Nationalité",
           content: "Hong Kong ",
+        },
+        {
+          title: "Année",
+          content: "2020",
         },
         {
           title: "Durée",
           content: "1h48",
-        },
-        {
-          title: "CGR CINEMAS",
-          content: "La Mézière",
-        },
-        {
-          title: "11/06/2020",
-          content: "10:45, 16:00 et 20:20",
         },
       ],
     }

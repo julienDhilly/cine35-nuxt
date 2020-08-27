@@ -2,7 +2,10 @@
   <div class="c35-entity-informations">
     <template v-for="(information, index) in informations">
       <div :key="index" class="row c35-entity-informations-row" :style="style">
-        <div class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left">
+        <div
+          class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left"
+          :class="classes"
+        >
           {{ information.title }} :
         </div>
         <div class="col-12 col-md-8 col-lg-9">
@@ -25,6 +28,11 @@ export default {
       type: String,
       required: false,
       default: null,
+    },
+    classes: {
+      type: String,
+      required: false,
+      default: "style1",
     },
   },
   computed: {

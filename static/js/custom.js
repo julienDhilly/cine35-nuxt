@@ -1,4 +1,12 @@
 $.when( $.ready ).then(function() {
+   // geooc
+   $('.c35-geoloc-btn').click(function() {
+      navigator.geolocation.getCurrentPosition(function(position) {
+         window.location = '/cinemas?latitude=' + position.coords.latitude + '&longitude=' + position.coords.longitude;
+      });
+   });
+
+
    // tooltip
    $('[data-toggle="tooltip"]').tooltip();
 

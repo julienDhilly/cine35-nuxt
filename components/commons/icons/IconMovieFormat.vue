@@ -1,6 +1,6 @@
 <template>
   <img
-    v-if="format"
+    v-if="format && imgSource"
     :src="imgSource"
     :alt="format"
     :title="title"
@@ -30,7 +30,7 @@ export default {
         case "4k+":
           return "/icons/picto_image_4Kplus_100.png"
       }
-      return "/icons/picto_image_4k_100.png"
+      return null
     },
     title() {
       switch (this.format) {

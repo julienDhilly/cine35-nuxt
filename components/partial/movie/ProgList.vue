@@ -31,6 +31,7 @@ export default {
               endDate: "05/09/2020",
               hours: ["12:00"],
               lang: "vfst",
+              format: "2k",
               dimension: "2d",
               confort: "ice_lv",
             },

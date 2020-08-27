@@ -25,6 +25,9 @@
       <nuxt-link :to="{ name: 'cinemas' }" class="btn btn-primary c35-btn">
         Voir toutes les salles
       </nuxt-link>
+      <div class="btn btn-primary c35-btn c35-geoloc-btn">
+        Voir les salles autour de moi
+      </div>
     </div>
   </div>
 </template>
