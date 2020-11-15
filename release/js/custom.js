@@ -66,13 +66,12 @@ $.when( $.ready ).then(function() {
          }
       }
 
-      console.log(filters);
       var movies = $('.c35-movie-preview');
       movies.each(function(index, movie) {
          if (filters.length > 0) {
             var value = $(movie).attr('data-filter-pegi');
-            var rangeValues = getRangeValues(value);
-            var isValid = rangeValues.some(function(value) {
+            const rangeValues = getRangeValues(value);
+            const isValid = rangeValues.some(function(value) {
                return filters.includes(value) === true;
             });
 
@@ -90,12 +89,12 @@ $.when( $.ready ).then(function() {
    function getRangeValues(value) {
       switch(value) {
          case '0': return ['0'];
-         case '3': return ['0', '3'];
-         case '6': return ['0', '6'];
-         case '10': return ['0', '10'];
+         case '3': return ['3'];
+         case '6': return ['6', '3'];
+         case '10': return ['10', '6', '3'];
          case '12': return ['12'];
-         case '16': return ['16'];
-         case '18': return ['18'];
+         case '16': return ['12', '16'];
+         case '18': return ['12', '16', '18'];
       }
    }
 

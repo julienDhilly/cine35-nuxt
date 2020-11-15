@@ -35,7 +35,7 @@
     <link
       data-n-head="ssr"
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
     />
     <script
       data-n-head="ssr"
@@ -61,14 +61,11 @@
       src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"
     ></script>
     <script data-n-head="ssr" src="/ads.js"></script>
-    <link rel="preload" href="/_nuxt/5dd7950e092c28f1eb58.js" as="script" />
-    <link rel="preload" href="/_nuxt/870345e323bfc84cec54.js" as="script" />
-    <link rel="preload" href="/_nuxt/5982dc8608b6293bd7d9.css" as="style" />
-    <link rel="preload" href="/_nuxt/33af398403db843cdc23.js" as="script" />
-    <link rel="preload" href="/_nuxt/b3087d3771d1854d9db4.css" as="style" />
-    <link rel="preload" href="/_nuxt/b5d43530e27a29c5f56c.js" as="script" />
-    <link rel="stylesheet" href="/_nuxt/5982dc8608b6293bd7d9.css" />
-    <link rel="stylesheet" href="/_nuxt/b3087d3771d1854d9db4.css" />
+    <script data-n-head="ssr" src="/js/custom.js"></script>
+    <link rel="preload" href="/css/40a609bb3d73d8207a50.css" as="style" />
+    <link rel="preload" href="/css/3cae4fc4b296736be4ad.css" as="style" />
+    <link rel="stylesheet" href="/css/40a609bb3d73d8207a50.css" />
+    <link rel="stylesheet" href="/css/3cae4fc4b296736be4ad.css" />
   </head>
   <body>
     <div data-server-rendered="true" id="__nuxt">
@@ -185,17 +182,44 @@
                   ></path>
                 </g></svg
             ></a>
-            <button
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-              class="navbar-toggler"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
+            <div class="d-flex">
+              <button
+                id="c35-btn-search-mobile"
+                type="button"
+                class="d-block d-lg-none navbar-toggler"
+              >
+                <img src="/images/icons/picto_search_white_100.png" width="20" />
+              </button>
+              <button
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                class="navbar-toggler"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+            <div id="navbarSearchContext" class="collapse navbar-collapse">
+              <form
+                action="/results"
+                class="c35-header-form-search form-inline mr-2 my-2 my-lg-0 ml-2 ml-lg-0"
+              >
+                <input
+                  name="search"
+                  placeholder="Rechercher un film ou une salle..."
+                  aria-label="Rechercher"
+                  class="form-control flex-grow-1"
+                />
+                <div class="input-group-append">
+                  <button type="submit" class="btn btn-primary">
+                    <img src="/images/icons/picto_search_white_100.png" width="20" />
+                  </button>
+                </div>
+              </form>
+            </div>
             <div id="navbarSupportedContent" class="collapse navbar-collapse">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item dropdown">
@@ -261,7 +285,7 @@
               </ul>
               <form
                 action="/results"
-                class="form-inline mr-2 my-2 my-lg-0 ml-2 ml-lg-0"
+                class="c35-header-form-search form-inline mr-2 my-2 my-lg-0 ml-2 ml-lg-0 d-none d-lg-flex"
               >
                 <input
                   name="search"
@@ -271,14 +295,14 @@
                 />
                 <div class="input-group-append">
                   <button type="submit" class="btn btn-primary">
-                    <img src="/icons/picto_search_white_100.png" width="20" />
+                    <img src="/images/icons/picto_search_white_100.png" width="20" />
                   </button>
                 </div>
               </form>
             </div>
           </nav>
           <div class="pub-container">
-            <div class="container py-4">
+            <div class="container pt-4">
               <div class="row justify-content-center">
                 <div
                   id="google-ads-test-banner"
@@ -287,37 +311,39 @@
               </div>
             </div>
           </div>
-          <div id="main-container">
-            <div id="page-invitations" class="container">
-              <div class="row">
-                <div class="col-12">
-                  <nav aria-label="breadcrumb" class="c35-breadcrumb">
-                    <ol class="breadcrumb">
-                      <li aria-current="page" class="breadcrumb-item">
-                        <a href="/" class="active">
-                          Accueil
-                        </a>
-                      </li>
-                      <li aria-current="page" class="breadcrumb-item active">
-                        Jeux
-                      </li>
-                    </ol>
-                  </nav>
-                </div>
-              </div>
-              <div class="c35-section">
+          <div id="main-container" class="pt-4">
+            <div class="container-lg">
+              <div id="page-invitations">
                 <div class="row">
                   <div class="col-12">
-                    <h2 class="strike">
-                      <span>
-                        Jeux
-                      </span>
-                    </h2>
+                    <nav aria-label="breadcrumb" class="c35-breadcrumb">
+                      <ol class="breadcrumb">
+                        <li aria-current="page" class="breadcrumb-item">
+                          <a href="/" class="active">
+                            Accueil
+                          </a>
+                        </li>
+                        <li aria-current="page" class="breadcrumb-item active">
+                          Jeux
+                        </li>
+                      </ol>
+                    </nav>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col-12">
-                    [Placer le contenue de la page ici]
+                <div class="c35-section">
+                  <div class="row">
+                    <div class="col-12">
+                      <h2 class="strike">
+                        <span>
+                          Jeux
+                        </span>
+                      </h2>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12">
+                      [Placer le contenue de la page ici]
+                    </div>
                   </div>
                 </div>
               </div>
@@ -325,10 +351,13 @@
           </div>
           <div class="c35-footer bg-dark mt-4 py-5">
             <div class="font-italic">
-              Ciné35 2020, tous droits réservés
+              Cine35.com 2020, tous droits réservés
             </div>
             <div class="mt-4">
-              Mentions Légales |
+              <a href="/mentions-legales" title="Mentions légales">
+                Mentions Légales
+              </a>
+              |
               <a href="/contact" title="Nous contacter">
                 Contact
               </a>
@@ -337,24 +366,5 @@
         </div>
       </div>
     </div>
-    <script>
-      window.__NUXT__ = {
-        layout: 'default',
-        data: [{}],
-        fetch: [],
-        error: null,
-        state: {
-          actors: { collection: [] },
-          directors: { collection: [] },
-          movies: { collection: [] },
-        },
-        serverRendered: !0,
-        routePath: '/games',
-      };
-    </script>
-    <script src="/_nuxt/5dd7950e092c28f1eb58.js" defer></script>
-    <script src="/_nuxt/870345e323bfc84cec54.js" defer></script>
-    <script src="/_nuxt/33af398403db843cdc23.js" defer></script>
-    <script src="/_nuxt/b5d43530e27a29c5f56c.js" defer></script>
-  </body>
+   </body>
 </html>

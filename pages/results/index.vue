@@ -130,5 +130,18 @@ export default {
       ],
     }
   },
+
+  head() {
+    return {
+      title: "Cine35.com - Résultat de recherche",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "Programmes des cinémas en Ille-et-Vilaine (Département 35)",
+        },
+      ],
+    }
+  },
 }
 </script>

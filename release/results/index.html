@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html data-n-head-ssr>
   <head>
-    <title>
-      Cine35.com - Tous les films, Toutes les salles de cinéma d'Ille-et-Vilaine
-    </title>
+    <title>Cine35.com - Résultat de recherche</title>
     <meta data-n-head="ssr" charset="utf-8" />
     <meta
       data-n-head="ssr"
@@ -35,7 +33,7 @@
     <link
       data-n-head="ssr"
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
     />
     <script
       data-n-head="ssr"
@@ -61,14 +59,11 @@
       src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"
     ></script>
     <script data-n-head="ssr" src="/ads.js"></script>
-    <link rel="preload" href="/_nuxt/5dd7950e092c28f1eb58.js" as="script" />
-    <link rel="preload" href="/_nuxt/870345e323bfc84cec54.js" as="script" />
-    <link rel="preload" href="/_nuxt/5982dc8608b6293bd7d9.css" as="style" />
-    <link rel="preload" href="/_nuxt/33af398403db843cdc23.js" as="script" />
-    <link rel="preload" href="/_nuxt/b3087d3771d1854d9db4.css" as="style" />
-    <link rel="preload" href="/_nuxt/b5d43530e27a29c5f56c.js" as="script" />
-    <link rel="stylesheet" href="/_nuxt/5982dc8608b6293bd7d9.css" />
-    <link rel="stylesheet" href="/_nuxt/b3087d3771d1854d9db4.css" />
+    <script data-n-head="ssr" src="/js/custom.js"></script>
+    <link rel="preload" href="/css/40a609bb3d73d8207a50.css" as="style" />
+    <link rel="preload" href="/css/3cae4fc4b296736be4ad.css" as="style" />
+    <link rel="stylesheet" href="/css/40a609bb3d73d8207a50.css" />
+    <link rel="stylesheet" href="/css/3cae4fc4b296736be4ad.css" />
   </head>
   <body>
     <div data-server-rendered="true" id="__nuxt">
@@ -185,17 +180,44 @@
                   ></path>
                 </g></svg
             ></a>
-            <button
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-              class="navbar-toggler"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
+            <div class="d-flex">
+              <button
+                id="c35-btn-search-mobile"
+                type="button"
+                class="d-block d-lg-none navbar-toggler"
+              >
+                <img src="/images/icons/picto_search_white_100.png" width="20" />
+              </button>
+              <button
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                class="navbar-toggler"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+            <div id="navbarSearchContext" class="collapse navbar-collapse">
+              <form
+                action="/results"
+                class="c35-header-form-search form-inline mr-2 my-2 my-lg-0 ml-2 ml-lg-0"
+              >
+                <input
+                  name="search"
+                  placeholder="Rechercher un film ou une salle..."
+                  aria-label="Rechercher"
+                  class="form-control flex-grow-1"
+                />
+                <div class="input-group-append">
+                  <button type="submit" class="btn btn-primary">
+                    <img src="/images/icons/picto_search_white_100.png" width="20" />
+                  </button>
+                </div>
+              </form>
+            </div>
             <div id="navbarSupportedContent" class="collapse navbar-collapse">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item dropdown">
@@ -258,7 +280,7 @@
               </ul>
               <form
                 action="/results"
-                class="form-inline mr-2 my-2 my-lg-0 ml-2 ml-lg-0"
+                class="c35-header-form-search form-inline mr-2 my-2 my-lg-0 ml-2 ml-lg-0 d-none d-lg-flex"
               >
                 <input
                   name="search"
@@ -268,14 +290,14 @@
                 />
                 <div class="input-group-append">
                   <button type="submit" class="btn btn-primary">
-                    <img src="/icons/picto_search_white_100.png" width="20" />
+                    <img src="/images/icons/picto_search_white_100.png" width="20" />
                   </button>
                 </div>
               </form>
             </div>
           </nav>
           <div class="pub-container">
-            <div class="container py-4">
+            <div class="container pt-4">
               <div class="row justify-content-center">
                 <div
                   id="google-ads-test-banner"
@@ -284,449 +306,461 @@
               </div>
             </div>
           </div>
-          <div id="main-container">
-            <div class="container">
-              <div class="row">
-                <div class="col-12">
-                  <nav aria-label="breadcrumb" class="c35-breadcrumb">
-                    <ol class="breadcrumb">
-                      <li aria-current="page" class="breadcrumb-item">
-                        <a href="/" class="active">
-                          Accueil
+          <div id="main-container" class="pt-4">
+            <div class="container-lg">
+              <div>
+                <div class="row">
+                  <div class="col-12">
+                    <nav aria-label="breadcrumb" class="c35-breadcrumb">
+                      <ol class="breadcrumb">
+                        <li aria-current="page" class="breadcrumb-item">
+                          <a href="/" class="active">
+                            Accueil
+                          </a>
+                        </li>
+                        <li aria-current="page" class="breadcrumb-item active">
+                          Résultats de recherche
+                        </li>
+                      </ol>
+                    </nav>
+                  </div>
+                </div>
+                <div class="c35-section mb-4">
+                  <div class="px-1">
+                    <div class="row mx-n1">
+                      <div class="col-12 pl-1">
+                        <h2 class="strike">
+                          <span>
+                            Résultats de recherche
+                          </span>
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-4 text-center">
+                    <div>
+                      3 résultats trouvés pour la recherche suivante
+                    </div>
+                    <div class="h2 text-primary">
+                      "Fureur"
+                    </div>
+                  </div>
+                </div>
+                <div class="c35-section mb-4">
+                  <div class="px-1">
+                    <div class="row mx-n1">
+                      <div class="col-12 pl-1">
+                        <h2 class="strike">
+                          <span>
+                            Résultats de recherche
+                          </span>
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-4 text-center">
+                    <div>
+                      0 résultats trouvés pour la recherche suivante
+                    </div>
+                    <div class="h2 text-primary">
+                      "Xfhjgd"
+                    </div>
+                    <p class="mt-4">
+                      Vérifiez l’orthographe de chaque mot de votre
+                      <br />recherche ou essayez essayez avec d’autres mots
+                      clés.
+                    </p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <ul role="tablist" class="nav nav-tabs c35-nav-tabs">
+                      <li class="nav-item">
+                        <a
+                          id="movies-tab"
+                          data-toggle="tab"
+                          href="#movies"
+                          role="tab"
+                          aria-controls="movies"
+                          aria-selected="true"
+                          class="nav-link active"
+                        >
+                          Films (3)
                         </a>
                       </li>
-                      <li aria-current="page" class="breadcrumb-item active">
-                        Résultats de recherche
+                      <li class="nav-item">
+                        <a
+                          id="cinemas-tab"
+                          data-toggle="tab"
+                          href="#cinemas"
+                          role="tab"
+                          aria-controls="cinemas"
+                          aria-selected="false"
+                          class="nav-link"
+                        >
+                          Salles (0)
+                        </a>
                       </li>
-                    </ol>
-                  </nav>
-                </div>
-              </div>
-              <div class="c35-section mb-4">
-                <div class="container-md px-1">
-                  <div class="row mx-n1">
-                    <div class="col-12 pl-1">
-                      <h2 class="strike">
-                        <span>
-                          Résultats de recherche
-                        </span>
-                      </h2>
-                    </div>
-                  </div>
-                </div>
-                <div class="mt-4 text-center">
-                  <div>
-                    3 résultats trouvés pour la recherche suivante
-                  </div>
-                  <div class="h2 text-primary">
-                    "Fureur"
-                  </div>
-                </div>
-              </div>
-              <div class="c35-section mb-4">
-                <div class="container-md px-1">
-                  <div class="row mx-n1">
-                    <div class="col-12 pl-1">
-                      <h2 class="strike">
-                        <span>
-                          Résultats de recherche
-                        </span>
-                      </h2>
-                    </div>
-                  </div>
-                </div>
-                <div class="mt-4 text-center">
-                  <div>
-                    0 résultats trouvés pour la recherche suivante
-                  </div>
-                  <div class="h2 text-primary">
-                    "Xfhjgd"
-                  </div>
-                  <p class="mt-4">
-                    Vérifiez l’orthographe de chaque mot de votre
-                    <br />recherche ou essayez essayez avec d’autres mots clés.
-                  </p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12">
-                  <ul role="tablist" class="nav nav-tabs c35-nav-tabs">
-                    <li class="nav-item">
-                      <a
-                        id="movies-tab"
-                        data-toggle="tab"
-                        href="#movies"
-                        role="tab"
-                        aria-controls="movies"
-                        aria-selected="true"
-                        class="nav-link active"
+                    </ul>
+                    <div class="tab-content c35-tab-content">
+                      <div
+                        id="movies"
+                        role="tabpanel"
+                        aria-labelledby="movies-tab"
+                        class="tab-pane fade show active"
                       >
-                        Films (3)
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a
-                        id="cinemas-tab"
-                        data-toggle="tab"
-                        href="#cinemas"
-                        role="tab"
-                        aria-controls="cinemas"
-                        aria-selected="false"
-                        class="nav-link"
-                      >
-                        Salles (0)
-                      </a>
-                    </li>
-                  </ul>
-                  <div class="tab-content c35-tab-content">
-                    <div
-                      id="movies"
-                      role="tabpanel"
-                      aria-labelledby="movies-tab"
-                      class="tab-pane fade show active"
-                    >
-                      <div>
-                        <div class="row">
-                          <div class="col-3">
-                            <a
-                              href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4"
-                              title="Just Kids"
-                              ><img
-                                src="/previews/just_kids.jpg"
-                                alt="Just kids"
-                                style="width: 100%;"
-                            /></a>
-                          </div>
-                          <div class="col-9">
-                            <div class="h2 text-primary">
+                        <div>
+                          <div class="row">
+                            <div class="col-3">
                               <a
                                 href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4"
                                 title="Just Kids"
-                                class="text-uppercase"
-                              >
-                                Just Kids
-                              </a>
+                                ><img
+                                  src="/images/movies/previews/just_kids.jpg"
+                                  alt="Just kids"
+                                  style="width: 100%;"
+                              /></a>
                             </div>
-                            <div class="c35-entity-informations mt-4">
+                            <div class="col-9">
                               <div
-                                class="row c35-entity-informations-row"
-                                style="padding-bottom: 1rem;"
+                                class="h3 text-primary"
+                                style="font-weight: 400;"
                               >
-                                <div
-                                  class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left"
+                                <a
+                                  href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4"
+                                  title="Just Kids"
+                                  class="text-uppercase"
                                 >
-                                  Réalisateur :
-                                </div>
-                                <div class="col-12 col-md-8 col-lg-9">
-                                  Lo Wei
-                                </div>
+                                  Just Kids
+                                </a>
                               </div>
-                              <div
-                                class="row c35-entity-informations-row"
-                                style="padding-bottom: 1rem;"
-                              >
+                              <div class="c35-entity-informations mt-4">
                                 <div
-                                  class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left"
+                                  class="row c35-entity-informations-row"
+                                  style="padding-bottom: 1rem;"
                                 >
-                                  Casting :
+                                  <div
+                                    class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left style1"
+                                  >
+                                    Réalisateur :
+                                  </div>
+                                  <div class="col-12 col-md-8 col-lg-9">
+                                    Lo Wei
+                                  </div>
                                 </div>
-                                <div class="col-12 col-md-8 col-lg-9">
-                                  Bruce Lee, Nora Miao, James Tien
-                                </div>
-                              </div>
-                              <div
-                                class="row c35-entity-informations-row"
-                                style="padding-bottom: 1rem;"
-                              >
                                 <div
-                                  class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left"
+                                  class="row c35-entity-informations-row"
+                                  style="padding-bottom: 1rem;"
                                 >
-                                  Date de sortie :
+                                  <div
+                                    class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left style1"
+                                  >
+                                    Casting :
+                                  </div>
+                                  <div class="col-12 col-md-8 col-lg-9">
+                                    Bruce Lee, Nora Miao, James Tien
+                                  </div>
                                 </div>
-                                <div class="col-12 col-md-8 col-lg-9">
-                                  1972
-                                </div>
-                              </div>
-                              <div
-                                class="row c35-entity-informations-row"
-                                style="padding-bottom: 1rem;"
-                              >
                                 <div
-                                  class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left"
+                                  class="row c35-entity-informations-row"
+                                  style="padding-bottom: 1rem;"
                                 >
-                                  Pays d'origine :
+                                  <div
+                                    class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left style1"
+                                  >
+                                    Date de sortie :
+                                  </div>
+                                  <div class="col-12 col-md-8 col-lg-9">
+                                    1972
+                                  </div>
                                 </div>
-                                <div class="col-12 col-md-8 col-lg-9">
-                                  Hong Kong
-                                </div>
-                              </div>
-                              <div
-                                class="row c35-entity-informations-row"
-                                style="padding-bottom: 1rem;"
-                              >
                                 <div
-                                  class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left"
+                                  class="row c35-entity-informations-row"
+                                  style="padding-bottom: 1rem;"
                                 >
-                                  Durée :
+                                  <div
+                                    class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left style1"
+                                  >
+                                    Pays d'origine :
+                                  </div>
+                                  <div class="col-12 col-md-8 col-lg-9">
+                                    Hong Kong
+                                  </div>
                                 </div>
-                                <div class="col-12 col-md-8 col-lg-9">
-                                  1h48
+                                <div
+                                  class="row c35-entity-informations-row"
+                                  style="padding-bottom: 1rem;"
+                                >
+                                  <div
+                                    class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left style1"
+                                  >
+                                    Durée :
+                                  </div>
+                                  <div class="col-12 col-md-8 col-lg-9">
+                                    1h48
+                                  </div>
                                 </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                        <hr />
-                        <div class="row">
-                          <div class="col-3">
-                            <a
-                              href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4"
-                              title="Just Kids"
-                              ><img
-                                src="/previews/eva_et_moi.jpg"
-                                alt="Eva et moi"
-                                style="width: 100%;"
-                            /></a>
-                          </div>
-                          <div class="col-9">
-                            <div class="h2 text-primary">
+                          <hr />
+                          <div class="row">
+                            <div class="col-3">
                               <a
                                 href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4"
-                                title="Eva et moi"
-                                class="text-uppercase"
-                              >
-                                Eva et moi
-                              </a>
+                                title="Just Kids"
+                                ><img
+                                  src="/images/movies/previews/eva_et_moi.jpg"
+                                  alt="Eva et moi"
+                                  style="width: 100%;"
+                              /></a>
                             </div>
-                            <div class="c35-entity-informations mt-4">
+                            <div class="col-9">
                               <div
-                                class="row c35-entity-informations-row"
-                                style="padding-bottom: 1rem;"
+                                class="h3 text-primary"
+                                style="font-weight: 400;"
                               >
-                                <div
-                                  class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left"
+                                <a
+                                  href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4"
+                                  title="Eva et moi"
+                                  class="text-uppercase"
                                 >
-                                  Réalisateur :
-                                </div>
-                                <div class="col-12 col-md-8 col-lg-9">
-                                  Lo Wei
-                                </div>
+                                  Eva et moi
+                                </a>
                               </div>
-                              <div
-                                class="row c35-entity-informations-row"
-                                style="padding-bottom: 1rem;"
-                              >
+                              <div class="c35-entity-informations mt-4">
                                 <div
-                                  class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left"
+                                  class="row c35-entity-informations-row"
+                                  style="padding-bottom: 1rem;"
                                 >
-                                  Casting :
+                                  <div
+                                    class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left style1"
+                                  >
+                                    Réalisateur :
+                                  </div>
+                                  <div class="col-12 col-md-8 col-lg-9">
+                                    Lo Wei
+                                  </div>
                                 </div>
-                                <div class="col-12 col-md-8 col-lg-9">
-                                  Bruce Lee, Nora Miao, James Tien
-                                </div>
-                              </div>
-                              <div
-                                class="row c35-entity-informations-row"
-                                style="padding-bottom: 1rem;"
-                              >
                                 <div
-                                  class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left"
+                                  class="row c35-entity-informations-row"
+                                  style="padding-bottom: 1rem;"
                                 >
-                                  Date de sortie :
+                                  <div
+                                    class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left style1"
+                                  >
+                                    Casting :
+                                  </div>
+                                  <div class="col-12 col-md-8 col-lg-9">
+                                    Bruce Lee, Nora Miao, James Tien
+                                  </div>
                                 </div>
-                                <div class="col-12 col-md-8 col-lg-9">
-                                  1972
-                                </div>
-                              </div>
-                              <div
-                                class="row c35-entity-informations-row"
-                                style="padding-bottom: 1rem;"
-                              >
                                 <div
-                                  class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left"
+                                  class="row c35-entity-informations-row"
+                                  style="padding-bottom: 1rem;"
                                 >
-                                  Pays d'origine :
+                                  <div
+                                    class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left style1"
+                                  >
+                                    Date de sortie :
+                                  </div>
+                                  <div class="col-12 col-md-8 col-lg-9">
+                                    1972
+                                  </div>
                                 </div>
-                                <div class="col-12 col-md-8 col-lg-9">
-                                  Hong Kong
-                                </div>
-                              </div>
-                              <div
-                                class="row c35-entity-informations-row"
-                                style="padding-bottom: 1rem;"
-                              >
                                 <div
-                                  class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left"
+                                  class="row c35-entity-informations-row"
+                                  style="padding-bottom: 1rem;"
                                 >
-                                  Durée :
+                                  <div
+                                    class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left style1"
+                                  >
+                                    Pays d'origine :
+                                  </div>
+                                  <div class="col-12 col-md-8 col-lg-9">
+                                    Hong Kong
+                                  </div>
                                 </div>
-                                <div class="col-12 col-md-8 col-lg-9">
-                                  1h48
+                                <div
+                                  class="row c35-entity-informations-row"
+                                  style="padding-bottom: 1rem;"
+                                >
+                                  <div
+                                    class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left style1"
+                                  >
+                                    Durée :
+                                  </div>
+                                  <div class="col-12 col-md-8 col-lg-9">
+                                    1h48
+                                  </div>
                                 </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                        <hr />
-                        <div class="row">
-                          <div class="col-3">
-                            <a
-                              href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4"
-                              title="Malmkrog"
-                              ><img
-                                src="/previews/malmkrog.jpg"
-                                alt="Malmkrog"
-                                style="width: 100%;"
-                            /></a>
-                          </div>
-                          <div class="col-9">
-                            <div class="h2 text-primary">
+                          <hr />
+                          <div class="row">
+                            <div class="col-3">
                               <a
                                 href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4"
                                 title="Malmkrog"
-                                class="text-uppercase"
-                              >
-                                Malmkrog
-                              </a>
+                                ><img
+                                  src="/images/movies/previews/malmkrog.jpg"
+                                  alt="Malmkrog"
+                                  style="width: 100%;"
+                              /></a>
                             </div>
-                            <div class="c35-entity-informations mt-4">
+                            <div class="col-9">
                               <div
-                                class="row c35-entity-informations-row"
-                                style="padding-bottom: 1rem;"
+                                class="h3 text-primary"
+                                style="font-weight: 400;"
                               >
-                                <div
-                                  class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left"
+                                <a
+                                  href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4"
+                                  title="Malmkrog"
+                                  class="text-uppercase"
                                 >
-                                  Réalisateur :
-                                </div>
-                                <div class="col-12 col-md-8 col-lg-9">
-                                  Lo Wei
-                                </div>
+                                  Malmkrog
+                                </a>
                               </div>
-                              <div
-                                class="row c35-entity-informations-row"
-                                style="padding-bottom: 1rem;"
-                              >
+                              <div class="c35-entity-informations mt-4">
                                 <div
-                                  class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left"
+                                  class="row c35-entity-informations-row"
+                                  style="padding-bottom: 1rem;"
                                 >
-                                  Casting :
+                                  <div
+                                    class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left style1"
+                                  >
+                                    Réalisateur :
+                                  </div>
+                                  <div class="col-12 col-md-8 col-lg-9">
+                                    Lo Wei
+                                  </div>
                                 </div>
-                                <div class="col-12 col-md-8 col-lg-9">
-                                  Bruce Lee, Nora Miao, James Tien
-                                </div>
-                              </div>
-                              <div
-                                class="row c35-entity-informations-row"
-                                style="padding-bottom: 1rem;"
-                              >
                                 <div
-                                  class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left"
+                                  class="row c35-entity-informations-row"
+                                  style="padding-bottom: 1rem;"
                                 >
-                                  Date de sortie :
+                                  <div
+                                    class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left style1"
+                                  >
+                                    Casting :
+                                  </div>
+                                  <div class="col-12 col-md-8 col-lg-9">
+                                    Bruce Lee, Nora Miao, James Tien
+                                  </div>
                                 </div>
-                                <div class="col-12 col-md-8 col-lg-9">
-                                  1972
-                                </div>
-                              </div>
-                              <div
-                                class="row c35-entity-informations-row"
-                                style="padding-bottom: 1rem;"
-                              >
                                 <div
-                                  class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left"
+                                  class="row c35-entity-informations-row"
+                                  style="padding-bottom: 1rem;"
                                 >
-                                  Pays d'origine :
+                                  <div
+                                    class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left style1"
+                                  >
+                                    Date de sortie :
+                                  </div>
+                                  <div class="col-12 col-md-8 col-lg-9">
+                                    1972
+                                  </div>
                                 </div>
-                                <div class="col-12 col-md-8 col-lg-9">
-                                  Hong Kong
-                                </div>
-                              </div>
-                              <div
-                                class="row c35-entity-informations-row"
-                                style="padding-bottom: 1rem;"
-                              >
                                 <div
-                                  class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left"
+                                  class="row c35-entity-informations-row"
+                                  style="padding-bottom: 1rem;"
                                 >
-                                  Durée :
+                                  <div
+                                    class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left style1"
+                                  >
+                                    Pays d'origine :
+                                  </div>
+                                  <div class="col-12 col-md-8 col-lg-9">
+                                    Hong Kong
+                                  </div>
                                 </div>
-                                <div class="col-12 col-md-8 col-lg-9">
-                                  1h48
+                                <div
+                                  class="row c35-entity-informations-row"
+                                  style="padding-bottom: 1rem;"
+                                >
+                                  <div
+                                    class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left style1"
+                                  >
+                                    Durée :
+                                  </div>
+                                  <div class="col-12 col-md-8 col-lg-9">
+                                    1h48
+                                  </div>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <div
-                      id="cinemas"
-                      role="tabpanel"
-                      aria-labelledby="cinemas-tab"
-                      class="tab-pane fade"
-                    >
-                      <div>
-                        <div class="row">
-                          <div class="col-3">
-                            <a
-                              href="/cinemas/1541"
-                              title="Voir AUDITORIUM LE VOLUME"
-                              ><img
-                                src="/previews/cinemas/cineville.jpg"
-                                alt=" AUDITORIUM LE VOLUME"
-                                style="width: 100%;"
-                            /></a>
-                          </div>
-                          <div class="col-9">
-                            <div class="h2 text-primary">
+                      <div
+                        id="cinemas"
+                        role="tabpanel"
+                        aria-labelledby="cinemas-tab"
+                        class="tab-pane fade"
+                      >
+                        <div>
+                          <div class="row">
+                            <div class="col-3">
                               <a
                                 href="/cinemas/1541"
                                 title="Voir AUDITORIUM LE VOLUME"
-                                class="text-uppercase"
-                              >
-                                AUDITORIUM LE VOLUME
-                              </a>
+                                ><img
+                                  src="/images/movies/previews/cinemas/cineville.jpg"
+                                  alt=" AUDITORIUM LE VOLUME"
+                                  style="width: 100%;"
+                              /></a>
                             </div>
-                            <div class="c35-entity-informations mt-4">
-                              <div
-                                class="row c35-entity-informations-row"
-                                style="padding-bottom: 1rem;"
-                              >
-                                <div
-                                  class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left"
+                            <div class="col-9">
+                              <div class="h2 text-primary">
+                                <a
+                                  href="/cinemas/1541"
+                                  title="Voir AUDITORIUM LE VOLUME"
+                                  class="text-uppercase"
                                 >
-                                  Address :
-                                </div>
-                                <div class="col-12 col-md-8 col-lg-9">
-                                  Centre Culturel Le Volume, Avenue de la
-                                  Chalotais 35770 Vern-sur-Seiche
-                                </div>
+                                  AUDITORIUM LE VOLUME
+                                </a>
                               </div>
-                              <div
-                                class="row c35-entity-informations-row"
-                                style="padding-bottom: 1rem;"
-                              >
+                              <div class="c35-entity-informations mt-4">
                                 <div
-                                  class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left"
+                                  class="row c35-entity-informations-row"
+                                  style="padding-bottom: 1rem;"
                                 >
-                                  Distance :
+                                  <div
+                                    class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left style1"
+                                  >
+                                    Address :
+                                  </div>
+                                  <div class="col-12 col-md-8 col-lg-9">
+                                    Centre Culturel Le Volume, Avenue de la
+                                    Chalotais 35770 Vern-sur-Seiche
+                                  </div>
                                 </div>
-                                <div class="col-12 col-md-8 col-lg-9">
-                                  15km
-                                </div>
-                              </div>
-                              <div
-                                class="row c35-entity-informations-row"
-                                style="padding-bottom: 1rem;"
-                              >
                                 <div
-                                  class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left"
+                                  class="row c35-entity-informations-row"
+                                  style="padding-bottom: 1rem;"
                                 >
-                                  Nombre de films :
+                                  <div
+                                    class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left style1"
+                                  >
+                                    Distance :
+                                  </div>
+                                  <div class="col-12 col-md-8 col-lg-9">
+                                    15km
+                                  </div>
                                 </div>
-                                <div class="col-12 col-md-8 col-lg-9">
-                                  XX films à l’affiche dans ce cinéma
+                                <div
+                                  class="row c35-entity-informations-row"
+                                  style="padding-bottom: 1rem;"
+                                >
+                                  <div
+                                    class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left style1"
+                                  >
+                                    Nombre de films :
+                                  </div>
+                                  <div class="col-12 col-md-8 col-lg-9">
+                                    XX films à l’affiche dans ce cinéma
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -741,10 +775,13 @@
           </div>
           <div class="c35-footer bg-dark mt-4 py-5">
             <div class="font-italic">
-              Ciné35 2020, tous droits réservés
+              Cine35.com 2020, tous droits réservés
             </div>
             <div class="mt-4">
-              Mentions Légales |
+              <a href="/mentions-legales" title="Mentions légales">
+                Mentions Légales
+              </a>
+              |
               <a href="/contact" title="Nous contacter">
                 Contact
               </a>
@@ -753,24 +790,5 @@
         </div>
       </div>
     </div>
-    <script>
-      window.__NUXT__ = {
-        layout: 'default',
-        data: [{}],
-        fetch: [],
-        error: null,
-        state: {
-          actors: { collection: [] },
-          directors: { collection: [] },
-          movies: { collection: [] },
-        },
-        serverRendered: !0,
-        routePath: '/results',
-      };
-    </script>
-    <script src="/_nuxt/5dd7950e092c28f1eb58.js" defer></script>
-    <script src="/_nuxt/870345e323bfc84cec54.js" defer></script>
-    <script src="/_nuxt/33af398403db843cdc23.js" defer></script>
-    <script src="/_nuxt/b5d43530e27a29c5f56c.js" defer></script>
-  </body>
+   </body>
 </html>

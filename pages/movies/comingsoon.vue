@@ -99,5 +99,10 @@ export default {
       return [...this.$store.getters["movies/collection"]]
     },
   },
+  head() {
+    return {
+      title: "Cine35.com - Prochainement",
+    }
+  },
 }
 </script>

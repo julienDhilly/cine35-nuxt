@@ -35,7 +35,7 @@
     <link
       data-n-head="ssr"
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
     />
     <script
       data-n-head="ssr"
@@ -61,14 +61,11 @@
       src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"
     ></script>
     <script data-n-head="ssr" src="/ads.js"></script>
-    <link rel="preload" href="/_nuxt/5dd7950e092c28f1eb58.js" as="script" />
-    <link rel="preload" href="/_nuxt/870345e323bfc84cec54.js" as="script" />
-    <link rel="preload" href="/_nuxt/5982dc8608b6293bd7d9.css" as="style" />
-    <link rel="preload" href="/_nuxt/33af398403db843cdc23.js" as="script" />
-    <link rel="preload" href="/_nuxt/b3087d3771d1854d9db4.css" as="style" />
-    <link rel="preload" href="/_nuxt/b5d43530e27a29c5f56c.js" as="script" />
-    <link rel="stylesheet" href="/_nuxt/5982dc8608b6293bd7d9.css" />
-    <link rel="stylesheet" href="/_nuxt/b3087d3771d1854d9db4.css" />
+    <script data-n-head="ssr" src="/js/custom.js"></script>
+    <link rel="preload" href="/css/40a609bb3d73d8207a50.css" as="style" />
+    <link rel="preload" href="/css/3cae4fc4b296736be4ad.css" as="style" />
+    <link rel="stylesheet" href="/css/40a609bb3d73d8207a50.css" />
+    <link rel="stylesheet" href="/css/3cae4fc4b296736be4ad.css" />
   </head>
   <body>
     <div data-server-rendered="true" id="__nuxt">
@@ -185,17 +182,44 @@
                   ></path>
                 </g></svg
             ></a>
-            <button
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-              class="navbar-toggler"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
+            <div class="d-flex">
+              <button
+                id="c35-btn-search-mobile"
+                type="button"
+                class="d-block d-lg-none navbar-toggler"
+              >
+                <img src="/images/icons/picto_search_white_100.png" width="20" />
+              </button>
+              <button
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                class="navbar-toggler"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+            <div id="navbarSearchContext" class="collapse navbar-collapse">
+              <form
+                action="/results"
+                class="c35-header-form-search form-inline mr-2 my-2 my-lg-0 ml-2 ml-lg-0"
+              >
+                <input
+                  name="search"
+                  placeholder="Rechercher un film ou une salle..."
+                  aria-label="Rechercher"
+                  class="form-control flex-grow-1"
+                />
+                <div class="input-group-append">
+                  <button type="submit" class="btn btn-primary">
+                    <img src="/images/icons/picto_search_white_100.png" width="20" />
+                  </button>
+                </div>
+              </form>
+            </div>
             <div id="navbarSupportedContent" class="collapse navbar-collapse">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item dropdown">
@@ -261,7 +285,7 @@
               </ul>
               <form
                 action="/results"
-                class="form-inline mr-2 my-2 my-lg-0 ml-2 ml-lg-0"
+                class="c35-header-form-search form-inline mr-2 my-2 my-lg-0 ml-2 ml-lg-0 d-none d-lg-flex"
               >
                 <input
                   name="search"
@@ -271,14 +295,14 @@
                 />
                 <div class="input-group-append">
                   <button type="submit" class="btn btn-primary">
-                    <img src="/icons/picto_search_white_100.png" width="20" />
+                    <img src="/images/icons/picto_search_white_100.png" width="20" />
                   </button>
                 </div>
               </form>
             </div>
           </nav>
           <div class="pub-container">
-            <div class="container py-4">
+            <div class="container pt-4">
               <div class="row justify-content-center">
                 <div
                   id="google-ads-test-banner"
@@ -287,37 +311,36 @@
               </div>
             </div>
           </div>
-          <div id="main-container">
-            <div id="page-invitations" class="container">
-              <div class="row">
-                <div class="col-12">
-                  <nav aria-label="breadcrumb" class="c35-breadcrumb">
-                    <ol class="breadcrumb">
-                      <li aria-current="page" class="breadcrumb-item">
-                        <a href="/" class="active">
-                          Accueil
-                        </a>
-                      </li>
-                      <li aria-current="page" class="breadcrumb-item active">
-                        Invitations
-                      </li>
-                    </ol>
-                  </nav>
-                </div>
-              </div>
-              <div class="c35-section">
+          <div id="main-container" class="pt-4">
+            <div class="container-lg">
+              <div id="page-invitations">
                 <div class="row">
                   <div class="col-12">
-                    <h2 class="strike">
-                      <span>
-                        INVITATIONS
-                      </span>
-                    </h2>
+                    <nav aria-label="breadcrumb" class="c35-breadcrumb">
+                      <ol class="breadcrumb">
+                        <li aria-current="page" class="breadcrumb-item">
+                          <a href="/" class="active">
+                            Accueil
+                          </a>
+                        </li>
+                        <li aria-current="page" class="breadcrumb-item active">
+                          Invitations
+                        </li>
+                      </ol>
+                    </nav>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col-2"></div>
-                  <div class="col-8">
+                <div class="c35-section">
+                  <div class="row">
+                    <div class="col-12">
+                      <h2 class="strike">
+                        <span>
+                          Invitations
+                        </span>
+                      </h2>
+                    </div>
+                  </div>
+                  <div class="mx-auto mt-5 px-2" style="max-width: 800px;">
                     <div class="text-center">
                       <p>
                         <strong>
@@ -357,70 +380,109 @@
                       <div class="invitation-option">
                         <div class="form-check invitation-option-title">
                           <input
-                            id="input1"
+                            id="input-1"
                             type="radio"
-                            name="1548"
-                            value="1548"
+                            name="invitation-value"
                             checked
+                            value="1"
                             class="form-check-input"
+                            style="margin-top: 10px;"
                           />
-                          <label for="input1" class="form-check-label">
+                          <label
+                            for="input-1"
+                            class="form-check-label font-oswald"
+                          >
                             SCOTT PILGRIM (2010)
                           </label>
                         </div>
                         <div class="row mt-3">
                           <div class="col-9">
-                            <div>
-                              <div class="row mt-2">
-                                <div class="col-4 text-right">
+                            <div class="c35-entity-informations">
+                              <div
+                                class="row c35-entity-informations-row"
+                                style="padding-bottom: 10px;"
+                              >
+                                <div
+                                  class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left style2"
+                                >
                                   Réalisateur :
                                 </div>
-                                <div class="col-8">
-                                  Edgar Wright
+                                <div class="col-12 col-md-8 col-lg-9">
+                                  Lo Wei
                                 </div>
                               </div>
-                              <div class="row mt-2">
-                                <div class="col-4 text-right">
-                                  Casting :
+                              <div
+                                class="row c35-entity-informations-row"
+                                style="padding-bottom: 10px;"
+                              >
+                                <div
+                                  class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left style2"
+                                >
+                                  Acteurs :
                                 </div>
-                                <div class="col-8">
-                                  Michael Cera, Mary Elizabeth Winstead, Ellen
-                                  Wong
-                                </div>
-                              </div>
-                              <div class="row mt-2">
-                                <div class="col-4 text-right">
-                                  Pays d'origine :
-                                </div>
-                                <div class="col-8">
-                                  Etats-Unis
+                                <div class="col-12 col-md-8 col-lg-9">
+                                  Bruce Lee, Nora Miao, James Tien
                                 </div>
                               </div>
-                              <div class="row mt-2">
-                                <div class="col-4 text-right">
+                              <div
+                                class="row c35-entity-informations-row"
+                                style="padding-bottom: 10px;"
+                              >
+                                <div
+                                  class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left style2"
+                                >
+                                  Nationalité :
+                                </div>
+                                <div class="col-12 col-md-8 col-lg-9">
+                                  Hong Kong
+                                </div>
+                              </div>
+                              <div
+                                class="row c35-entity-informations-row"
+                                style="padding-bottom: 10px;"
+                              >
+                                <div
+                                  class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left style2"
+                                >
+                                  Année :
+                                </div>
+                                <div class="col-12 col-md-8 col-lg-9">
+                                  2020
+                                </div>
+                              </div>
+                              <div
+                                class="row c35-entity-informations-row"
+                                style="padding-bottom: 10px;"
+                              >
+                                <div
+                                  class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left style2"
+                                >
                                   Durée :
                                 </div>
-                                <div class="col-8">
-                                  1h52
+                                <div class="col-12 col-md-8 col-lg-9">
+                                  1h48
                                 </div>
                               </div>
-                              <div class="row mt-2">
-                                <div class="col-4 text-right">
-                                  <strong>
-                                    CGR CINEMAS 10/06/2020
-                                  </strong>
-                                </div>
-                                <div class="col-8">
-                                  <strong>
-                                    La Mézière 19:30 et 22h15
-                                  </strong>
-                                </div>
+                            </div>
+                            <div class="mt-3">
+                              <div class="font-weight-bold">
+                                CGR CINEMAS - La Mézière
                               </div>
+                              <div class="mt-2">
+                                24/09/2020
+                              </div>
+                              <div class="font-weight-bold">
+                                12:30, 20:30
+                              </div>
+                              <div class="mt-2">
+                                25/09/2020
+                              </div>
+                              <div>12:30, 20:30</div>
                             </div>
                           </div>
                           <div class="col-3">
                             <img
-                              src="/previews/eva_et_moi.jpg"
+                              src="/images/movies/previews/eva_et_moi.jpg"
                               alt="ALERTE"
                               style="width: 100%;"
                             />
@@ -430,70 +492,109 @@
                       <div class="invitation-option">
                         <div class="form-check invitation-option-title">
                           <input
-                            id="input1"
+                            id="input-2"
                             type="radio"
-                            name="1548"
-                            value="1548"
+                            name="invitation-value"
                             checked
+                            value="2"
                             class="form-check-input"
+                            style="margin-top: 10px;"
                           />
-                          <label for="input1" class="form-check-label">
+                          <label
+                            for="input-2"
+                            class="form-check-label font-oswald"
+                          >
                             SCOTT PILGRIM (2010)
                           </label>
                         </div>
                         <div class="row mt-3">
                           <div class="col-9">
-                            <div>
-                              <div class="row mt-2">
-                                <div class="col-4 text-right">
+                            <div class="c35-entity-informations">
+                              <div
+                                class="row c35-entity-informations-row"
+                                style="padding-bottom: 10px;"
+                              >
+                                <div
+                                  class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left style2"
+                                >
                                   Réalisateur :
                                 </div>
-                                <div class="col-8">
-                                  Edgar Wright
+                                <div class="col-12 col-md-8 col-lg-9">
+                                  Lo Wei
                                 </div>
                               </div>
-                              <div class="row mt-2">
-                                <div class="col-4 text-right">
-                                  Casting :
+                              <div
+                                class="row c35-entity-informations-row"
+                                style="padding-bottom: 10px;"
+                              >
+                                <div
+                                  class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left style2"
+                                >
+                                  Acteurs :
                                 </div>
-                                <div class="col-8">
-                                  Michael Cera, Mary Elizabeth Winstead, Ellen
-                                  Wong
-                                </div>
-                              </div>
-                              <div class="row mt-2">
-                                <div class="col-4 text-right">
-                                  Pays d'origine :
-                                </div>
-                                <div class="col-8">
-                                  Etats-Unis
+                                <div class="col-12 col-md-8 col-lg-9">
+                                  Bruce Lee, Nora Miao, James Tien
                                 </div>
                               </div>
-                              <div class="row mt-2">
-                                <div class="col-4 text-right">
+                              <div
+                                class="row c35-entity-informations-row"
+                                style="padding-bottom: 10px;"
+                              >
+                                <div
+                                  class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left style2"
+                                >
+                                  Nationalité :
+                                </div>
+                                <div class="col-12 col-md-8 col-lg-9">
+                                  Hong Kong
+                                </div>
+                              </div>
+                              <div
+                                class="row c35-entity-informations-row"
+                                style="padding-bottom: 10px;"
+                              >
+                                <div
+                                  class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left style2"
+                                >
+                                  Année :
+                                </div>
+                                <div class="col-12 col-md-8 col-lg-9">
+                                  2020
+                                </div>
+                              </div>
+                              <div
+                                class="row c35-entity-informations-row"
+                                style="padding-bottom: 10px;"
+                              >
+                                <div
+                                  class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left style2"
+                                >
                                   Durée :
                                 </div>
-                                <div class="col-8">
-                                  1h52
+                                <div class="col-12 col-md-8 col-lg-9">
+                                  1h48
                                 </div>
                               </div>
-                              <div class="row mt-2">
-                                <div class="col-4 text-right">
-                                  <strong>
-                                    CGR CINEMAS 10/06/2020
-                                  </strong>
-                                </div>
-                                <div class="col-8">
-                                  <strong>
-                                    La Mézière 19:30 et 22h15
-                                  </strong>
-                                </div>
+                            </div>
+                            <div class="mt-3">
+                              <div class="font-weight-bold">
+                                CGR CINEMAS - La Mézière
                               </div>
+                              <div class="mt-2">
+                                24/09/2020
+                              </div>
+                              <div class="font-weight-bold">
+                                12:30, 20:30
+                              </div>
+                              <div class="mt-2">
+                                25/09/2020
+                              </div>
+                              <div>12:30, 20:30</div>
                             </div>
                           </div>
                           <div class="col-3">
                             <img
-                              src="/previews/eva_et_moi.jpg"
+                              src="/images/movies/previews/eva_et_moi.jpg"
                               alt="ALERTE"
                               style="width: 100%;"
                             />
@@ -503,70 +604,109 @@
                       <div class="invitation-option">
                         <div class="form-check invitation-option-title">
                           <input
-                            id="input1"
+                            id="input-3"
                             type="radio"
-                            name="1548"
-                            value="1548"
+                            name="invitation-value"
                             checked
+                            value="3"
                             class="form-check-input"
+                            style="margin-top: 10px;"
                           />
-                          <label for="input1" class="form-check-label">
+                          <label
+                            for="input-3"
+                            class="form-check-label font-oswald"
+                          >
                             SCOTT PILGRIM (2010)
                           </label>
                         </div>
                         <div class="row mt-3">
                           <div class="col-9">
-                            <div>
-                              <div class="row mt-2">
-                                <div class="col-4 text-right">
+                            <div class="c35-entity-informations">
+                              <div
+                                class="row c35-entity-informations-row"
+                                style="padding-bottom: 10px;"
+                              >
+                                <div
+                                  class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left style2"
+                                >
                                   Réalisateur :
                                 </div>
-                                <div class="col-8">
-                                  Edgar Wright
+                                <div class="col-12 col-md-8 col-lg-9">
+                                  Lo Wei
                                 </div>
                               </div>
-                              <div class="row mt-2">
-                                <div class="col-4 text-right">
-                                  Casting :
+                              <div
+                                class="row c35-entity-informations-row"
+                                style="padding-bottom: 10px;"
+                              >
+                                <div
+                                  class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left style2"
+                                >
+                                  Acteurs :
                                 </div>
-                                <div class="col-8">
-                                  Michael Cera, Mary Elizabeth Winstead, Ellen
-                                  Wong
-                                </div>
-                              </div>
-                              <div class="row mt-2">
-                                <div class="col-4 text-right">
-                                  Pays d'origine :
-                                </div>
-                                <div class="col-8">
-                                  Etats-Unis
+                                <div class="col-12 col-md-8 col-lg-9">
+                                  Bruce Lee, Nora Miao, James Tien
                                 </div>
                               </div>
-                              <div class="row mt-2">
-                                <div class="col-4 text-right">
+                              <div
+                                class="row c35-entity-informations-row"
+                                style="padding-bottom: 10px;"
+                              >
+                                <div
+                                  class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left style2"
+                                >
+                                  Nationalité :
+                                </div>
+                                <div class="col-12 col-md-8 col-lg-9">
+                                  Hong Kong
+                                </div>
+                              </div>
+                              <div
+                                class="row c35-entity-informations-row"
+                                style="padding-bottom: 10px;"
+                              >
+                                <div
+                                  class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left style2"
+                                >
+                                  Année :
+                                </div>
+                                <div class="col-12 col-md-8 col-lg-9">
+                                  2020
+                                </div>
+                              </div>
+                              <div
+                                class="row c35-entity-informations-row"
+                                style="padding-bottom: 10px;"
+                              >
+                                <div
+                                  class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left style2"
+                                >
                                   Durée :
                                 </div>
-                                <div class="col-8">
-                                  1h52
+                                <div class="col-12 col-md-8 col-lg-9">
+                                  1h48
                                 </div>
                               </div>
-                              <div class="row mt-2">
-                                <div class="col-4 text-right">
-                                  <strong>
-                                    CGR CINEMAS 10/06/2020
-                                  </strong>
-                                </div>
-                                <div class="col-8">
-                                  <strong>
-                                    La Mézière 19:30 et 22h15
-                                  </strong>
-                                </div>
+                            </div>
+                            <div class="mt-3">
+                              <div class="font-weight-bold">
+                                CGR CINEMAS - La Mézière
                               </div>
+                              <div class="mt-2">
+                                24/09/2020
+                              </div>
+                              <div class="font-weight-bold">
+                                12:30, 20:30
+                              </div>
+                              <div class="mt-2">
+                                25/09/2020
+                              </div>
+                              <div>12:30, 20:30</div>
                             </div>
                           </div>
                           <div class="col-3">
                             <img
-                              src="/previews/eva_et_moi.jpg"
+                              src="/images/movies/previews/eva_et_moi.jpg"
                               alt="ALERTE"
                               style="width: 100%;"
                             />
@@ -576,81 +716,120 @@
                       <div class="invitation-option">
                         <div class="form-check invitation-option-title">
                           <input
-                            id="input1"
+                            id="input-4"
                             type="radio"
-                            name="1548"
-                            value="1548"
+                            name="invitation-value"
                             checked
+                            value="4"
                             class="form-check-input"
+                            style="margin-top: 10px;"
                           />
-                          <label for="input1" class="form-check-label">
+                          <label
+                            for="input-4"
+                            class="form-check-label font-oswald"
+                          >
                             SCOTT PILGRIM (2010)
                           </label>
                         </div>
                         <div class="row mt-3">
                           <div class="col-9">
-                            <div>
-                              <div class="row mt-2">
-                                <div class="col-4 text-right">
+                            <div class="c35-entity-informations">
+                              <div
+                                class="row c35-entity-informations-row"
+                                style="padding-bottom: 10px;"
+                              >
+                                <div
+                                  class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left style2"
+                                >
                                   Réalisateur :
                                 </div>
-                                <div class="col-8">
-                                  Edgar Wright
+                                <div class="col-12 col-md-8 col-lg-9">
+                                  Lo Wei
                                 </div>
                               </div>
-                              <div class="row mt-2">
-                                <div class="col-4 text-right">
-                                  Casting :
+                              <div
+                                class="row c35-entity-informations-row"
+                                style="padding-bottom: 10px;"
+                              >
+                                <div
+                                  class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left style2"
+                                >
+                                  Acteurs :
                                 </div>
-                                <div class="col-8">
-                                  Michael Cera, Mary Elizabeth Winstead, Ellen
-                                  Wong
-                                </div>
-                              </div>
-                              <div class="row mt-2">
-                                <div class="col-4 text-right">
-                                  Pays d'origine :
-                                </div>
-                                <div class="col-8">
-                                  Etats-Unis
+                                <div class="col-12 col-md-8 col-lg-9">
+                                  Bruce Lee, Nora Miao, James Tien
                                 </div>
                               </div>
-                              <div class="row mt-2">
-                                <div class="col-4 text-right">
+                              <div
+                                class="row c35-entity-informations-row"
+                                style="padding-bottom: 10px;"
+                              >
+                                <div
+                                  class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left style2"
+                                >
+                                  Nationalité :
+                                </div>
+                                <div class="col-12 col-md-8 col-lg-9">
+                                  Hong Kong
+                                </div>
+                              </div>
+                              <div
+                                class="row c35-entity-informations-row"
+                                style="padding-bottom: 10px;"
+                              >
+                                <div
+                                  class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left style2"
+                                >
+                                  Année :
+                                </div>
+                                <div class="col-12 col-md-8 col-lg-9">
+                                  2020
+                                </div>
+                              </div>
+                              <div
+                                class="row c35-entity-informations-row"
+                                style="padding-bottom: 10px;"
+                              >
+                                <div
+                                  class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left style2"
+                                >
                                   Durée :
                                 </div>
-                                <div class="col-8">
-                                  1h52
+                                <div class="col-12 col-md-8 col-lg-9">
+                                  1h48
                                 </div>
                               </div>
-                              <div class="row mt-2">
-                                <div class="col-4 text-right">
-                                  <strong>
-                                    CGR CINEMAS 10/06/2020
-                                  </strong>
-                                </div>
-                                <div class="col-8">
-                                  <strong>
-                                    La Mézière 19:30 et 22h15
-                                  </strong>
-                                </div>
+                            </div>
+                            <div class="mt-3">
+                              <div class="font-weight-bold">
+                                CGR CINEMAS - La Mézière
                               </div>
+                              <div class="mt-2">
+                                24/09/2020
+                              </div>
+                              <div class="font-weight-bold">
+                                12:30, 20:30
+                              </div>
+                              <div class="mt-2">
+                                25/09/2020
+                              </div>
+                              <div>12:30, 20:30</div>
                             </div>
                           </div>
                           <div class="col-3">
                             <img
-                              src="/previews/eva_et_moi.jpg"
+                              src="/images/movies/previews/eva_et_moi.jpg"
                               alt="ALERTE"
                               style="width: 100%;"
                             />
                           </div>
                         </div>
                       </div>
-                      <div class="mt-5">
+                      <div style="margin-top: 8rem;">
                         <div class="form-group row">
                           <label
                             for="inputCivility"
-                            class="col-sm-3 col-form-label text-right"
+                            class="col-sm-3 col-form-label text-sm-right"
                           >
                             Civilité* :
                           </label>
@@ -671,7 +850,7 @@
                         <div class="form-group row">
                           <label
                             for="name"
-                            class="col-sm-3 col-form-label text-right"
+                            class="col-sm-3 col-form-label text-sm-right"
                           >
                             Nom* :
                           </label>
@@ -682,7 +861,7 @@
                         <div class="form-group row">
                           <label
                             for="firstName"
-                            class="col-sm-3 col-form-label text-right"
+                            class="col-sm-3 col-form-label text-sm-right"
                           >
                             Prénom* :
                           </label>
@@ -695,7 +874,7 @@
                           </div>
                         </div>
                         <div class="form-group row">
-                          <label class="col-sm-3 col-form-label text-right">
+                          <label class="col-sm-3 col-form-label text-sm-right">
                             Né(e) le* :
                           </label>
                           <div class="col-sm-9">
@@ -1056,9 +1235,9 @@
                         <div class="form-group row">
                           <label
                             for="email"
-                            class="col-sm-3 col-form-label text-right"
+                            class="col-sm-3 col-form-label text-sm-right"
                           >
-                            Addresse mail* :
+                            Adresse mail* :
                           </label>
                           <div class="col-sm-9">
                             <input
@@ -1089,11 +1268,10 @@
                             type="submit"
                             value="Envoyer"
                             class="btn btn-primary c35-btn"
-                            style="text-transform: uppercase;"
                           />
                         </div>
                       </div>
-                      <div class="mt-5">
+                      <div style="margin-top: 8rem;">
                         <div class="row">
                           <div class="col-4 text-right">
                             <strong>Salles participantes</strong>
@@ -1186,17 +1364,19 @@
                       </div>
                     </form>
                   </div>
-                  <div class="col-2"></div>
                 </div>
               </div>
             </div>
           </div>
           <div class="c35-footer bg-dark mt-4 py-5">
             <div class="font-italic">
-              Ciné35 2020, tous droits réservés
+              Cine35.com 2020, tous droits réservés
             </div>
             <div class="mt-4">
-              Mentions Légales |
+              <a href="/mentions-legales" title="Mentions légales">
+                Mentions Légales
+              </a>
+              |
               <a href="/contact" title="Nous contacter">
                 Contact
               </a>
@@ -1205,24 +1385,5 @@
         </div>
       </div>
     </div>
-    <script>
-      window.__NUXT__ = {
-        layout: 'default',
-        data: [{}],
-        fetch: [],
-        error: null,
-        state: {
-          actors: { collection: [] },
-          directors: { collection: [] },
-          movies: { collection: [] },
-        },
-        serverRendered: !0,
-        routePath: '/invitations',
-      };
-    </script>
-    <script src="/_nuxt/5dd7950e092c28f1eb58.js" defer></script>
-    <script src="/_nuxt/870345e323bfc84cec54.js" defer></script>
-    <script src="/_nuxt/33af398403db843cdc23.js" defer></script>
-    <script src="/_nuxt/b5d43530e27a29c5f56c.js" defer></script>
-  </body>
+   </body>
 </html>

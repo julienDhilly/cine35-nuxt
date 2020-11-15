@@ -35,7 +35,7 @@
     <link
       data-n-head="ssr"
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
     />
     <script
       data-n-head="ssr"
@@ -61,14 +61,11 @@
       src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"
     ></script>
     <script data-n-head="ssr" src="/ads.js"></script>
-    <link rel="preload" href="/_nuxt/5dd7950e092c28f1eb58.js" as="script" />
-    <link rel="preload" href="/_nuxt/870345e323bfc84cec54.js" as="script" />
-    <link rel="preload" href="/_nuxt/5982dc8608b6293bd7d9.css" as="style" />
-    <link rel="preload" href="/_nuxt/33af398403db843cdc23.js" as="script" />
-    <link rel="preload" href="/_nuxt/b3087d3771d1854d9db4.css" as="style" />
-    <link rel="preload" href="/_nuxt/b5d43530e27a29c5f56c.js" as="script" />
-    <link rel="stylesheet" href="/_nuxt/5982dc8608b6293bd7d9.css" />
-    <link rel="stylesheet" href="/_nuxt/b3087d3771d1854d9db4.css" />
+    <script data-n-head="ssr" src="/js/custom.js"></script>
+    <link rel="preload" href="/css/40a609bb3d73d8207a50.css" as="style" />
+    <link rel="preload" href="/css/3cae4fc4b296736be4ad.css" as="style" />
+    <link rel="stylesheet" href="/css/40a609bb3d73d8207a50.css" />
+    <link rel="stylesheet" href="/css/3cae4fc4b296736be4ad.css" />
   </head>
   <body>
     <div data-server-rendered="true" id="__nuxt">
@@ -185,17 +182,44 @@
                   ></path>
                 </g></svg
             ></a>
-            <button
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-              class="navbar-toggler"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
+            <div class="d-flex">
+              <button
+                id="c35-btn-search-mobile"
+                type="button"
+                class="d-block d-lg-none navbar-toggler"
+              >
+                <img src="/images/icons/picto_search_white_100.png" width="20" />
+              </button>
+              <button
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                class="navbar-toggler"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+            <div id="navbarSearchContext" class="collapse navbar-collapse">
+              <form
+                action="/results"
+                class="c35-header-form-search form-inline mr-2 my-2 my-lg-0 ml-2 ml-lg-0"
+              >
+                <input
+                  name="search"
+                  placeholder="Rechercher un film ou une salle..."
+                  aria-label="Rechercher"
+                  class="form-control flex-grow-1"
+                />
+                <div class="input-group-append">
+                  <button type="submit" class="btn btn-primary">
+                    <img src="/images/icons/picto_search_white_100.png" width="20" />
+                  </button>
+                </div>
+              </form>
+            </div>
             <div id="navbarSupportedContent" class="collapse navbar-collapse">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item dropdown">
@@ -258,7 +282,7 @@
               </ul>
               <form
                 action="/results"
-                class="form-inline mr-2 my-2 my-lg-0 ml-2 ml-lg-0"
+                class="c35-header-form-search form-inline mr-2 my-2 my-lg-0 ml-2 ml-lg-0 d-none d-lg-flex"
               >
                 <input
                   name="search"
@@ -268,14 +292,14 @@
                 />
                 <div class="input-group-append">
                   <button type="submit" class="btn btn-primary">
-                    <img src="/icons/picto_search_white_100.png" width="20" />
+                    <img src="/images/icons/picto_search_white_100.png" width="20" />
                   </button>
                 </div>
               </form>
             </div>
           </nav>
           <div class="pub-container">
-            <div class="container py-4">
+            <div class="container pt-4">
               <div class="row justify-content-center">
                 <div
                   id="google-ads-test-banner"
@@ -284,580 +308,707 @@
               </div>
             </div>
           </div>
-          <div id="main-container">
-            <div id="movie-page" class="container">
-              <nav aria-label="breadcrumb" class="c35-breadcrumb">
-                <ol class="breadcrumb">
-                  <li aria-current="page" class="breadcrumb-item">
-                    <a href="/" class="active">
-                      Accueil
-                    </a>
-                  </li>
-                  <li aria-current="page" class="breadcrumb-item">
-                    Salle
-                  </li>
-                  <li aria-current="page" class="breadcrumb-item active">
-                    {{Cinema name}}
-                  </li>
-                </ol>
-              </nav>
-              <div
-                class="c35-movie-banner"
-                style="background-image: url(/previews/cinemas/cineville.jpg);"
-              >
-                <div class="row px-4">
-                  <div class="col-6 col-lg-9">
-                    <h1 class="c35-movie-title mt-5">
-                      CGR LA MÉZIÈRE
-                    </h1>
-                    <h2 class="c35-movie-description ml-3 mt-3">
-                      Mézière - 35520
-                    </h2>
-                  </div>
-                  <div class="col-6 col-lg-3">
-                    <img src="/logos/cgr.png" alt="CGR La Mézière" />
+          <div id="main-container" class="pt-4">
+            <div class="container-lg">
+              <div id="movie-page">
+                <nav aria-label="breadcrumb" class="c35-breadcrumb">
+                  <ol class="breadcrumb">
+                    <li aria-current="page" class="breadcrumb-item">
+                      <a href="/" class="active">
+                        Accueil
+                      </a>
+                    </li>
+                    <li aria-current="page" class="breadcrumb-item">
+                      Salle
+                    </li>
+                    <li aria-current="page" class="breadcrumb-item active">
+                      {{Cinema name}}
+                    </li>
+                  </ol>
+                </nav>
+                <div
+                  class="c35-movie-banner"
+                  style="
+                    background-image: url(/images/cinemas/previews/cineville.jpg);
+                  "
+                >
+                  <div class="row px-4">
+                    <div class="col-6 col-lg-9">
+                      <h1 class="c35-movie-title mt-5">
+                        CGR LA MÉZIÈRE
+                      </h1>
+                      <h2 class="c35-movie-description ml-3 mt-3">
+                        Mézière - 35520
+                      </h2>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                      <img src="/images/cinemas/logos/cgr.png" alt="CGR La Mézière" />
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="row pt-4">
-                <div class="col-12">
-                  <ul role="tablist" class="nav nav-tabs c35-nav-tabs">
-                    <li class="nav-item">
-                      <a
-                        id="informations-tab"
-                        data-toggle="tab"
-                        href="#informations"
-                        role="tab"
-                        aria-controls="informations"
-                        aria-selected="false"
-                        class="nav-link"
-                      >
-                        Informations
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a
-                        id="sessions-tab"
-                        data-toggle="tab"
-                        href="#programmation"
-                        role="tab"
-                        aria-controls="sessions"
-                        aria-selected="true"
-                        class="nav-link active"
-                      >
-                        Programmation
-                      </a>
-                    </li>
-                  </ul>
-                  <div
-                    class="tab-content c35-tab-content c35-movie-tab-informations"
-                  >
+                <div class="row pt-4">
+                  <div class="col-12">
+                    <ul role="tablist" class="nav nav-tabs c35-nav-tabs">
+                      <li class="nav-item">
+                        <a
+                          id="informations-tab"
+                          data-toggle="tab"
+                          href="#informations"
+                          role="tab"
+                          aria-controls="informations"
+                          aria-selected="false"
+                          class="nav-link"
+                        >
+                          Informations
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          id="sessions-tab"
+                          data-toggle="tab"
+                          href="#programmation"
+                          role="tab"
+                          aria-controls="sessions"
+                          aria-selected="true"
+                          class="nav-link active"
+                        >
+                          Programmation
+                        </a>
+                      </li>
+                    </ul>
                     <div
-                      id="informations"
-                      role="tabpanel"
-                      aria-labelledby="informations-tab"
-                      class="tab-pane fade"
+                      class="tab-content c35-tab-content c35-movie-tab-informations"
                     >
                       <div
-                        class="c35-cinema-title d-flex justify-content-between mb-4"
+                        id="informations"
+                        role="tabpanel"
+                        aria-labelledby="informations-tab"
+                        class="tab-pane fade"
                       >
-                        <div>
-                          <h1>CGR LA MÉZIÈRE/</h1>
-                          <h2>Mézière</h2>
-                          <div class="c35-distance">
-                            à 15km
+                        <div
+                          class="c35-cinema-title d-flex justify-content-between mb-4"
+                        >
+                          <div>
+                            <h1>CGR LA MÉZIÈRE/</h1>
+                            <h2>Mézière</h2>
+                            <div class="c35-distance">
+                              à 15km
+                            </div>
                           </div>
-                        </div>
-                        <div class="mt-2">
-                          <a
-                            href="https://www.facebook.com/CGRLaMeziere/"
-                            title="page facebook"
-                            target="_blank"
-                            class="mr-3"
-                            ><img
-                              src="/icons/picto_fb_100.png"
-                              alt="page facebook"
-                              width="40"
-                          /></a>
-                          <a
-                            href="https://www.cgrcinemas.fr/lameziere/"
-                            title="page facebook"
-                            target="_blank"
-                            class="mr-3"
-                            ><img
-                              src="/icons/picto_web_100.png"
-                              alt="site internet"
-                              width="40"
-                          /></a>
-                        </div>
-                      </div>
-                      <div class="c35-entity-informations">
-                        <div class="row c35-entity-informations-row">
-                          <div
-                            class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left"
-                          >
-                            Adresse :
-                          </div>
-                          <div class="col-12 col-md-8 col-lg-9">
-                            Zone de Millet, ZAC de Cap Malo, 35520 La Mézière
-                          </div>
-                        </div>
-                        <div class="row c35-entity-informations-row">
-                          <div
-                            class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left"
-                          >
-                            Tarifs :
-                          </div>
-                          <div class="col-12 col-md-8 col-lg-9">
-                            10 € / 5 € étudiants / 3 € enfants
-                          </div>
-                        </div>
-                        <div class="row c35-entity-informations-row">
-                          <div
-                            class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left"
-                          >
-                            Nombre de salles :
-                          </div>
-                          <div class="col-12 col-md-8 col-lg-9">
-                            7 salles dont une 4DX 4K
-                          </div>
-                        </div>
-                        <div class="row c35-entity-informations-row">
-                          <div
-                            class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left"
-                          >
-                            Nombre de places :
-                          </div>
-                          <div class="col-12 col-md-8 col-lg-9">
-                            546 places
-                          </div>
-                        </div>
-                        <div class="row c35-entity-informations-row">
-                          <div
-                            class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left"
-                          >
-                            Informations complémentaires :
-                          </div>
-                          <div class="col-12 col-md-8 col-lg-9">
-                            Avant-premières, événements et espaces privatisables
-                            dans une chaîne de cinémas multiplexes grand public.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      id="programmation"
-                      role="tabpanel"
-                      aria-labelledby="sessions-tab"
-                      class="tab-pane fade show active"
-                    >
-                      <div class="c35-prog">
-                        <div class="row c35-prog">
-                          <div class="c35-prog-poster col-sm-3">
+                          <div class="mt-2">
                             <a
-                              href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4"
-                              title="Voir Bluebird"
-                              ><img src="/previews/bluebird.jpg" alt="Bluebird"
+                              href="https://www.facebook.com/CGRLaMeziere/"
+                              title="page facebook"
+                              target="_blank"
+                              class="mr-3"
+                              ><img
+                                src="/images/icons/picto_fb_100.png"
+                                alt="page facebook"
+                                width="40"
+                            /></a>
+                            <a
+                              href="https://www.cgrcinemas.fr/lameziere/"
+                              title="page facebook"
+                              target="_blank"
+                              class="mr-3"
+                              ><img
+                                src="/images/icons/picto_web_100.png"
+                                alt="site internet"
+                                width="40"
                             /></a>
                           </div>
-                          <div class="c35-prog-content col-12 col-sm-9">
-                            <div class="c35-prog-movie-title">
+                        </div>
+                        <div class="c35-entity-informations">
+                          <div class="row c35-entity-informations-row">
+                            <div
+                              class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left style1"
+                            >
+                              Adresse :
+                            </div>
+                            <div class="col-12 col-md-8 col-lg-9">
+                              Zone de Millet, ZAC de Cap Malo, 35520 La Mézière
+                            </div>
+                          </div>
+                          <div class="row c35-entity-informations-row">
+                            <div
+                              class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left style1"
+                            >
+                              Tarifs :
+                            </div>
+                            <div class="col-12 col-md-8 col-lg-9">
+                              10 € / 5 € étudiants / 3 € enfants
+                            </div>
+                          </div>
+                          <div class="row c35-entity-informations-row">
+                            <div
+                              class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left style1"
+                            >
+                              Nombre de salles :
+                            </div>
+                            <div class="col-12 col-md-8 col-lg-9">
+                              7 salles dont une 4DX 4K
+                            </div>
+                          </div>
+                          <div class="row c35-entity-informations-row">
+                            <div
+                              class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left style1"
+                            >
+                              Nombre de places :
+                            </div>
+                            <div class="col-12 col-md-8 col-lg-9">
+                              546 places
+                            </div>
+                          </div>
+                          <div class="row c35-entity-informations-row">
+                            <div
+                              class="col-12 col-md-4 col-lg-3 c35-entity-informations-col-left style1"
+                            >
+                              Informations complémentaires :
+                            </div>
+                            <div class="col-12 col-md-8 col-lg-9">
+                              Avant-premières, événements et espaces
+                              privatisables dans une chaîne de cinémas
+                              multiplexes grand public.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        id="programmation"
+                        role="tabpanel"
+                        aria-labelledby="sessions-tab"
+                        class="tab-pane fade show active"
+                      >
+                        <div class="c35-prog">
+                          <div class="row c35-prog">
+                            <div class="c35-prog-poster col-sm-3">
                               <a
                                 href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4"
                                 title="Voir Bluebird"
-                              >
-                                Bluebird
-                              </a>
-                              <span> (2010) </span>
-                              <img
-                                src="/icons/picto_age_3_100.png"
-                                width="40"
-                                alt="Pegi 3"
-                              />
+                                ><img
+                                  src="/images/movies/previews/bluebird.jpg"
+                                  alt="Bluebird"
+                              /></a>
                             </div>
+                            <div class="c35-prog-content col-12 col-sm-9">
+                              <div class="c35-prog-movie-title">
+                                <a
+                                  href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4"
+                                  title="Voir Bluebird"
+                                >
+                                  Bluebird
+                                </a>
+                                <span> (2010) </span>
+                                <img
+                                  src="/images/icons/picto_age_3_100.png"
+                                  alt="pagi 3"
+                                  title="Recommandé à partir de 3 ans"
+                                  width="40"
+                                  data-toggle="tooltip"
+                                  data-placement="top"
+                                />
+                              </div>
 
-                            <div class="c35-prog-schedules">
-                              <div class="c35-prog-schedule ml-2">
-                                <div class="c35-prog-schedule-dates">
-                                  <div>Du 01/09/2020</div>
-                                  <div>au 05/09/2020</div>
-                                </div>
-                                <div
-                                  class="c35-prog-schedule-hours-icons d-block d-lg-flex"
-                                >
-                                  <div class="c35-prog-schedule-hours">
-                                    12:00
+                              <div class="c35-prog-schedules">
+                                <div class="c35-prog-schedule ml-2">
+                                  <div class="c35-prog-schedule-dates">
+                                    <div>Du 01/09/2020</div>
+                                    <div>au 05/09/2020</div>
                                   </div>
-                                  <div class="c35-prog-schedule-icons">
-                                    <img
-                                      src="/icons/picto_version_vfst_100.png"
-                                      alt="vfst"
-                                      width="40"
-                                    />
-                                    <img
-                                      src="/icons/picto_2d_100.png"
-                                      alt="2d"
-                                      width="40"
-                                    />
-                                    <!---->
-                                    <!---->
-                                    <img
-                                      src="/icons/picto_confort_ice_lv_100.png"
-                                      alt="ice_lv"
-                                      width="40"
-                                    />
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="c35-prog-schedule ml-2">
-                                <div class="c35-prog-schedule-dates">
-                                  <div>Le 01/09/2020</div>
-                                </div>
-                                <div
-                                  class="c35-prog-schedule-hours-icons d-block d-lg-flex"
-                                >
-                                  <div class="c35-prog-schedule-hours">
-                                    14:00, 16:30, 19:00, 21:30
-                                  </div>
-                                  <div class="c35-prog-schedule-icons">
-                                    <img
-                                      src="/icons/picto_version_vf_100.png"
-                                      alt="vf"
-                                      width="40"
-                                    />
-                                    <img
-                                      src="/icons/picto_2d_100.png"
-                                      alt="2d"
-                                      width="40"
-                                    />
-                                    <img
-                                      src="/icons/picto_image_35mm_100.png"
-                                      alt="35mm"
-                                      width="40"
-                                    />
-                                    <!---->
-                                    <img
-                                      src="/icons/picto_confort_ice_100.png"
-                                      alt="ice"
-                                      width="40"
-                                    />
+                                  <div
+                                    class="c35-prog-schedule-hours-icons d-block d-lg-flex"
+                                  >
+                                    <div class="c35-prog-schedule-hours">
+                                      12:00
+                                    </div>
+                                    <div class="c35-prog-schedule-icons">
+                                      <img
+                                        src="/images/icons/picto_version_vfst_100.png"
+                                        alt="vfst"
+                                        title="Version française sous-titrée pour malentendants"
+                                        width="40"
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                      />
+                                      <img
+                                        src="/images/icons/picto_2d_100.png"
+                                        alt="2d"
+                                        width="40"
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                      />
+                                      <!---->
+                                      <!---->
+                                      <img
+                                        src="/images/icons/picto_confort_ice_lv_100.png"
+                                        alt="ice_lv"
+                                        title="Salle Immersive Cinema Experience + Light Vibes"
+                                        width="40"
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                      />
+                                    </div>
                                   </div>
                                 </div>
-                              </div>
-                              <div class="c35-prog-schedule ml-2">
-                                <div class="c35-prog-schedule-dates">
-                                  <div>Du 01/09/2020</div>
-                                  <div>au 05/09/2020</div>
-                                </div>
-                                <div
-                                  class="c35-prog-schedule-hours-icons d-block d-lg-flex"
-                                >
-                                  <div class="c35-prog-schedule-hours">
-                                    23:30
+                                <div class="c35-prog-schedule ml-2">
+                                  <div class="c35-prog-schedule-dates">
+                                    <div>Le 01/09/2020</div>
                                   </div>
-                                  <div class="c35-prog-schedule-icons">
-                                    <img
-                                      src="/icons/picto_version_vfad_100.png"
-                                      alt="vfad"
-                                      width="40"
-                                    />
-                                    <img
-                                      src="/icons/picto_3d_100.png"
-                                      alt="3d"
-                                      width="40"
-                                    />
-                                    <img
-                                      src="/icons/picto_image_4k_100.png"
-                                      alt="4k"
-                                      width="40"
-                                    />
-                                    <img
-                                      src="/icons/picto_son_71_100.png"
-                                      alt="7.1"
-                                      width="40"
-                                    />
-                                    <img
-                                      src="/icons/picto_confort_4dx_100.png"
-                                      alt="4dx"
-                                      width="40"
-                                    />
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="c35-prog-schedule ml-2">
-                                <div class="c35-prog-schedule-dates">
-                                  <div>Le 02/09/2020</div>
-                                </div>
-                                <div
-                                  class="c35-prog-schedule-hours-icons d-block d-lg-flex"
-                                >
-                                  <div class="c35-prog-schedule-hours">
-                                    14:00, 16:30, 19:00, 21:30
-                                  </div>
-                                  <div class="c35-prog-schedule-icons">
-                                    <img
-                                      src="/icons/picto_version_vo_100.png"
-                                      alt="vo"
-                                      width="40"
-                                    />
-                                    <img
-                                      src="/icons/picto_3d_100.png"
-                                      alt="3d"
-                                      width="40"
-                                    />
-                                    <img
-                                      src="/icons/picto_image_4Kplus_100.png"
-                                      alt="4k+"
-                                      width="40"
-                                    />
-                                    <img
-                                      src="/icons/picto_son_atmos_100.png"
-                                      alt="atmos"
-                                      width="40"
-                                    />
-                                    <img
-                                      src="/icons/picto_confort_dc_100.png"
-                                      alt="dc"
-                                      width="40"
-                                    />
+                                  <div
+                                    class="c35-prog-schedule-hours-icons d-block d-lg-flex"
+                                  >
+                                    <div class="c35-prog-schedule-hours">
+                                      14:00, 16:30, 19:00, 21:30
+                                    </div>
+                                    <div class="c35-prog-schedule-icons">
+                                      <img
+                                        src="/images/icons/picto_version_vf_100.png"
+                                        alt="vf"
+                                        title="Version française"
+                                        width="40"
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                      />
+                                      <img
+                                        src="/images/icons/picto_2d_100.png"
+                                        alt="2d"
+                                        width="40"
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                      />
+                                      <img
+                                        src="/images/icons/picto_image_35mm_100.png"
+                                        alt="35mm"
+                                        title="Format pellicule 35 mm"
+                                        width="40"
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                      />
+                                      <!---->
+                                      <img
+                                        src="/images/icons/picto_confort_ice_100.png"
+                                        alt="ice"
+                                        title="Salle Immersive Cinema Experience"
+                                        width="40"
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                      />
+                                    </div>
                                   </div>
                                 </div>
-                              </div>
-                              <div class="c35-prog-schedule ml-2">
-                                <div class="c35-prog-schedule-dates">
-                                  <div>Du 01/09/2020</div>
-                                  <div>au 05/09/2020</div>
-                                </div>
-                                <div
-                                  class="c35-prog-schedule-hours-icons d-block d-lg-flex"
-                                >
-                                  <div class="c35-prog-schedule-hours">
-                                    14:00, 16:30
+                                <div class="c35-prog-schedule ml-2">
+                                  <div class="c35-prog-schedule-dates">
+                                    <div>Du 01/09/2020</div>
+                                    <div>au 05/09/2020</div>
                                   </div>
-                                  <div class="c35-prog-schedule-icons">
-                                    <img
-                                      src="/icons/picto_version_vost_100.png"
-                                      alt="vost"
-                                      width="40"
-                                    />
-                                    <img
-                                      src="/icons/picto_2d_100.png"
-                                      alt="2d"
-                                      width="40"
-                                    />
-                                    <img
-                                      src="/icons/picto_image_4k_100.png"
-                                      alt="4k"
-                                      width="40"
-                                    />
-                                    <!---->
-                                    <!---->
+                                  <div
+                                    class="c35-prog-schedule-hours-icons d-block d-lg-flex"
+                                  >
+                                    <div class="c35-prog-schedule-hours">
+                                      23:30
+                                    </div>
+                                    <div class="c35-prog-schedule-icons">
+                                      <img
+                                        src="/images/icons/picto_version_vfad_100.png"
+                                        alt="vfad"
+                                        title="Version française en audio description pour malvoyants"
+                                        width="40"
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                      />
+                                      <img
+                                        src="/images/icons/picto_3d_100.png"
+                                        alt="3d"
+                                        title="Séance avec lunettes 3D"
+                                        width="40"
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                      />
+                                      <img
+                                        src="/images/icons/picto_image_4k_100.png"
+                                        alt="4k"
+                                        title="Format numérique 4K"
+                                        width="40"
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                      />
+                                      <img
+                                        src="/images/icons/picto_son_71_100.png"
+                                        alt="7.1"
+                                        title="Son Dolby 7.1"
+                                        width="40"
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                      />
+                                      <img
+                                        src="/images/icons/picto_confort_4dx_100.png"
+                                        alt="4dx"
+                                        title="Salle dynamique 4DX"
+                                        width="40"
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="c35-prog-schedule ml-2">
+                                  <div class="c35-prog-schedule-dates">
+                                    <div>Le 02/09/2020</div>
+                                  </div>
+                                  <div
+                                    class="c35-prog-schedule-hours-icons d-block d-lg-flex"
+                                  >
+                                    <div class="c35-prog-schedule-hours">
+                                      14:00, 16:30, 19:00, 21:30
+                                    </div>
+                                    <div class="c35-prog-schedule-icons">
+                                      <img
+                                        src="/images/icons/picto_version_vo_100.png"
+                                        alt="vo"
+                                        title="Version originale"
+                                        width="40"
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                      />
+                                      <img
+                                        src="/images/icons/picto_3d_100.png"
+                                        alt="3d"
+                                        title="Séance avec lunettes 3D"
+                                        width="40"
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                      />
+                                      <img
+                                        src="/images/icons/picto_image_4Kplus_100.png"
+                                        alt="4k+"
+                                        title="Format numérique 4K+"
+                                        width="40"
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                      />
+                                      <img
+                                        src="/images/icons/picto_son_atmos_100.png"
+                                        alt="atmos"
+                                        title="Son Dolby Atmos"
+                                        width="40"
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                      />
+                                      <img
+                                        src="/images/icons/picto_confort_dc_100.png"
+                                        alt="dc"
+                                        title="Salle Dolby Cinema"
+                                        width="40"
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="c35-prog-schedule ml-2">
+                                  <div class="c35-prog-schedule-dates">
+                                    <div>Du 01/09/2020</div>
+                                    <div>au 05/09/2020</div>
+                                  </div>
+                                  <div
+                                    class="c35-prog-schedule-hours-icons d-block d-lg-flex"
+                                  >
+                                    <div class="c35-prog-schedule-hours">
+                                      14:00, 16:30
+                                    </div>
+                                    <div class="c35-prog-schedule-icons">
+                                      <img
+                                        src="/images/icons/picto_version_vost_100.png"
+                                        alt="vost"
+                                        title="Version originale sous-titrée"
+                                        width="40"
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                      />
+                                      <img
+                                        src="/images/icons/picto_2d_100.png"
+                                        alt="2d"
+                                        width="40"
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                      />
+                                      <img
+                                        src="/images/icons/picto_image_4k_100.png"
+                                        alt="4k"
+                                        title="Format numérique 4K"
+                                        width="40"
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                      />
+                                      <!---->
+                                      <!---->
+                                    </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                        <div class="row c35-prog">
-                          <div class="c35-prog-poster col-sm-3">
-                            <a
-                              href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4"
-                              title="Voir Bluebird"
-                              ><img src="/previews/ballon.jpg" alt="Ballong"
-                            /></a>
-                          </div>
-                          <div class="c35-prog-content col-12 col-sm-9">
-                            <div class="c35-prog-movie-title">
+                          <div class="row c35-prog">
+                            <div class="c35-prog-poster col-sm-3">
                               <a
                                 href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4"
                                 title="Voir Bluebird"
-                              >
-                                Ballong
-                              </a>
-                              <span> (2010) </span>
-                              <img
-                                src="/icons/picto_age_6_100.png"
-                                width="40"
-                                alt="Pegi 6"
-                              />
+                                ><img src="/images/movies/previews/ballon.jpg" alt="Ballong"
+                              /></a>
                             </div>
+                            <div class="c35-prog-content col-12 col-sm-9">
+                              <div class="c35-prog-movie-title">
+                                <a
+                                  href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4"
+                                  title="Voir Bluebird"
+                                >
+                                  Ballong
+                                </a>
+                                <span> (2010) </span>
+                                <img
+                                  src="/images/icons/picto_age_6_100.png"
+                                  alt="pagi 6"
+                                  title="Recommandé à partir de 6 ans"
+                                  width="40"
+                                  data-toggle="tooltip"
+                                  data-placement="top"
+                                />
+                              </div>
 
-                            <div class="c35-prog-schedules">
-                              <div class="c35-prog-schedule ml-2">
-                                <div class="c35-prog-schedule-dates">
-                                  <div>Du 01/09/2020</div>
-                                  <div>au 05/09/2020</div>
-                                </div>
-                                <div
-                                  class="c35-prog-schedule-hours-icons d-block d-lg-flex"
-                                >
-                                  <div class="c35-prog-schedule-hours">
-                                    12:00
+                              <div class="c35-prog-schedules">
+                                <div class="c35-prog-schedule ml-2">
+                                  <div class="c35-prog-schedule-dates">
+                                    <div>Du 01/09/2020</div>
+                                    <div>au 05/09/2020</div>
                                   </div>
-                                  <div class="c35-prog-schedule-icons">
-                                    <img
-                                      src="/icons/picto_version_vfst_100.png"
-                                      alt="vfst"
-                                      width="40"
-                                    />
-                                    <img
-                                      src="/icons/picto_2d_100.png"
-                                      alt="2d"
-                                      width="40"
-                                    />
-                                    <!---->
-                                    <!---->
-                                    <img
-                                      src="/icons/picto_confort_ice_lv_100.png"
-                                      alt="ice_lv"
-                                      width="40"
-                                    />
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="c35-prog-schedule ml-2">
-                                <div class="c35-prog-schedule-dates">
-                                  <div>Le 01/09/2020</div>
-                                </div>
-                                <div
-                                  class="c35-prog-schedule-hours-icons d-block d-lg-flex"
-                                >
-                                  <div class="c35-prog-schedule-hours">
-                                    14:00, 16:30, 19:00, 21:30
-                                  </div>
-                                  <div class="c35-prog-schedule-icons">
-                                    <img
-                                      src="/icons/picto_version_vf_100.png"
-                                      alt="vf"
-                                      width="40"
-                                    />
-                                    <img
-                                      src="/icons/picto_2d_100.png"
-                                      alt="2d"
-                                      width="40"
-                                    />
-                                    <img
-                                      src="/icons/picto_image_35mm_100.png"
-                                      alt="35mm"
-                                      width="40"
-                                    />
-                                    <!---->
-                                    <img
-                                      src="/icons/picto_confort_ice_100.png"
-                                      alt="ice"
-                                      width="40"
-                                    />
+                                  <div
+                                    class="c35-prog-schedule-hours-icons d-block d-lg-flex"
+                                  >
+                                    <div class="c35-prog-schedule-hours">
+                                      12:00
+                                    </div>
+                                    <div class="c35-prog-schedule-icons">
+                                      <img
+                                        src="/images/icons/picto_version_vfst_100.png"
+                                        alt="vfst"
+                                        title="Version française sous-titrée pour malentendants"
+                                        width="40"
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                      />
+                                      <img
+                                        src="/images/icons/picto_2d_100.png"
+                                        alt="2d"
+                                        width="40"
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                      />
+                                      <!---->
+                                      <!---->
+                                      <img
+                                        src="/images/icons/picto_confort_ice_lv_100.png"
+                                        alt="ice_lv"
+                                        title="Salle Immersive Cinema Experience + Light Vibes"
+                                        width="40"
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                      />
+                                    </div>
                                   </div>
                                 </div>
-                              </div>
-                              <div class="c35-prog-schedule ml-2">
-                                <div class="c35-prog-schedule-dates">
-                                  <div>Du 01/09/2020</div>
-                                  <div>au 05/09/2020</div>
-                                </div>
-                                <div
-                                  class="c35-prog-schedule-hours-icons d-block d-lg-flex"
-                                >
-                                  <div class="c35-prog-schedule-hours">
-                                    23:30
+                                <div class="c35-prog-schedule ml-2">
+                                  <div class="c35-prog-schedule-dates">
+                                    <div>Le 01/09/2020</div>
                                   </div>
-                                  <div class="c35-prog-schedule-icons">
-                                    <img
-                                      src="/icons/picto_version_vfad_100.png"
-                                      alt="vfad"
-                                      width="40"
-                                    />
-                                    <img
-                                      src="/icons/picto_3d_100.png"
-                                      alt="3d"
-                                      width="40"
-                                    />
-                                    <img
-                                      src="/icons/picto_image_4k_100.png"
-                                      alt="4k"
-                                      width="40"
-                                    />
-                                    <img
-                                      src="/icons/picto_son_71_100.png"
-                                      alt="7.1"
-                                      width="40"
-                                    />
-                                    <img
-                                      src="/icons/picto_confort_4dx_100.png"
-                                      alt="4dx"
-                                      width="40"
-                                    />
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="c35-prog-schedule ml-2">
-                                <div class="c35-prog-schedule-dates">
-                                  <div>Le 02/09/2020</div>
-                                </div>
-                                <div
-                                  class="c35-prog-schedule-hours-icons d-block d-lg-flex"
-                                >
-                                  <div class="c35-prog-schedule-hours">
-                                    14:00, 16:30, 19:00, 21:30
-                                  </div>
-                                  <div class="c35-prog-schedule-icons">
-                                    <img
-                                      src="/icons/picto_version_vo_100.png"
-                                      alt="vo"
-                                      width="40"
-                                    />
-                                    <img
-                                      src="/icons/picto_3d_100.png"
-                                      alt="3d"
-                                      width="40"
-                                    />
-                                    <img
-                                      src="/icons/picto_image_4Kplus_100.png"
-                                      alt="4k+"
-                                      width="40"
-                                    />
-                                    <img
-                                      src="/icons/picto_son_atmos_100.png"
-                                      alt="atmos"
-                                      width="40"
-                                    />
-                                    <img
-                                      src="/icons/picto_confort_dc_100.png"
-                                      alt="dc"
-                                      width="40"
-                                    />
+                                  <div
+                                    class="c35-prog-schedule-hours-icons d-block d-lg-flex"
+                                  >
+                                    <div class="c35-prog-schedule-hours">
+                                      14:00, 16:30, 19:00, 21:30
+                                    </div>
+                                    <div class="c35-prog-schedule-icons">
+                                      <img
+                                        src="/images/icons/picto_version_vf_100.png"
+                                        alt="vf"
+                                        title="Version française"
+                                        width="40"
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                      />
+                                      <img
+                                        src="/images/icons/picto_2d_100.png"
+                                        alt="2d"
+                                        width="40"
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                      />
+                                      <img
+                                        src="/images/icons/picto_image_35mm_100.png"
+                                        alt="35mm"
+                                        title="Format pellicule 35 mm"
+                                        width="40"
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                      />
+                                      <!---->
+                                      <img
+                                        src="/images/icons/picto_confort_ice_100.png"
+                                        alt="ice"
+                                        title="Salle Immersive Cinema Experience"
+                                        width="40"
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                      />
+                                    </div>
                                   </div>
                                 </div>
-                              </div>
-                              <div class="c35-prog-schedule ml-2">
-                                <div class="c35-prog-schedule-dates">
-                                  <div>Du 01/09/2020</div>
-                                  <div>au 05/09/2020</div>
-                                </div>
-                                <div
-                                  class="c35-prog-schedule-hours-icons d-block d-lg-flex"
-                                >
-                                  <div class="c35-prog-schedule-hours">
-                                    14:00, 16:30
+                                <div class="c35-prog-schedule ml-2">
+                                  <div class="c35-prog-schedule-dates">
+                                    <div>Du 01/09/2020</div>
+                                    <div>au 05/09/2020</div>
                                   </div>
-                                  <div class="c35-prog-schedule-icons">
-                                    <img
-                                      src="/icons/picto_version_vost_100.png"
-                                      alt="vost"
-                                      width="40"
-                                    />
-                                    <img
-                                      src="/icons/picto_2d_100.png"
-                                      alt="2d"
-                                      width="40"
-                                    />
-                                    <img
-                                      src="/icons/picto_image_4k_100.png"
-                                      alt="4k"
-                                      width="40"
-                                    />
-                                    <!---->
-                                    <!---->
+                                  <div
+                                    class="c35-prog-schedule-hours-icons d-block d-lg-flex"
+                                  >
+                                    <div class="c35-prog-schedule-hours">
+                                      23:30
+                                    </div>
+                                    <div class="c35-prog-schedule-icons">
+                                      <img
+                                        src="/images/icons/picto_version_vfad_100.png"
+                                        alt="vfad"
+                                        title="Version française en audio description pour malvoyants"
+                                        width="40"
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                      />
+                                      <img
+                                        src="/images/icons/picto_3d_100.png"
+                                        alt="3d"
+                                        title="Séance avec lunettes 3D"
+                                        width="40"
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                      />
+                                      <img
+                                        src="/images/icons/picto_image_4k_100.png"
+                                        alt="4k"
+                                        title="Format numérique 4K"
+                                        width="40"
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                      />
+                                      <img
+                                        src="/images/icons/picto_son_71_100.png"
+                                        alt="7.1"
+                                        title="Son Dolby 7.1"
+                                        width="40"
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                      />
+                                      <img
+                                        src="/images/icons/picto_confort_4dx_100.png"
+                                        alt="4dx"
+                                        title="Salle dynamique 4DX"
+                                        width="40"
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="c35-prog-schedule ml-2">
+                                  <div class="c35-prog-schedule-dates">
+                                    <div>Le 02/09/2020</div>
+                                  </div>
+                                  <div
+                                    class="c35-prog-schedule-hours-icons d-block d-lg-flex"
+                                  >
+                                    <div class="c35-prog-schedule-hours">
+                                      14:00, 16:30, 19:00, 21:30
+                                    </div>
+                                    <div class="c35-prog-schedule-icons">
+                                      <img
+                                        src="/images/icons/picto_version_vo_100.png"
+                                        alt="vo"
+                                        title="Version originale"
+                                        width="40"
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                      />
+                                      <img
+                                        src="/images/icons/picto_3d_100.png"
+                                        alt="3d"
+                                        title="Séance avec lunettes 3D"
+                                        width="40"
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                      />
+                                      <img
+                                        src="/images/icons/picto_image_4Kplus_100.png"
+                                        alt="4k+"
+                                        title="Format numérique 4K+"
+                                        width="40"
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                      />
+                                      <img
+                                        src="/images/icons/picto_son_atmos_100.png"
+                                        alt="atmos"
+                                        title="Son Dolby Atmos"
+                                        width="40"
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                      />
+                                      <img
+                                        src="/images/icons/picto_confort_dc_100.png"
+                                        alt="dc"
+                                        title="Salle Dolby Cinema"
+                                        width="40"
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="c35-prog-schedule ml-2">
+                                  <div class="c35-prog-schedule-dates">
+                                    <div>Du 01/09/2020</div>
+                                    <div>au 05/09/2020</div>
+                                  </div>
+                                  <div
+                                    class="c35-prog-schedule-hours-icons d-block d-lg-flex"
+                                  >
+                                    <div class="c35-prog-schedule-hours">
+                                      14:00, 16:30
+                                    </div>
+                                    <div class="c35-prog-schedule-icons">
+                                      <img
+                                        src="/images/icons/picto_version_vost_100.png"
+                                        alt="vost"
+                                        title="Version originale sous-titrée"
+                                        width="40"
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                      />
+                                      <img
+                                        src="/images/icons/picto_2d_100.png"
+                                        alt="2d"
+                                        width="40"
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                      />
+                                      <img
+                                        src="/images/icons/picto_image_4k_100.png"
+                                        alt="4k"
+                                        title="Format numérique 4K"
+                                        width="40"
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                      />
+                                      <!---->
+                                      <!---->
+                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -873,10 +1024,13 @@
           </div>
           <div class="c35-footer bg-dark mt-4 py-5">
             <div class="font-italic">
-              Ciné35 2020, tous droits réservés
+              Cine35.com 2020, tous droits réservés
             </div>
             <div class="mt-4">
-              Mentions Légales |
+              <a href="/mentions-legales" title="Mentions légales">
+                Mentions Légales
+              </a>
+              |
               <a href="/contact" title="Nous contacter">
                 Contact
               </a>
@@ -885,24 +1039,5 @@
         </div>
       </div>
     </div>
-    <script>
-      window.__NUXT__ = {
-        layout: 'default',
-        data: [{}],
-        fetch: [],
-        error: null,
-        state: {
-          actors: { collection: [] },
-          directors: { collection: [] },
-          movies: { collection: [] },
-        },
-        serverRendered: !0,
-        routePath: '/cinemas/181',
-      };
-    </script>
-    <script src="/_nuxt/5dd7950e092c28f1eb58.js" defer></script>
-    <script src="/_nuxt/870345e323bfc84cec54.js" defer></script>
-    <script src="/_nuxt/33af398403db843cdc23.js" defer></script>
-    <script src="/_nuxt/b5d43530e27a29c5f56c.js" defer></script>
-  </body>
+   </body>
 </html>

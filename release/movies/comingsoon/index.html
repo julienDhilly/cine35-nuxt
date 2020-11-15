@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html data-n-head-ssr>
   <head>
-    <title>
-      Cine35.com - Tous les films, Toutes les salles de cinéma d'Ille-et-Vilaine
-    </title>
+    <title>Cine35.com - Prochainement</title>
     <meta data-n-head="ssr" charset="utf-8" />
     <meta
       data-n-head="ssr"
@@ -35,7 +33,7 @@
     <link
       data-n-head="ssr"
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
     />
     <script
       data-n-head="ssr"
@@ -61,14 +59,11 @@
       src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"
     ></script>
     <script data-n-head="ssr" src="/ads.js"></script>
-    <link rel="preload" href="/_nuxt/5dd7950e092c28f1eb58.js" as="script" />
-    <link rel="preload" href="/_nuxt/870345e323bfc84cec54.js" as="script" />
-    <link rel="preload" href="/_nuxt/5982dc8608b6293bd7d9.css" as="style" />
-    <link rel="preload" href="/_nuxt/33af398403db843cdc23.js" as="script" />
-    <link rel="preload" href="/_nuxt/b3087d3771d1854d9db4.css" as="style" />
-    <link rel="preload" href="/_nuxt/b5d43530e27a29c5f56c.js" as="script" />
-    <link rel="stylesheet" href="/_nuxt/5982dc8608b6293bd7d9.css" />
-    <link rel="stylesheet" href="/_nuxt/b3087d3771d1854d9db4.css" />
+    <script data-n-head="ssr" src="/js/custom.js"></script>
+    <link rel="preload" href="/css/40a609bb3d73d8207a50.css" as="style" />
+    <link rel="preload" href="/css/3cae4fc4b296736be4ad.css" as="style" />
+    <link rel="stylesheet" href="/css/40a609bb3d73d8207a50.css" />
+    <link rel="stylesheet" href="/css/3cae4fc4b296736be4ad.css" />
   </head>
   <body>
     <div data-server-rendered="true" id="__nuxt">
@@ -185,17 +180,44 @@
                   ></path>
                 </g></svg
             ></a>
-            <button
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-              class="navbar-toggler"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
+            <div class="d-flex">
+              <button
+                id="c35-btn-search-mobile"
+                type="button"
+                class="d-block d-lg-none navbar-toggler"
+              >
+                <img src="/images/icons/picto_search_white_100.png" width="20" />
+              </button>
+              <button
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                class="navbar-toggler"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+            <div id="navbarSearchContext" class="collapse navbar-collapse">
+              <form
+                action="/results"
+                class="c35-header-form-search form-inline mr-2 my-2 my-lg-0 ml-2 ml-lg-0"
+              >
+                <input
+                  name="search"
+                  placeholder="Rechercher un film ou une salle..."
+                  aria-label="Rechercher"
+                  class="form-control flex-grow-1"
+                />
+                <div class="input-group-append">
+                  <button type="submit" class="btn btn-primary">
+                    <img src="/images/icons/picto_search_white_100.png" width="20" />
+                  </button>
+                </div>
+              </form>
+            </div>
             <div id="navbarSupportedContent" class="collapse navbar-collapse">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item dropdown header-dropdown-active">
@@ -261,7 +283,7 @@
               </ul>
               <form
                 action="/results"
-                class="form-inline mr-2 my-2 my-lg-0 ml-2 ml-lg-0"
+                class="c35-header-form-search form-inline mr-2 my-2 my-lg-0 ml-2 ml-lg-0 d-none d-lg-flex"
               >
                 <input
                   name="search"
@@ -271,14 +293,14 @@
                 />
                 <div class="input-group-append">
                   <button type="submit" class="btn btn-primary">
-                    <img src="/icons/picto_search_white_100.png" width="20" />
+                    <img src="/images/icons/picto_search_white_100.png" width="20" />
                   </button>
                 </div>
               </form>
             </div>
           </nav>
           <div class="pub-container">
-            <div class="container py-4">
+            <div class="container pt-4">
               <div class="row justify-content-center">
                 <div
                   id="google-ads-test-banner"
@@ -287,514 +309,545 @@
               </div>
             </div>
           </div>
-          <div id="main-container">
-            <div class="container">
-              <div class="row">
-                <div class="col-12">
-                  <nav aria-label="breadcrumb" class="c35-breadcrumb">
-                    <ol class="breadcrumb">
-                      <li aria-current="page" class="breadcrumb-item">
-                        <a href="/" class="active">
-                          Accueil
-                        </a>
-                      </li>
-                      <li aria-current="page" class="breadcrumb-item active">
-                        A l'affiche
-                      </li>
-                    </ol>
-                  </nav>
+          <div id="main-container" class="pt-4">
+            <div class="container-lg">
+              <div>
+                <div class="row">
+                  <div class="col-12">
+                    <nav aria-label="breadcrumb" class="c35-breadcrumb">
+                      <ol class="breadcrumb">
+                        <li aria-current="page" class="breadcrumb-item">
+                          <a href="/" class="active">
+                            Accueil
+                          </a>
+                        </li>
+                        <li aria-current="page" class="breadcrumb-item active">
+                          A l'affiche
+                        </li>
+                      </ol>
+                    </nav>
+                  </div>
                 </div>
-              </div>
-              <div class="c35-section">
-                <div class="container-md px-1">
-                  <div class="row mx-n1">
-                    <div class="col-12 pl-1">
-                      <h2 class="strike">
-                        <span>
-                          Prochainement
-                        </span>
-                      </h2>
+                <div class="c35-section">
+                  <div class="px-1">
+                    <div class="row mx-n1">
+                      <div class="col-12 pl-1">
+                        <h2 class="strike">
+                          <span>
+                            Prochainement
+                          </span>
+                        </h2>
+                      </div>
                     </div>
+                    <div class="c35-movie-list-date-section">
+                      SORTIE NATIONALE LE 01/07/2020
+                    </div>
+                    <div class="row mx-n1">
+                      <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
+                        <a
+                          href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4"
+                          title="Just Kids"
+                          data-filter-pegi="6"
+                          class="c35-movie-preview"
+                          ><img src="/images/movies/previews/just_kids.jpg" alt="ALERTE" />
+                          <div class="c35-movie-preview-overlay">
+                            <div class="c35-movie-preview-overlay-text">
+                              <span>Just Kids</span>
+                              <div>
+                                Jonás Trueba<br />
+                                2018<br />
+                                1h25m
+                              </div>
+                            </div>
+                          </div></a
+                        >
+                      </div>
+                      <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
+                        <a
+                          href="/movies/353680c1-5de6-44b9-8144-245cc74e56e1"
+                          title="Ballong"
+                          data-filter-pegi="0"
+                          class="c35-movie-preview"
+                          ><img src="/images/movies/previews/ballon.jpg" alt="ALERTE" />
+                          <div class="c35-movie-preview-overlay">
+                            <div class="c35-movie-preview-overlay-text">
+                              <span>Ballong</span>
+                              <div>
+                                Pema Tseden<br />
+                                2018<br />
+                                1h25m
+                              </div>
+                            </div>
+                          </div></a
+                        >
+                      </div>
+                      <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
+                        <a
+                          href="/movies/744e0d9c-227a-4c60-91da-c79f2254025d"
+                          title="Away"
+                          data-filter-pegi="6"
+                          class="c35-movie-preview"
+                          ><img src="/images/movies/previews/away.jpg" alt="ALERTE" />
+                          <div class="c35-movie-preview-overlay">
+                            <div class="c35-movie-preview-overlay-text">
+                              <span>Away</span>
+                              <div>
+                                Jonás Trueba<br />
+                                2018<br />
+                                1h08m
+                              </div>
+                            </div>
+                          </div></a
+                        >
+                      </div>
+                      <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
+                        <a
+                          href="/movies/754d7aca-3922-447b-9e3b-469565260a5d"
+                          title="Midnight Runner"
+                          data-filter-pegi="10"
+                          class="c35-movie-preview"
+                          ><img
+                            src="/images/movies/previews/midnight_runner.jpg"
+                            alt="ALERTE"
+                          />
+                          <div class="c35-movie-preview-overlay">
+                            <div class="c35-movie-preview-overlay-text">
+                              <span>Midnight Runner</span>
+                              <div>
+                                Wolfgang Petersen<br />
+                                2018<br />
+                                597h39m
+                              </div>
+                            </div>
+                          </div></a
+                        >
+                      </div>
+                      <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
+                        <a
+                          href="/movies/7e43f64d-23ba-470f-abd3-c840a1511463"
+                          title="Bluebird"
+                          data-filter-pegi="12"
+                          class="c35-movie-preview"
+                          ><img src="/images/movies/previews/bluebird.jpg" alt="ALERTE" />
+                          <div class="c35-movie-preview-overlay">
+                            <div class="c35-movie-preview-overlay-text">
+                              <span>Bluebird</span>
+                              <div>
+                                Jonás Trueba<br />
+                                2018<br />
+                                584h46m
+                              </div>
+                            </div>
+                          </div></a
+                        >
+                      </div>
+                      <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
+                        <a
+                          href="/movies/a93f27dc-2de5-4a2f-b534-a5afb64f2305"
+                          title="Eva en août"
+                          data-filter-pegi="18"
+                          class="c35-movie-preview"
+                          ><img src="/images/movies/previews/eva_et_moi.jpg" alt="ALERTE" />
+                          <div class="c35-movie-preview-overlay">
+                            <div class="c35-movie-preview-overlay-text">
+                              <span>Eva en août</span>
+                              <div>
+                                Jonás Trueba<br />
+                                2018<br />
+                                2h54m
+                              </div>
+                            </div>
+                          </div></a
+                        >
+                      </div>
+                      <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
+                        <a
+                          href="/movies/cbfc0413-cb8d-4b91-a312-290505a735df"
+                          title="Malmkrog"
+                          data-filter-pegi="16"
+                          class="c35-movie-preview"
+                          ><img src="/images/movies/previews/malmkrog.jpg" alt="ALERTE" />
+                          <div class="c35-movie-preview-overlay">
+                            <div class="c35-movie-preview-overlay-text">
+                              <span>Malmkrog</span>
+                              <div>
+                                Cristi Puiu<br />
+                                2018<br />
+                                3h12m
+                              </div>
+                            </div>
+                          </div></a
+                        >
+                      </div>
+                      <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
+                        <a
+                          href="/movies/xJABSfO0P91AUEXcKzLj"
+                          title="Alerte"
+                          data-filter-pegi="3"
+                          class="c35-movie-preview"
+                          ><img src="/images/movies/previews/alerte.jpg" alt="ALERTE" />
+                          <div class="c35-movie-preview-overlay">
+                            <div class="c35-movie-preview-overlay-text">
+                              <span>Alerte</span>
+                              <div>
+                                Wolfgang Petersen<br />
+                                2018<br />
+                                1h30m
+                              </div>
+                            </div>
+                          </div></a
+                        >
+                      </div>
+                    </div>
+                    <div class="c35-movie-list-date-section">
+                      SORTIE NATIONALE LE 08/07/2020
+                    </div>
+                    <div class="row mx-n1">
+                      <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
+                        <a
+                          href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4"
+                          title="Just Kids"
+                          data-filter-pegi="16"
+                          class="c35-movie-preview"
+                          ><img src="/images/movies/previews/just_kids.jpg" alt="ALERTE" />
+                          <div class="c35-movie-preview-overlay">
+                            <div class="c35-movie-preview-overlay-text">
+                              <span>Just Kids</span>
+                              <div>
+                                Jonás Trueba<br />
+                                2018<br />
+                                1h25m
+                              </div>
+                            </div>
+                          </div></a
+                        >
+                      </div>
+                      <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
+                        <a
+                          href="/movies/353680c1-5de6-44b9-8144-245cc74e56e1"
+                          title="Ballong"
+                          data-filter-pegi="0"
+                          class="c35-movie-preview"
+                          ><img src="/images/movies/previews/ballon.jpg" alt="ALERTE" />
+                          <div class="c35-movie-preview-overlay">
+                            <div class="c35-movie-preview-overlay-text">
+                              <span>Ballong</span>
+                              <div>
+                                Pema Tseden<br />
+                                2018<br />
+                                1h25m
+                              </div>
+                            </div>
+                          </div></a
+                        >
+                      </div>
+                      <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
+                        <a
+                          href="/movies/744e0d9c-227a-4c60-91da-c79f2254025d"
+                          title="Away"
+                          data-filter-pegi="18"
+                          class="c35-movie-preview"
+                          ><img src="/images/movies/previews/away.jpg" alt="ALERTE" />
+                          <div class="c35-movie-preview-overlay">
+                            <div class="c35-movie-preview-overlay-text">
+                              <span>Away</span>
+                              <div>
+                                Jonás Trueba<br />
+                                2018<br />
+                                1h08m
+                              </div>
+                            </div>
+                          </div></a
+                        >
+                      </div>
+                      <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
+                        <a
+                          href="/movies/754d7aca-3922-447b-9e3b-469565260a5d"
+                          title="Midnight Runner"
+                          data-filter-pegi="0"
+                          class="c35-movie-preview"
+                          ><img
+                            src="/images/movies/previews/midnight_runner.jpg"
+                            alt="ALERTE"
+                          />
+                          <div class="c35-movie-preview-overlay">
+                            <div class="c35-movie-preview-overlay-text">
+                              <span>Midnight Runner</span>
+                              <div>
+                                Wolfgang Petersen<br />
+                                2018<br />
+                                597h39m
+                              </div>
+                            </div>
+                          </div></a
+                        >
+                      </div>
+                      <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
+                        <a
+                          href="/movies/7e43f64d-23ba-470f-abd3-c840a1511463"
+                          title="Bluebird"
+                          data-filter-pegi="12"
+                          class="c35-movie-preview"
+                          ><img src="/images/movies/previews/bluebird.jpg" alt="ALERTE" />
+                          <div class="c35-movie-preview-overlay">
+                            <div class="c35-movie-preview-overlay-text">
+                              <span>Bluebird</span>
+                              <div>
+                                Jonás Trueba<br />
+                                2018<br />
+                                584h46m
+                              </div>
+                            </div>
+                          </div></a
+                        >
+                      </div>
+                      <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
+                        <a
+                          href="/movies/a93f27dc-2de5-4a2f-b534-a5afb64f2305"
+                          title="Eva en août"
+                          data-filter-pegi="3"
+                          class="c35-movie-preview"
+                          ><img src="/images/movies/previews/eva_et_moi.jpg" alt="ALERTE" />
+                          <div class="c35-movie-preview-overlay">
+                            <div class="c35-movie-preview-overlay-text">
+                              <span>Eva en août</span>
+                              <div>
+                                Jonás Trueba<br />
+                                2018<br />
+                                2h54m
+                              </div>
+                            </div>
+                          </div></a
+                        >
+                      </div>
+                      <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
+                        <a
+                          href="/movies/cbfc0413-cb8d-4b91-a312-290505a735df"
+                          title="Malmkrog"
+                          data-filter-pegi="16"
+                          class="c35-movie-preview"
+                          ><img src="/images/movies/previews/malmkrog.jpg" alt="ALERTE" />
+                          <div class="c35-movie-preview-overlay">
+                            <div class="c35-movie-preview-overlay-text">
+                              <span>Malmkrog</span>
+                              <div>
+                                Cristi Puiu<br />
+                                2018<br />
+                                3h12m
+                              </div>
+                            </div>
+                          </div></a
+                        >
+                      </div>
+                      <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
+                        <a
+                          href="/movies/xJABSfO0P91AUEXcKzLj"
+                          title="Alerte"
+                          data-filter-pegi="18"
+                          class="c35-movie-preview"
+                          ><img src="/images/movies/previews/alerte.jpg" alt="ALERTE" />
+                          <div class="c35-movie-preview-overlay">
+                            <div class="c35-movie-preview-overlay-text">
+                              <span>Alerte</span>
+                              <div>
+                                Wolfgang Petersen<br />
+                                2018<br />
+                                1h30m
+                              </div>
+                            </div>
+                          </div></a
+                        >
+                      </div>
+                    </div>
+                    <div class="c35-movie-list-date-section">
+                      SORTIE NATIONALE LE 15/07/2020
+                    </div>
+                    <div class="row mx-n1">
+                      <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
+                        <a
+                          href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4"
+                          title="Just Kids"
+                          data-filter-pegi="6"
+                          class="c35-movie-preview"
+                          ><img src="/images/movies/previews/just_kids.jpg" alt="ALERTE" />
+                          <div class="c35-movie-preview-overlay">
+                            <div class="c35-movie-preview-overlay-text">
+                              <span>Just Kids</span>
+                              <div>
+                                Jonás Trueba<br />
+                                2018<br />
+                                1h25m
+                              </div>
+                            </div>
+                          </div></a
+                        >
+                      </div>
+                      <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
+                        <a
+                          href="/movies/353680c1-5de6-44b9-8144-245cc74e56e1"
+                          title="Ballong"
+                          data-filter-pegi="16"
+                          class="c35-movie-preview"
+                          ><img src="/images/movies/previews/ballon.jpg" alt="ALERTE" />
+                          <div class="c35-movie-preview-overlay">
+                            <div class="c35-movie-preview-overlay-text">
+                              <span>Ballong</span>
+                              <div>
+                                Pema Tseden<br />
+                                2018<br />
+                                1h25m
+                              </div>
+                            </div>
+                          </div></a
+                        >
+                      </div>
+                      <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
+                        <a
+                          href="/movies/744e0d9c-227a-4c60-91da-c79f2254025d"
+                          title="Away"
+                          data-filter-pegi="3"
+                          class="c35-movie-preview"
+                          ><img src="/images/movies/previews/away.jpg" alt="ALERTE" />
+                          <div class="c35-movie-preview-overlay">
+                            <div class="c35-movie-preview-overlay-text">
+                              <span>Away</span>
+                              <div>
+                                Jonás Trueba<br />
+                                2018<br />
+                                1h08m
+                              </div>
+                            </div>
+                          </div></a
+                        >
+                      </div>
+                      <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
+                        <a
+                          href="/movies/754d7aca-3922-447b-9e3b-469565260a5d"
+                          title="Midnight Runner"
+                          data-filter-pegi="6"
+                          class="c35-movie-preview"
+                          ><img
+                            src="/images/movies/previews/midnight_runner.jpg"
+                            alt="ALERTE"
+                          />
+                          <div class="c35-movie-preview-overlay">
+                            <div class="c35-movie-preview-overlay-text">
+                              <span>Midnight Runner</span>
+                              <div>
+                                Wolfgang Petersen<br />
+                                2018<br />
+                                597h39m
+                              </div>
+                            </div>
+                          </div></a
+                        >
+                      </div>
+                      <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
+                        <a
+                          href="/movies/7e43f64d-23ba-470f-abd3-c840a1511463"
+                          title="Bluebird"
+                          data-filter-pegi="12"
+                          class="c35-movie-preview"
+                          ><img src="/images/movies/previews/bluebird.jpg" alt="ALERTE" />
+                          <div class="c35-movie-preview-overlay">
+                            <div class="c35-movie-preview-overlay-text">
+                              <span>Bluebird</span>
+                              <div>
+                                Jonás Trueba<br />
+                                2018<br />
+                                584h46m
+                              </div>
+                            </div>
+                          </div></a
+                        >
+                      </div>
+                      <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
+                        <a
+                          href="/movies/a93f27dc-2de5-4a2f-b534-a5afb64f2305"
+                          title="Eva en août"
+                          data-filter-pegi="12"
+                          class="c35-movie-preview"
+                          ><img src="/images/movies/previews/eva_et_moi.jpg" alt="ALERTE" />
+                          <div class="c35-movie-preview-overlay">
+                            <div class="c35-movie-preview-overlay-text">
+                              <span>Eva en août</span>
+                              <div>
+                                Jonás Trueba<br />
+                                2018<br />
+                                2h54m
+                              </div>
+                            </div>
+                          </div></a
+                        >
+                      </div>
+                      <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
+                        <a
+                          href="/movies/cbfc0413-cb8d-4b91-a312-290505a735df"
+                          title="Malmkrog"
+                          data-filter-pegi="6"
+                          class="c35-movie-preview"
+                          ><img src="/images/movies/previews/malmkrog.jpg" alt="ALERTE" />
+                          <div class="c35-movie-preview-overlay">
+                            <div class="c35-movie-preview-overlay-text">
+                              <span>Malmkrog</span>
+                              <div>
+                                Cristi Puiu<br />
+                                2018<br />
+                                3h12m
+                              </div>
+                            </div>
+                          </div></a
+                        >
+                      </div>
+                      <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
+                        <a
+                          href="/movies/xJABSfO0P91AUEXcKzLj"
+                          title="Alerte"
+                          data-filter-pegi="10"
+                          class="c35-movie-preview"
+                          ><img src="/images/movies/previews/alerte.jpg" alt="ALERTE" />
+                          <div class="c35-movie-preview-overlay">
+                            <div class="c35-movie-preview-overlay-text">
+                              <span>Alerte</span>
+                              <div>
+                                Wolfgang Petersen<br />
+                                2018<br />
+                                1h30m
+                              </div>
+                            </div>
+                          </div></a
+                        >
+                      </div>
+                    </div>
+                    <nav class="mt-3">
+                      <ul
+                        class="pagination pagination-lg justify-content-center"
+                      >
+                        <li class="page-item disabled">
+                          <a href="#" tabindex="-1" class="page-link">1</a>
+                        </li>
+                        <li class="page-item">
+                          <a href="#" class="page-link">2</a>
+                        </li>
+                        <li class="page-item">
+                          <a href="#" class="page-link">3</a>
+                        </li>
+                      </ul>
+                    </nav>
                   </div>
-                  <div class="c35-movie-list-date-section">
-                    SORTIE NATIONALE LE 01/07/2020
-                  </div>
-                  <div class="row mx-n1">
-                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
-                      <a
-                        href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4"
-                        title="Just Kids"
-                        class="c35-movie-preview"
-                        ><img src="/previews/just_kids.jpg" alt="ALERTE" />
-                        <div class="c35-movie-preview-overlay">
-                          <div class="c35-movie-preview-overlay-text">
-                            <span>Just Kids</span>
-                            <div>
-                              Jonás Trueba<br />
-                              2018<br />
-                              1h25m
-                            </div>
-                          </div>
-                        </div></a
-                      >
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
-                      <a
-                        href="/movies/353680c1-5de6-44b9-8144-245cc74e56e1"
-                        title="Ballong"
-                        class="c35-movie-preview"
-                        ><img src="/previews/ballon.jpg" alt="ALERTE" />
-                        <div class="c35-movie-preview-overlay">
-                          <div class="c35-movie-preview-overlay-text">
-                            <span>Ballong</span>
-                            <div>
-                              Pema Tseden<br />
-                              2018<br />
-                              1h25m
-                            </div>
-                          </div>
-                        </div></a
-                      >
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
-                      <a
-                        href="/movies/744e0d9c-227a-4c60-91da-c79f2254025d"
-                        title="Away"
-                        class="c35-movie-preview"
-                        ><img src="/previews/away.jpg" alt="ALERTE" />
-                        <div class="c35-movie-preview-overlay">
-                          <div class="c35-movie-preview-overlay-text">
-                            <span>Away</span>
-                            <div>
-                              Jonás Trueba<br />
-                              2018<br />
-                              1h08m
-                            </div>
-                          </div>
-                        </div></a
-                      >
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
-                      <a
-                        href="/movies/754d7aca-3922-447b-9e3b-469565260a5d"
-                        title="Midnight Runner"
-                        class="c35-movie-preview"
-                        ><img
-                          src="/previews/midnight_runner.jpg"
-                          alt="ALERTE"
-                        />
-                        <div class="c35-movie-preview-overlay">
-                          <div class="c35-movie-preview-overlay-text">
-                            <span>Midnight Runner</span>
-                            <div>
-                              Wolfgang Petersen<br />
-                              2018<br />
-                              597h39m
-                            </div>
-                          </div>
-                        </div></a
-                      >
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
-                      <a
-                        href="/movies/7e43f64d-23ba-470f-abd3-c840a1511463"
-                        title="Bluebird"
-                        class="c35-movie-preview"
-                        ><img src="/previews/bluebird.jpg" alt="ALERTE" />
-                        <div class="c35-movie-preview-overlay">
-                          <div class="c35-movie-preview-overlay-text">
-                            <span>Bluebird</span>
-                            <div>
-                              Jonás Trueba<br />
-                              2018<br />
-                              584h46m
-                            </div>
-                          </div>
-                        </div></a
-                      >
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
-                      <a
-                        href="/movies/a93f27dc-2de5-4a2f-b534-a5afb64f2305"
-                        title="Eva en août"
-                        class="c35-movie-preview"
-                        ><img src="/previews/eva_et_moi.jpg" alt="ALERTE" />
-                        <div class="c35-movie-preview-overlay">
-                          <div class="c35-movie-preview-overlay-text">
-                            <span>Eva en août</span>
-                            <div>
-                              Jonás Trueba<br />
-                              2018<br />
-                              2h54m
-                            </div>
-                          </div>
-                        </div></a
-                      >
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
-                      <a
-                        href="/movies/cbfc0413-cb8d-4b91-a312-290505a735df"
-                        title="Malmkrog"
-                        class="c35-movie-preview"
-                        ><img src="/previews/malmkrog.jpg" alt="ALERTE" />
-                        <div class="c35-movie-preview-overlay">
-                          <div class="c35-movie-preview-overlay-text">
-                            <span>Malmkrog</span>
-                            <div>
-                              Cristi Puiu<br />
-                              2018<br />
-                              3h12m
-                            </div>
-                          </div>
-                        </div></a
-                      >
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
-                      <a
-                        href="/movies/xJABSfO0P91AUEXcKzLj"
-                        title="Alerte"
-                        class="c35-movie-preview"
-                        ><img src="/previews/alerte.jpg" alt="ALERTE" />
-                        <div class="c35-movie-preview-overlay">
-                          <div class="c35-movie-preview-overlay-text">
-                            <span>Alerte</span>
-                            <div>
-                              Wolfgang Petersen<br />
-                              2018<br />
-                              1h30m
-                            </div>
-                          </div>
-                        </div></a
-                      >
-                    </div>
-                  </div>
-                  <div class="c35-movie-list-date-section">
-                    SORTIE NATIONALE LE 08/07/2020
-                  </div>
-                  <div class="row mx-n1">
-                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
-                      <a
-                        href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4"
-                        title="Just Kids"
-                        class="c35-movie-preview"
-                        ><img src="/previews/just_kids.jpg" alt="ALERTE" />
-                        <div class="c35-movie-preview-overlay">
-                          <div class="c35-movie-preview-overlay-text">
-                            <span>Just Kids</span>
-                            <div>
-                              Jonás Trueba<br />
-                              2018<br />
-                              1h25m
-                            </div>
-                          </div>
-                        </div></a
-                      >
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
-                      <a
-                        href="/movies/353680c1-5de6-44b9-8144-245cc74e56e1"
-                        title="Ballong"
-                        class="c35-movie-preview"
-                        ><img src="/previews/ballon.jpg" alt="ALERTE" />
-                        <div class="c35-movie-preview-overlay">
-                          <div class="c35-movie-preview-overlay-text">
-                            <span>Ballong</span>
-                            <div>
-                              Pema Tseden<br />
-                              2018<br />
-                              1h25m
-                            </div>
-                          </div>
-                        </div></a
-                      >
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
-                      <a
-                        href="/movies/744e0d9c-227a-4c60-91da-c79f2254025d"
-                        title="Away"
-                        class="c35-movie-preview"
-                        ><img src="/previews/away.jpg" alt="ALERTE" />
-                        <div class="c35-movie-preview-overlay">
-                          <div class="c35-movie-preview-overlay-text">
-                            <span>Away</span>
-                            <div>
-                              Jonás Trueba<br />
-                              2018<br />
-                              1h08m
-                            </div>
-                          </div>
-                        </div></a
-                      >
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
-                      <a
-                        href="/movies/754d7aca-3922-447b-9e3b-469565260a5d"
-                        title="Midnight Runner"
-                        class="c35-movie-preview"
-                        ><img
-                          src="/previews/midnight_runner.jpg"
-                          alt="ALERTE"
-                        />
-                        <div class="c35-movie-preview-overlay">
-                          <div class="c35-movie-preview-overlay-text">
-                            <span>Midnight Runner</span>
-                            <div>
-                              Wolfgang Petersen<br />
-                              2018<br />
-                              597h39m
-                            </div>
-                          </div>
-                        </div></a
-                      >
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
-                      <a
-                        href="/movies/7e43f64d-23ba-470f-abd3-c840a1511463"
-                        title="Bluebird"
-                        class="c35-movie-preview"
-                        ><img src="/previews/bluebird.jpg" alt="ALERTE" />
-                        <div class="c35-movie-preview-overlay">
-                          <div class="c35-movie-preview-overlay-text">
-                            <span>Bluebird</span>
-                            <div>
-                              Jonás Trueba<br />
-                              2018<br />
-                              584h46m
-                            </div>
-                          </div>
-                        </div></a
-                      >
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
-                      <a
-                        href="/movies/a93f27dc-2de5-4a2f-b534-a5afb64f2305"
-                        title="Eva en août"
-                        class="c35-movie-preview"
-                        ><img src="/previews/eva_et_moi.jpg" alt="ALERTE" />
-                        <div class="c35-movie-preview-overlay">
-                          <div class="c35-movie-preview-overlay-text">
-                            <span>Eva en août</span>
-                            <div>
-                              Jonás Trueba<br />
-                              2018<br />
-                              2h54m
-                            </div>
-                          </div>
-                        </div></a
-                      >
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
-                      <a
-                        href="/movies/cbfc0413-cb8d-4b91-a312-290505a735df"
-                        title="Malmkrog"
-                        class="c35-movie-preview"
-                        ><img src="/previews/malmkrog.jpg" alt="ALERTE" />
-                        <div class="c35-movie-preview-overlay">
-                          <div class="c35-movie-preview-overlay-text">
-                            <span>Malmkrog</span>
-                            <div>
-                              Cristi Puiu<br />
-                              2018<br />
-                              3h12m
-                            </div>
-                          </div>
-                        </div></a
-                      >
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
-                      <a
-                        href="/movies/xJABSfO0P91AUEXcKzLj"
-                        title="Alerte"
-                        class="c35-movie-preview"
-                        ><img src="/previews/alerte.jpg" alt="ALERTE" />
-                        <div class="c35-movie-preview-overlay">
-                          <div class="c35-movie-preview-overlay-text">
-                            <span>Alerte</span>
-                            <div>
-                              Wolfgang Petersen<br />
-                              2018<br />
-                              1h30m
-                            </div>
-                          </div>
-                        </div></a
-                      >
-                    </div>
-                  </div>
-                  <div class="c35-movie-list-date-section">
-                    SORTIE NATIONALE LE 15/07/2020
-                  </div>
-                  <div class="row mx-n1">
-                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
-                      <a
-                        href="/movies/2446822f-b48d-4a39-9dc8-08c07fae05f4"
-                        title="Just Kids"
-                        class="c35-movie-preview"
-                        ><img src="/previews/just_kids.jpg" alt="ALERTE" />
-                        <div class="c35-movie-preview-overlay">
-                          <div class="c35-movie-preview-overlay-text">
-                            <span>Just Kids</span>
-                            <div>
-                              Jonás Trueba<br />
-                              2018<br />
-                              1h25m
-                            </div>
-                          </div>
-                        </div></a
-                      >
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
-                      <a
-                        href="/movies/353680c1-5de6-44b9-8144-245cc74e56e1"
-                        title="Ballong"
-                        class="c35-movie-preview"
-                        ><img src="/previews/ballon.jpg" alt="ALERTE" />
-                        <div class="c35-movie-preview-overlay">
-                          <div class="c35-movie-preview-overlay-text">
-                            <span>Ballong</span>
-                            <div>
-                              Pema Tseden<br />
-                              2018<br />
-                              1h25m
-                            </div>
-                          </div>
-                        </div></a
-                      >
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
-                      <a
-                        href="/movies/744e0d9c-227a-4c60-91da-c79f2254025d"
-                        title="Away"
-                        class="c35-movie-preview"
-                        ><img src="/previews/away.jpg" alt="ALERTE" />
-                        <div class="c35-movie-preview-overlay">
-                          <div class="c35-movie-preview-overlay-text">
-                            <span>Away</span>
-                            <div>
-                              Jonás Trueba<br />
-                              2018<br />
-                              1h08m
-                            </div>
-                          </div>
-                        </div></a
-                      >
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
-                      <a
-                        href="/movies/754d7aca-3922-447b-9e3b-469565260a5d"
-                        title="Midnight Runner"
-                        class="c35-movie-preview"
-                        ><img
-                          src="/previews/midnight_runner.jpg"
-                          alt="ALERTE"
-                        />
-                        <div class="c35-movie-preview-overlay">
-                          <div class="c35-movie-preview-overlay-text">
-                            <span>Midnight Runner</span>
-                            <div>
-                              Wolfgang Petersen<br />
-                              2018<br />
-                              597h39m
-                            </div>
-                          </div>
-                        </div></a
-                      >
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
-                      <a
-                        href="/movies/7e43f64d-23ba-470f-abd3-c840a1511463"
-                        title="Bluebird"
-                        class="c35-movie-preview"
-                        ><img src="/previews/bluebird.jpg" alt="ALERTE" />
-                        <div class="c35-movie-preview-overlay">
-                          <div class="c35-movie-preview-overlay-text">
-                            <span>Bluebird</span>
-                            <div>
-                              Jonás Trueba<br />
-                              2018<br />
-                              584h46m
-                            </div>
-                          </div>
-                        </div></a
-                      >
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
-                      <a
-                        href="/movies/a93f27dc-2de5-4a2f-b534-a5afb64f2305"
-                        title="Eva en août"
-                        class="c35-movie-preview"
-                        ><img src="/previews/eva_et_moi.jpg" alt="ALERTE" />
-                        <div class="c35-movie-preview-overlay">
-                          <div class="c35-movie-preview-overlay-text">
-                            <span>Eva en août</span>
-                            <div>
-                              Jonás Trueba<br />
-                              2018<br />
-                              2h54m
-                            </div>
-                          </div>
-                        </div></a
-                      >
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
-                      <a
-                        href="/movies/cbfc0413-cb8d-4b91-a312-290505a735df"
-                        title="Malmkrog"
-                        class="c35-movie-preview"
-                        ><img src="/previews/malmkrog.jpg" alt="ALERTE" />
-                        <div class="c35-movie-preview-overlay">
-                          <div class="c35-movie-preview-overlay-text">
-                            <span>Malmkrog</span>
-                            <div>
-                              Cristi Puiu<br />
-                              2018<br />
-                              3h12m
-                            </div>
-                          </div>
-                        </div></a
-                      >
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-1 px-1">
-                      <a
-                        href="/movies/xJABSfO0P91AUEXcKzLj"
-                        title="Alerte"
-                        class="c35-movie-preview"
-                        ><img src="/previews/alerte.jpg" alt="ALERTE" />
-                        <div class="c35-movie-preview-overlay">
-                          <div class="c35-movie-preview-overlay-text">
-                            <span>Alerte</span>
-                            <div>
-                              Wolfgang Petersen<br />
-                              2018<br />
-                              1h30m
-                            </div>
-                          </div>
-                        </div></a
-                      >
-                    </div>
-                  </div>
-                  <nav class="mt-3">
-                    <ul class="pagination pagination-lg justify-content-center">
-                      <li class="page-item disabled">
-                        <a href="#" tabindex="-1" class="page-link">1</a>
-                      </li>
-                      <li class="page-item">
-                        <a href="#" class="page-link">2</a>
-                      </li>
-                      <li class="page-item">
-                        <a href="#" class="page-link">3</a>
-                      </li>
-                    </ul>
-                  </nav>
                 </div>
               </div>
             </div>
           </div>
           <div class="c35-footer bg-dark mt-4 py-5">
             <div class="font-italic">
-              Ciné35 2020, tous droits réservés
+              Cine35.com 2020, tous droits réservés
             </div>
             <div class="mt-4">
-              Mentions Légales |
+              <a href="/mentions-legales" title="Mentions légales">
+                Mentions Légales
+              </a>
+              |
               <a href="/contact" title="Nous contacter">
                 Contact
               </a>
@@ -803,252 +856,5 @@
         </div>
       </div>
     </div>
-    <script>
-      window.__NUXT__ = (function (
-        a,
-        e,
-        i,
-        s,
-        t,
-        r,
-        d,
-        m,
-        f,
-        c,
-        o,
-        N,
-        l,
-        n,
-        b,
-        u,
-        p,
-        g,
-        v,
-        w,
-        j,
-        y,
-        h,
-        _,
-        J,
-        T,
-        k,
-        A,
-        P,
-        S,
-        z,
-        B,
-        K,
-        M,
-        R,
-        C,
-        I,
-        x,
-        E,
-        H,
-        O,
-      ) {
-        return {
-          layout: 'default',
-          data: [{}],
-          fetch: [],
-          error: a,
-          state: {
-            actors: { collection: [] },
-            directors: { collection: [] },
-            movies: {
-              collection: [
-                {
-                  id: '2446822f-b48d-4a39-9dc8-08c07fae05f4',
-                  name: 'Just Kids',
-                  duration: '5148',
-                  preview: y,
-                  cover: y,
-                  synopsis: a,
-                  actors: [
-                    { id: k, lastName: K, firstName: J },
-                    { id: m, firstName: i, lastName: B },
-                    {
-                      id: '452911cf-cb79-4235-aa68-5a402e651267',
-                      firstName: 'Alice',
-                      lastName: 'Braga',
-                    },
-                    { id: s, firstName: t, lastName: r },
-                  ],
-                  directors: [{ id: d, lastName: e, firstName: f }],
-                },
-                {
-                  id: '353680c1-5de6-44b9-8144-245cc74e56e1',
-                  name: 'Ballong',
-                  duration: '5112',
-                  preview: M,
-                  cover: M,
-                  synopsis: a,
-                  actors: [
-                    { id: u, lastName: p, firstName: g },
-                    { id: v, firstName: w, lastName: j },
-                    { id: O, firstName: h, lastName: 'Tso' },
-                  ],
-                  directors: [
-                    {
-                      id: '98c68e10-47f5-4904-b16f-c9ef10ced123',
-                      firstName: 'Pema',
-                      lastName: 'Tseden',
-                    },
-                  ],
-                },
-                {
-                  id: '744e0d9c-227a-4c60-91da-c79f2254025d',
-                  name: 'Away',
-                  duration: '4104',
-                  preview: _,
-                  cover: _,
-                  synopsis: a,
-                  actors: [
-                    { id: c, firstName: o, lastName: N },
-                    { id: O, firstName: h, lastName: 'Tso' },
-                    { id: m, firstName: i, lastName: B },
-                  ],
-                  directors: [{ id: d, lastName: e, firstName: f }],
-                },
-                {
-                  id: '754d7aca-3922-447b-9e3b-469565260a5d',
-                  name: 'Midnight Runner',
-                  duration: '2151581',
-                  preview: A,
-                  cover: A,
-                  synopsis: a,
-                  actors: [
-                    { id: P, lastName: S, firstName: z },
-                    { id: u, lastName: p, firstName: g },
-                    { id: l, lastName: n, firstName: b },
-                    { id: R, firstName: 'Joe', lastName: C },
-                  ],
-                  directors: [{ id: m, firstName: i, lastName: I }],
-                },
-                {
-                  id: '7e43f64d-23ba-470f-abd3-c840a1511463',
-                  name: 'Bluebird',
-                  duration: '2105184',
-                  preview: x,
-                  cover: x,
-                  synopsis: a,
-                  actors: [
-                    { id: P, lastName: S, firstName: z },
-                    { id: s, firstName: t, lastName: r },
-                    { id: R, firstName: 'Joe', lastName: C },
-                  ],
-                  directors: [{ id: d, lastName: e, firstName: f }],
-                },
-                {
-                  id: 'a93f27dc-2de5-4a2f-b534-a5afb64f2305',
-                  name: 'Eva en août',
-                  duration: '10440',
-                  preview: E,
-                  cover: E,
-                  synopsis: a,
-                  actors: [
-                    { id: c, firstName: o, lastName: N },
-                    { id: l, lastName: n, firstName: b },
-                    { id: s, firstName: t, lastName: r },
-                    {
-                      id: 'b9f95d7d-55f2-44d4-b572-c49392132b94',
-                      lastName: 'Stoffel',
-                      firstName: 'Isabelle',
-                    },
-                  ],
-                  directors: [{ id: d, lastName: e, firstName: f }],
-                },
-                {
-                  id: 'cbfc0413-cb8d-4b91-a312-290505a735df',
-                  name: 'Malmkrog',
-                  duration: '11556',
-                  preview: H,
-                  cover: H,
-                  synopsis: a,
-                  actors: [
-                    {
-                      id: '032e4951-171b-4fd1-bef6-b843d0c751c4',
-                      lastName: 'Sanz',
-                      firstName: 'Vito',
-                    },
-                    { id: l, lastName: n, firstName: b },
-                    { id: c, firstName: o, lastName: N },
-                    { id: v, firstName: w, lastName: j },
-                  ],
-                  directors: [
-                    {
-                      id: 'f06abfa8-01e3-402e-951b-f4be42eb2903',
-                      firstName: 'Cristi',
-                      lastName: 'Puiu',
-                    },
-                  ],
-                },
-                {
-                  id: 'xJABSfO0P91AUEXcKzLj',
-                  name: 'Alerte',
-                  duration: 5400,
-                  preview: T,
-                  cover: T,
-                  synopsis: 'this synopsis',
-                  actors: [
-                    { id: k, lastName: K, firstName: J },
-                    { id: s, firstName: t, lastName: r },
-                  ],
-                  directors: [{ id: m, firstName: i, lastName: I }],
-                },
-              ],
-            },
-          },
-          serverRendered: !0,
-          routePath: '/movies/comingsoon',
-        };
-      })(
-        null,
-        'Trueba',
-        'Wolfgang',
-        'abf093d2-a457-481f-99f6-79410994131c',
-        'Cuba',
-        'Gooding Jr.',
-        'f017bb5a-02a5-4f4c-b1de-eb819e364f9a',
-        'K5TSg5rkOlRqHwzynwxw',
-        'Jonás',
-        '923c2d2f-5b62-463a-ae38-c0dfc5d58385',
-        'Itsaso',
-        'Arana',
-        'CVNlIcj9Qj1hNsaTe7lK',
-        'Hoffman',
-        'Dustin',
-        '65d2b10c-0683-43bb-abfc-ed809e4a6722',
-        'Wangmo',
-        'Sonam',
-        'e19e1f03-fde3-4ed5-8f07-be1fffea9c56',
-        'Jinpachi',
-        'Nezu',
-        'just_kids.jpg',
-        'Yangshik',
-        'away.jpg',
-        'Mark',
-        'alerte.jpg',
-        '3aae074a-69b2-47a5-8650-b39419bba8b4',
-        'midnight_runner.jpg',
-        '3a1d4be2-bdaf-4fcc-a95b-a4c740cdaf43',
-        'Schulz-richard',
-        'Frédéric',
-        'Petersena',
-        'Ruffalo',
-        'ballon.jpg',
-        '7c57bea9-1a17-4763-8439-c1f326c7a17c',
-        'Manjon',
-        'Petersen',
-        'bluebird.jpg',
-        'eva_et_moi.jpg',
-        'malmkrog.jpg',
-        'b63dc4ab-cec4-40c7-a806-813c506d97a7',
-      );
-    </script>
-    <script src="/_nuxt/5dd7950e092c28f1eb58.js" defer></script>
-    <script src="/_nuxt/870345e323bfc84cec54.js" defer></script>
-    <script src="/_nuxt/33af398403db843cdc23.js" defer></script>
-    <script src="/_nuxt/b5d43530e27a29c5f56c.js" defer></script>
-  </body>
+   </body>
 </html>

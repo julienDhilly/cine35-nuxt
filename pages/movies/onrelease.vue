@@ -82,5 +82,10 @@ export default {
       return [...this.$store.getters["movies/collection"]]
     },
   },
+  head() {
+    return {
+      title: "Cine35.com - Films à l'affiche",
+    }
+  },
 }
 </script>
