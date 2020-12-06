@@ -1,4 +1,26 @@
 $.when( $.ready ).then(function() {
+
+   // fav city business
+   const cookieValue = getCookie('current-city');
+   if (!cookieValue) {
+      $('#exampleModal').modal('toggle');
+   } else if(cookieValue !== 'null') {
+      var option = $('#select-city-elt option[value="'+cookieValue+'"]');
+      if (option) {
+         option.prop('selected', true);
+      }
+   }
+
+   $('#never-ask-city').on('click', function() {
+      saveCityNull();
+   });
+   $('#save-city-btn').on('click', function() {
+      saveCity();
+   });
+   $('#btn-change-city').on('click', function() {
+      $('#exampleModal').modal('toggle');
+   });
+
    // geooc
    $('.c35-geoloc-btn').click(function() {
       navigator.geolocation.getCurrentPosition(function(position) {
@@ -155,3 +177,36 @@ $.when( $.ready ).then(function() {
       $('#c35-prog-list-filters-mobile-container').removeClass('active');
    });
  });
+
+ function getCookie(cname) {
+   var name = cname + "=";
+   var decodedCookie = decodeURIComponent(document.cookie);
+   var ca = decodedCookie.split(';');
+   for(var i = 0; i <ca.length; i++) {
+     var c = ca[i];
+     while (c.charAt(0) == ' ') {
+       c = c.substring(1);
+     }
+     if (c.indexOf(name) == 0) {
+       return c.substring(name.length, c.length);
+     }
+   }
+   return "";
+ }
+
+ function setCookie(cname, cvalue, exdays) {
+   var d = new Date();
+   d.setTime(d.getTime() + (exdays*24*60*60*1000));
+   var expires = "expires="+ d.toUTCString();
+   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+ }
+
+function  saveCityNull() {
+    setCookie('current-city', 'null', 300);
+ }
+
+ function  saveCity() {
+    const value = $('#select-city-elt').val();
+    setCookie('current-city', value, 300);
+    window.location.reload();
+ }

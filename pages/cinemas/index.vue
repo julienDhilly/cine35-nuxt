@@ -14,6 +14,9 @@
         </div>
       </div>
       <div class="text-right mb-3">
+        <div id="btn-change-city" class="btn btn-primary c35-btn">
+          Changer ma ville
+        </div>
         <div class="btn btn-primary c35-btn c35-geoloc-btn">
           Voir les salles autour de moi
         </div>
