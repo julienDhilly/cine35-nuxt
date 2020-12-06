@@ -55,10 +55,13 @@
    z-index: 1;
    background: #393939;
    overflow: hidden;
+   background-size: cover;
 
-   img {
-      width: 100%;
+   .c35-movie-banner-poster {
+      max-width: 100%;
    }
+
+
 
    .c35-movie-title {
       display: inline-block;

@@ -10,7 +10,7 @@
       }"
     >
       <div class="row px-4">
-        <div class="col-12 col-sm-9">
+        <div class="col-12 col-sm-6">
           <div class="d-flex mt-5">
             <h1 class="c35-movie-title">
               La fureur de vaincre
@@ -32,8 +32,12 @@
             à 15km
           </h2>
         </div>
-        <div class="col-12 d-none d-sm-flex col-sm-3">
-          <img :src="`/previews/bluebird.jpg`" alt="ALERTE" />
+        <div class="col-12 d-none d-sm-block col-sm-6 text-right">
+          <img
+            class="c35-movie-banner-poster"
+            :src="`/previews/bluebird.jpg`"
+            alt="ALERTE"
+          />
         </div>
       </div>
     </div>

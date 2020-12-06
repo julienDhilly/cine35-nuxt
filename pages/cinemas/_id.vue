@@ -7,7 +7,7 @@
       style="background-image: url('/previews/cinemas/cineville.jpg');"
     >
       <div class="row px-4">
-        <div class="col-6 col-lg-9">
+        <div class="col-12 col-sm-6">
           <h1 class="c35-movie-title mt-5">
             CGR LA MÉZIÈRE
           </h1>
@@ -15,8 +15,12 @@
             Mézière - 35520
           </h2>
         </div>
-        <div class="col-6 col-lg-3">
-          <img src="/logos/cgr.png" alt="CGR La Mézière" />
+        <div class="col-12 d-none d-sm-block col-sm-6 text-right">
+          <img
+            class="c35-movie-banner-poster"
+            src="/logos/cgr.png"
+            alt="CGR La Mézière"
+          />
         </div>
       </div>
     </div>
