@@ -148,11 +148,24 @@ $.when( $.ready ).then(function() {
       if (progListActiveFilters.length === 0) {
          $('#c35-prog-list-filters-values').find('.c35-prog-schedule').show();
       } else {
+
+         var groups = {};
+         progListActiveFilters.forEach(filter => {
+            if (!groups[filter.group]) {
+               groups[filter.group] = [filter];
+            } else {
+               groups[filter.group].push(filter);
+            }
+         });
+
+         groups = Object.values(groups);
          progListElts.each(function(index, elt) {
-            var valid = progListActiveFilters.some(function(filter) {
-               var eltValue = $(elt).attr('data-' + filter.group);
-               return eltValue === filter.value;
-            });
+            var valid = groups.reduce(function(valid, filters) {
+               return valid && filters.some(function(filter) {
+                  var eltValue = $(elt).attr('data-' + filter.group);
+                  return eltValue === filter.value;
+               });
+            }, true);
 
             if (valid) {
                $(elt).show();
@@ -165,7 +178,6 @@ $.when( $.ready ).then(function() {
 
    // prog list filtersdisplay on mobile
    $('#c35-btn-movie-filters-mobile').click(function() {
-      console.log('jere');
       if ($('#c35-prog-list-filters-mobile-container').hasClass('active')) {
          $('#c35-prog-list-filters-mobile-container').removeClass('active');
       } else {
