@@ -24,11 +24,12 @@
     }
 
     .c35-cinema-preview-title {
-       display: inline-block;
+       display: block;
        color: #FFF;
        cursor: pointer;
        background: theme-color("primary");
        padding: 0.5rem 1rem;
+       max-width: 100%;
     }
 
     .c35-cinema-preview-description {

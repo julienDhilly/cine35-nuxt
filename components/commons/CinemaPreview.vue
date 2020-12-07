@@ -6,7 +6,7 @@
   >
     <div class="c35-cinema-preview-overlay"></div>
     <div class="c35-cinema-preview-content">
-      <div class="c35-cinema-preview-title">
+      <div class="c35-cinema-preview-title text-truncate">
         {{ cinema.name }}
       </div>
       <div class="c35-cinema-preview-description">
